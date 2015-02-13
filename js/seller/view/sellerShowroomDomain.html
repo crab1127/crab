@@ -1,0 +1,70 @@
+<div class="box" style="border:0px;">
+    <div class="tips-s4">
+        <span class="icons mark" style="float:left;"></span>
+        <div class="des" i18n>MODULE.SHOWROOM_SET.HTTP_SERVICE</div>
+    </div>
+    <form id="form1" class="mod-form-s1" a-if="data.nodata" validator>
+        <div class="field">
+            <label style="width:180px;padding-right:10px;" class="col" i18n>MODULE.SHOWROOM_SET.HTTP_NAME</label>
+            <div class="el">
+                <div class="http" i18n>MODULE.SHOWROOM_SET.HTTP_HTTP</div>
+                <div class="el-cont" style="margin-right:5px;">
+                    <div>
+                        <input type="text" class="w300 ipt url" pattern="^[a-zA-Z0-9]{3,50}$" error="MODULE.SHOWROOM_SET.DOMAIN_TIPS1" id="domainName" name="domainName" value="" required />
+                    </div>
+                </div>
+                <div class="http" i18n>MODULE.SHOWROOM_SET.HTTP_COM</div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col" style="width:180px;padding-right:10px;">&nbsp;</label>
+            <div class="el">
+                <div class="notice">
+                    Notice:
+                </div>
+                <div class="notice-tips" i18n>MODULE.SHOWROOM_SET.HTTP_NOTICETIPS</div>
+            </div>
+        </div>
+        <div class="actions">
+            <a class="btn btn-s11 btn-http" id="submit" href="javascript:;" i18n>TPL_SHOWROOM.SAVE</a>
+        </div>
+    </form>
+    <div class="mod-form-s1" a-if="data.pass">
+        <div class="field">
+            <label class="col" style="width:180px;padding-right:10px;" i18n>MODULE.SHOWROOM_SET.HTTP_NAME</label>
+            <div class="bg-ico ico-verified" i18n>TPL_SHOWROOM.VERIFIED</div>
+            <div class="el">
+                <div class="http" style="margin-right:0px;" i18n>MODULE.SHOWROOM_SET.HTTP_HTTP</div>
+                <div class="http" style="margin-right:0px;">{{data.domainName}}</div>
+                <div class="http" i18n>MODULE.SHOWROOM_SET.HTTP_COM</div>
+            </div>
+        </div>
+    </div>
+    <div class="pend" a-if="data.pending">
+        <div class="icons pending sit"></div>
+        <div class="pend-cont">
+            <p>
+                <span i18n>MODULE.SHOWROOM_SET.HTTP_NAME</span>
+                <span class="http" i18n>MODULE.SHOWROOM_SET.HTTP_HTTP</span>
+                <span class="http">{{data.domainName}}</span>
+                <span class="http" i18n>MODULE.SHOWROOM_SET.HTTP_COM</span>
+            </p>
+            <h3 i18n>MODULE.SHOWROOM_SET.HTTP_PEND</h3>
+        </div>
+    </div>
+    <div class="pend" a-if="data.nopass">
+        <div class="icons nomacth-bg sit"></div>
+        <div class="pend-cont">
+            <p>
+                <span i18n>MODULE.SHOWROOM_SET.HTTP_NAME</span>
+                <span class="http" i18n>MODULE.SHOWROOM_SET.HTTP_HTTP</span>
+                <span class="http">{{data.domainName}}</span>
+                <span class="http" i18n>MODULE.SHOWROOM_SET.HTTP_COM</span>
+            </p>
+            <h3>
+                <span i18n>MODULE.SHOWROOM_SET.HTTP_NOMATCH</span>
+                <span style="cursor: pointer;" class="green" i18n>MODULE.SHOWROOM_SET.HTTP_SET</span>
+            </h3>
+        </div>
+    </div>
+</div>

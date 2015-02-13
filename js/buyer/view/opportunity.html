@@ -1,0 +1,170 @@
+<!--顶部tab-->
+<script type="text/tpl" id="top-tab">
+    <div class="tab-s1">
+        <a href="javascript:;" class="co" i18n>MODULE.OPPORTUNITY.COLLECTIONS</a>
+        <a href="javascript:;" class="se" i18n>MODULE.OPPORTUNITY.SOURCING_EGG</a>
+    </div>
+</script>
+
+<!-- Collections -->
+<script type="text/tpl" id="collection-wrap">
+    <div class="content-wrap">
+        <form class="mod-filter clear">
+            <select id="categoryField" style="width:150px;" name="categoryCode" dropDown>
+                <option value="" i18n>MODULE.OPPORTUNITY.CATEGORY</option>
+                <option a-repeat="categoryList" value="{{code}}">{{typeName}}</option>
+            </select>
+
+            <select id="tagField" style="width:150px;" name="tagId" dropDown>
+                <option value="" i18n>MODULE.OPPORTUNITY.TAG</option>
+                <option a-repeat="tagList" value="{{tagId}}">{{tagName}}</option>
+            </select>
+
+            <select id="sourceField" style="width:150px;" name="sourceType" dropDown>
+                <option value="" i18n>MODULE.OPPORTUNITY.SOURCE</option>
+                <option a-repeat="sourceList" value="{{sourceType}}">{{sourceName}}</option>
+            </select>
+
+
+
+            <div class="search-s2" style="width: 320px;">
+                <input type="text" class="txt" style="width: 300px;" name="keyword" placeholder="input a keyword">
+            </div>
+            <div class="action">
+                <span class="brace"></span>
+                <a href="javascript:;" class="btn btn-s11" i18n>BUTTON.SEARCH_BTN</a>
+            </div>
+        </form>
+
+        <div a-if="isShowLoad" class="loading" >
+            <span></span>
+            Loading...
+        </div>
+
+        <div a-if="^isShowLoad">
+            <div a-if="^data.length" class="fil-none">
+                <p class="txt2" i18n>NOT_SEARCH_RESULT</p>
+                <p class="txt3" i18n>NOT_SEARCH_SUGGEST</p>
+                <!--<p><a href="javascript:;" class="btn btn-l btn-s13" i18n>BUTTON.RETURN_LIST</a></p>-->
+            </div>
+        </div>
+
+        <div a-if="^isShowLoad" class="collection-wrap">
+            <div a-repeat="data" class="item">
+                <span can-tip="DELETE_CONFIRM" can-tip-type="left" class="remove icons close-0" data-id="{{collectionId}}"></span>
+                <div class="cont">
+                    <div class="image" >
+                        <a href="#!/view-product?id={{targetId}}&m=OpportunityModuleId" a-if="isProduct">
+                            <img can-src="{{image}}" width="120" height="120" alt="{{subject}}">
+                        </a>
+                        <a href="{{domainUrl}}/china-supplier/{{targetId}}.html" target="_blank" a-if="^isProduct">
+                            <img can-src="{{image}}" width="120" height="120" alt="{{subject}}">
+                        </a>
+
+                    </div>
+                    <div class="info">
+                        <strong>
+                            <a href="#!/view-product?id={{targetId}}&m=OpportunityModuleId" a-if="isProduct">
+                                {{subject}}
+                            </a>
+                            <a href="{{domainUrl}}/china-supplier/{{targetId}}.html" target="_blank" a-if="^isProduct">
+                                {{subject}}
+                            </a>
+                        </strong>
+                        <div a-if="description">                        
+                            <label a-if="^isProduct">Main product: </label>
+                            <span substr="80" title="{{description}}">
+                                {{description}}                     
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tool">
+                    <a href="#" act="inquire" data-ix="{{ix}}">
+                        <span class="icons inquire-0"></span>
+                        <span i18n>MODULE.PRODUCT_DETAIL.INQUIRY</span>                  
+                    </a>
+
+                    <a href="#" show-supplier="{{supplierId}}">
+                        <span class="icons crad-0"></span>
+                        {{superlierName}}
+                    </a>
+                    <div class="io-skype io-skype-r" id="SkypeButton{{collectionId}}"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+        <div a-if="^isShowLoad" class="page-toop" page-current="{{page.page}}" page-total="{{page.total}}" page-limit="{{page.pageSize}}" paging></div>
+    </div>
+</script>
+
+<script type="text/tpl" id="egg-wrap">
+    <div class="content-wrap">
+        <div class="banner">
+            <p>
+                <strong i18n>MODULE.OPPORTUNITY.EGG_TIP1</strong>
+            </p>
+            <p i18n>MODULE.OPPORTUNITY.EGG_TIP2</p>
+        </div>
+
+        <div a-if="isShowLoad" class="loading" >
+            <span></span>
+            Loading...
+        </div>
+
+        <div a-if="^isShowLoad">
+        <div a-repeat="data" class="item-egg">
+            <div class="grid grid-1">
+                <a href="/china-supplier/{{companyId}}.html" target="_blank">
+                    <img can-src="{{logo}}" alt="{{subject}}" width="120" height="60"/>
+                </a>
+            </div>
+            <div class="grid grid-2">
+                <p><strong><a href="/china-supplier/{{companyId}}.html" target="_blank">
+{{subject}}</a></strong> 
+                    <i class="icons period">{{period}}</i>
+                </p>
+                <p style="margin-top:4px;">
+                    {{countryName}}                    
+                    <span a-if="joinCount" join-count="{{joinCount}}"></span>
+                </p>
+                <p style="margin-top:5px;">
+                <label i18n>MODULE.OPPORTUNITY.SCAN_TIME</label> 
+                {{scanTime}}
+                </p>
+            </div>
+            <div class="grid grid-3">
+                <div match="{{match}}"><span i18n>MODULE.OPPORTUNITY.MATCH</span>  <i>{{match}}%</i></div>
+                    <p><label i18n>MODULE.OPPORTUNITY.CONTACT</label> 
+                      <strong>
+                        <a href="#" show-supplier="{{superlierId}}">{{superlierName}}</a>
+                      </strong> 
+                    </p>
+                </div>
+                <div class="grid grid-4">
+                    <p>
+                        <a class="ui-btn btn-gray-2" href="#" act="inquire" data-ix="{{ix}}">
+                            <i class="icons inquire-0"></i>
+                            <span i18n>MODULE.PRODUCT_DETAIL.INQUIRY</span>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="china-supplier/products-director-{{companyId}}.html" class="products" target="_blank">
+                            <i class="icons zoom-0"></i>
+                            <span i18n>MODULE.OPPORTUNITY.PRODUCTS</span>
+                            
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div a-if="^isShowLoad" class="page-toop" page-current="{{page.page}}" page-total="{{page.total}}" page-limit="{{page.pageSize}}" paging></div>
+
+
+    </div>
+</script>

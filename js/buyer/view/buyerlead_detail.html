@@ -1,0 +1,273 @@
+<script type="text/javascript" src="../js/seller/action/buyerleadDTreplyAction.js"></script>
+<script language="javascript">
+    function suv(str, event) {
+        var el = $(str), pos = $(str).offset();
+        var feedback = new Can.ui.tips({
+            cssName:'win-tips-s1', mainCss:'win-fav'
+        });
+        feedback.updateContent('<div class="succ"><p class="txt-ok" style="padding-left: 0px; margin-left: 10px">Added!</p>' +
+                '<p class="tips" style="margin-left: 10px">You can find it from your Treasury.asdfsdafdsafdsaDADSFGFDFGFD</p> </div>' +
+                '<div class="b-actions clear"><a href="javascript:;" class="btn btn-s12" role="close">Cancel</a><a href="javascript:;" class="btn btn-s11" role="reply">Reply</a></div>');
+
+        feedback_item = feedback.el;
+
+        feedback.on('ON_SHOW', function () {
+            feedback.updateCss({
+                'top':pos['top'] - 30, left:pos.left + feedback_item.outerWidth() + 20
+            })
+        });
+        feedback.show();
+        // tag panel close
+        feedback_item.on('click', '[role=close]', function () {
+            feedback.remove();
+        });
+
+        //reply
+        feedback_item.on('click', '[role=reply]', function () {
+            var _data = {
+                inquiry:[
+                    {
+                        supplierId:1838,
+                        supplierName:'Simon Wang',
+                        companyId:34343,
+                        companyName:'Canton Fair Business',
+                        products:[
+                            {
+                                productId:523882,
+                                productTitle:'Led led LED lcd Led led LED lcd',
+                                productPhoto:'/img/60_60.jpg'
+                            }
+                        ]
+                    }
+                ]
+            };
+            Can.util.singleInstance('inquiry', [Can.msg.MESSAGE_WINDOW.INQUIRY_TIT, _data, 'Hey, Send inquire to you']);
+        });
+
+        event.stopPropagation()
+    }
+</script>
+<div class="content clear">
+<div class="detail-box purch-bl clear">
+    <div class="des">
+        <h2>Brake System Parts for Russian, Chinese and Korea Cars <span class="bg-ico ico-state-reply"></span></h2>
+
+        <div class="ort-info">
+            <span>Time Left :<em>29D 2H</em></span>
+            <span>Date Posted :<em>2013-01-17</em></span>
+            <span>Status :<em>审核通过</em></span>
+        </div>
+    </div>
+</div>
+<div class="box-bl">
+<div class="tab-s2">
+    <a href="#">Base Info</a><a href="#" class="cur">Reply History</a>
+</div>
+<div class="tab-cont">
+<div class="cont base-info hidden">
+    <div class="row clear">
+        <label class="tit">Category :</label>
+
+        <div class="txt">kitchen light</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Description :</label>
+
+        <div class="txt">Importer.It's target market is : Eastern Europe&amp;Northern Europe.If your
+            products meet the requirement, please contact the buyer now to grab more business opportunities.
+        </div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Attachments :</label>
+
+        <div class="txt"><img title="" alt="" src="../../img/150_150.jpg">
+
+            <p class="arras-name">kitchen light .pdf</p></div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Expiration date :</label>
+
+        <div class="txt">2012-1-25</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Purchase :</label>
+
+        <div class="txt">1000 Pieces</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Annual :</label>
+
+        <div class="txt">10,000 Pieces</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Mode of transport :</label>
+
+        <div class="txt">Ship</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Preferred Price :</label>
+
+        <div class="txt">60$</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Port of arrival :</label>
+
+        <div class="txt">HONGKONG</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Supplier requirements :</label>
+
+        <div class="txt">Manufacturer</div>
+    </div>
+    <div class="row clear">
+        <label class="tit">Expect to receive :</label>
+
+        <div class="txt">2012-1-30</div>
+    </div>
+</div>
+<div class="cont con-history r-his">
+    <div class="item unread">
+        <div class="inner">
+            <div class="des clear">
+                <div class="mod-mch mod-mch-s1">Match:<em>20%</em></div>
+                <div class="mod-person">
+                    <div class="pic"><img width="60" height="60" alt=""
+                                          src="../../img/user_pic/default_60.jpg"></div>
+                    <div class="info">
+                        <p class="name"><a href="#">james ma james ma james ma</a></p>
+
+                        <p class="country"><span class="flags fs5"></span><span
+                                class="txt">country</span><span class="mth">6</span></p>
+
+                        <p class="cpy-name">Lanxi Electric Light Source Co., Ltd.</p>
+                    </div>
+                </div>
+                <div class="r-tit">
+                    <span class="bg-ico ico-read"></span>
+
+                    <h3><a href="#" onclick="suv(this,event);">Brake System Parts for Russian, Chinese and Korea Cars
+                        Brake System Parts for Russian, Chinese and Korea CarsBrake System Parts for
+                        Russian, Chinese and Korea Cars</a></h3>
+                </div>
+            </div>
+            <div class="e-info"><strong>06:48</strong><br><span>02 october 2012</span></div>
+            <div class="bg-ico arrow"></div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="inner">
+            <div class="des clear">
+                <div class="mod-mch mod-mch-s1">Match:<em>20%</em></div>
+                <div class="mod-person">
+                    <div class="pic"><img width="60" height="60" alt=""
+                                          src="../../img/user_pic/default_60.jpg"></div>
+                    <div class="info">
+                        <p class="name"><a href="#">james ma james ma james ma</a></p>
+
+                        <p class="country"><span class="flags fs5"></span><span
+                                class="txt">country</span><span class="mth">6</span></p>
+
+                        <p class="cpy-name">Lanxi Electric Light Source Co., Ltd.</p>
+                    </div>
+                </div>
+                <div class="r-tit">
+                    <span class="bg-ico ico-read ico-chked"></span>
+
+                    <h3><a href="#">Brake System Parts for Russian, Chinese and Korea Cars Brake System
+                        Parts for Russian, Chinese and Korea CarsBrake System Parts for Russian, Chinese and
+                        Korea Cars</a></h3>
+                </div>
+            </div>
+            <div class="e-info"><strong>06:48</strong><br><span>02 october 2012</span></div>
+            <div class="bg-ico arrow"></div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="inner">
+            <div class="des clear">
+                <div class="mod-mch mod-mch-s1">Match:<em>20%</em></div>
+                <div class="mod-person">
+                    <div class="pic"><img width="60" height="60" alt=""
+                                          src="../../img/user_pic/default_60.jpg"></div>
+                    <div class="info">
+                        <p class="name"><a href="#">james ma james ma james ma</a></p>
+
+                        <p class="country"><span class="flags fs5"></span><span
+                                class="txt">country</span><span class="mth">6</span></p>
+
+                        <p class="cpy-name">Lanxi Electric Light Source Co., Ltd.</p>
+                    </div>
+                </div>
+                <div class="r-tit">
+                    <span class="bg-ico ico-read ico-chked"></span>
+
+                    <h3><a href="#">Brake System Parts for Russian, Chinese and Korea Cars Brake System
+                        Parts for Russian, Chinese and Korea CarsBrake System Parts for Russian, Chinese and
+                        Korea Cars</a></h3>
+                </div>
+            </div>
+            <div class="e-info"><strong>06:48</strong><br><span>02 october 2012</span></div>
+            <div class="bg-ico arrow"></div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="inner">
+            <div class="des clear">
+                <div class="mod-mch mod-mch-s1">Match:<em>20%</em></div>
+                <div class="mod-person">
+                    <div class="pic"><img width="60" height="60" alt=""
+                                          src="../../img/user_pic/default_60.jpg"></div>
+                    <div class="info">
+                        <p class="name"><a href="#">james ma james ma james ma</a></p>
+
+                        <p class="country"><span class="flags fs5"></span><span
+                                class="txt">country</span><span class="mth">6</span></p>
+
+                        <p class="cpy-name">Lanxi Electric Light Source Co., Ltd.</p>
+                    </div>
+                </div>
+                <div class="r-tit">
+                    <span class="bg-ico ico-read ico-chked"></span>
+
+                    <h3><a href="#">Brake System Parts for Russian, Chinese and Korea Cars Brake System
+                        Parts for Russian, Chinese and Korea CarsBrake System Parts for Russian, Chinese and
+                        Korea Cars</a></h3>
+                </div>
+            </div>
+            <div class="e-info"><strong>06:48</strong><br><span>02 october 2012</span></div>
+            <div class="bg-ico arrow"></div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="inner">
+            <div class="des clear">
+                <div class="mod-mch mod-mch-s1">Match:<em>20%</em></div>
+                <div class="mod-person">
+                    <div class="pic"><img width="60" height="60" alt=""
+                                          src="../../img/user_pic/default_60.jpg"></div>
+                    <div class="info">
+                        <p class="name"><a href="#">james ma james ma james ma</a></p>
+
+                        <p class="country"><span class="flags fs5"></span><span
+                                class="txt">country</span><span class="mth">6</span></p>
+
+                        <p class="cpy-name">Lanxi Electric Light Source Co., Ltd.</p>
+                    </div>
+                </div>
+                <div class="r-tit">
+                    <span class="bg-ico ico-read ico-chked"></span>
+
+                    <h3><a href="#">Brake System Parts for Russian, Chinese and Korea Cars Brake System
+                        Parts for Russian, Chinese and Korea CarsBrake System Parts for Russian, Chinese and
+                        Korea Cars</a></h3>
+                </div>
+            </div>
+            <div class="e-info"><strong>06:48</strong><br><span>02 october 2012</span></div>
+            <div class="bg-ico arrow"></div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+</div>

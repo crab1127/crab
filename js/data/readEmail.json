@@ -1,0 +1,331 @@
+{
+	"message": "",
+	"type": "json",
+	"data": {
+		"lastPage": 3,
+		"list": [
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456339",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dears,</p><p>hello I am Simon.</p><p>pls give me catalog of all your company products.</p><p>wait for your info.</p><p>thx.</p><p><img src=\"/img/Casual-Garments.jpg\"/></p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456337",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456333",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dears,</p><p>hello I am Simon.</p><p>pls give me catalog of all your company products.</p><p>wait for your info.</p><p>thx.</p><p><img src=\"/img/Casual-Garments.jpg\"/></p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456335",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc45632f",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dears,</p><p>hello I am Simon.</p><p>pls give me catalog of all your company products.</p><p>wait for your info.</p><p>thx.</p><p><img src=\"/img/Casual-Garments.jpg\"/></p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456331",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc45632d",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dears,</p><p>hello I am Simon.</p><p>pls give me catalog of all your company products.</p><p>wait for your info.</p><p>thx.</p><p><img src=\"/img/Casual-Garments.jpg\"/></p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456329",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc45632b",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dears,</p><p>hello I am Simon.</p><p>pls give me catalog of all your company products.</p><p>wait for your info.</p><p>thx.</p><p><img src=\"/img/Casual-Garments.jpg\"/></p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456325",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456327",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dears,</p><p>hello I am Simon.</p><p>pls give me catalog of all your company products.</p><p>wait for your info.</p><p>thx.</p><p><img src=\"/img/Casual-Garments.jpg\"/></p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456323",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc45631f",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dears,</p><p>hello I am Simon.</p><p>pls give me catalog of all your company products.</p><p>wait for your info.</p><p>thx.</p><p><img src=\"/img/Casual-Garments.jpg\"/></p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc456321",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			},
+			{
+				"content": "<p style=\"font-size:16px;font-weight: bold;color: #4FB27C;\">Dear Jim,</p><p>Mrs Simon want to apply for access to your contact information to you,<br/>whether you are willing to open your contact information to him.</p><p>Do you agree?</p>",
+				"read": false,
+				"subject": "Sku mapping success!",
+				"messageId": "512c4efd3fb9cc79cc45631d",
+				"createDate": 1361843901000,
+				"messageType": "email",
+				"contacter": {
+					"name": "DevilySim",
+					"id": 4692,
+					"type": -1,
+					"header": null,
+					"countryId": 0,
+					"countryName": null,
+					"customer": false
+				},
+				"actionType": "receive",
+				"attachments": null,
+				"referId": "-1",
+				"referType": "system_normal"
+			}
+		]
+	},
+	"status": "success",
+	"page": {
+		"total": 30,
+		"page": 1,
+		"maxPage": 0,
+		"pageSize": 0
+	}
+}

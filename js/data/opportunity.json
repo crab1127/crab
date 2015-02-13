@@ -1,0 +1,174 @@
+{
+    "message": "",
+    "type": null,
+    "data": [
+        {
+            "items": [
+                {
+                    "match": "28",
+                    "subject": "led1",
+                    "collectionPhoto": "http://58.248.138.13:81//group1/M00/39/89/wKgKEVFjiwuAbzn6AAFGoumWMg4660.jpg",
+                    "superlierName": "tommywu111",
+                    "oppCompanyName": "baqi",
+                    "collectionId": "400075",
+                    "companyImage": null,
+                    "province": null,
+                    "collectType": "2",
+                    "gender": "1",
+                    "countryName": "China",
+                    "participation": null,
+                    "supplierPhoto": null,
+                    "countryId": "233",
+                    "supplierId": "73467",
+                    "oppCompanyId": "73465",
+                    "collectId": "1506",
+                    "createTime": 1365844359000
+                },
+                {
+                    "match": "28",
+                    "subject": null,
+                    "collectionPhoto": null,
+                    "superlierName": "tommywu",
+                    "oppCompanyName": "baqi",
+                    "collectionId": "400065",
+                    "companyImage": null,
+                    "province": null,
+                    "collectType": "1",
+                    "gender": "1",
+                    "countryName": "China",
+                    "participation": null,
+                    "supplierPhoto": null,
+                    "countryId": "233",
+                    "supplierId": "73467",
+                    "oppCompanyId": "73465",
+                    "collectId": "1478",
+                    "createTime": 1365844049000
+                }
+            ],
+            "datetime": 1365782400000
+        },
+        {
+            "items": [
+                {
+                    "match": "28",
+                    "subject": "Powder BP98 Sodium Benzoate",
+                    "collectionPhoto": "http://58.248.138.13:81//group1/M00/39/81/wKgKEVFcI92AUVlGAAFNO3uQCa4629.jpg",
+                    "superlierName": "tommywu",
+                    "oppCompanyName": "baqi",
+                    "collectionId": "400041",
+                    "companyImage": null,
+                    "province": null,
+                    "collectType": "2",
+                    "gender": "1",
+                    "countryName": "China",
+                    "participation": null,
+                    "supplierPhoto": null,
+                    "countryId": "233",
+                    "supplierId": "73467",
+                    "oppCompanyId": "73465",
+                    "collectId": "1502",
+                    "createTime": 1365597061000
+                },
+                {
+                    "match": "0",
+                    "subject": null,
+                    "collectionPhoto": null,
+                    "superlierName": null,
+                    "oppCompanyName": null,
+                    "collectionId": "244390",
+                    "companyImage": null,
+                    "province": null,
+                    "collectType": "1",
+                    "gender": null,
+                    "countryName": "China",
+                    "participation": null,
+                    "supplierPhoto": null,
+                    "countryId": "233",
+                    "supplierId": null,
+                    "oppCompanyId": "244390",
+                    "collectId": "1501",
+                    "createTime": 1365573053000
+                }
+            ],
+            "datetime": 1365523200000
+        },
+        {
+            "items": [
+                {
+                    "match": "0",
+                    "subject": null,
+                    "collectionPhoto": null,
+                    "superlierName": null,
+                    "oppCompanyName": null,
+                    "collectionId": "10458",
+                    "companyImage": null,
+                    "province": null,
+                    "collectType": "1",
+                    "gender": null,
+                    "countryName": "China",
+                    "participation": null,
+                    "supplierPhoto": null,
+                    "countryId": "233",
+                    "supplierId": null,
+                    "oppCompanyId": "10458",
+                    "collectId": "1493",
+                    "createTime": 1365400708000
+                }
+            ],
+            "datetime": 1365350400000
+        },
+        {
+            "items": [
+                {
+                    "match": "28",
+                    "subject": "baqi",
+                    "collectionPhoto": null,
+                    "superlierName": "tommywu",
+                    "oppCompanyName": "baqi",
+                    "collectionId": "73465",
+                    "companyImage": null,
+                    "province": "Longyan",
+                    "collectType": "1",
+                    "gender": "1",
+                    "countryName": "China",
+                    "participation": null,
+                    "supplierPhoto": null,
+                    "countryId": "233",
+                    "supplierId": "73467",
+                    "oppCompanyId": "73465",
+                    "collectId": "1477",
+                    "createTime": 1364998616000
+                },
+                {
+                    "match": "11",
+                    "subject": "yigeyaokaitongtaocandegongyingshang",
+                    "collectionPhoto": "http://58.248.138.13:81/da",
+                    "superlierName": "ChristinaDior",
+                    "oppCompanyName": "yigeyaokaitongtaocandegongyingshang",
+                    "collectionId": "73460",
+                    "companyImage": null,
+                    "province": "Guangzhou",
+                    "collectType": "1",
+                    "gender": "2",
+                    "countryName": "China",
+                    "participation": null,
+                    "supplierPhoto": null,
+                    "countryId": "233",
+                    "supplierId": "73462",
+                    "oppCompanyId": "73460",
+                    "collectId": "1476",
+                    "createTime": 1364996649000
+                }
+            ],
+            "datetime": 1364918400000
+        }
+    ],
+    "status": "success",
+    "page": {
+        "total": 4,
+        "page": 1,
+        "maxPage": 1,
+        "pageSize": 4
+    },
+    "errorCode": null
+}

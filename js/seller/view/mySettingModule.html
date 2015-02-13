@@ -1,0 +1,1119 @@
+<!-- 侧边栏 -->
+<script type="text/tpl" id="my-setNav">	  
+    <div class="site-nav">
+        <div class="nav-item">     
+            <ul class="my-apps">
+                <li a-if="oPerm.bAccount">
+                    <a href="#!/setAccount" class="{{curs.acc}}"><span class="bg-ico c-account"><div class="bg-ico cur-mark"></div></span><span i18n>MODULE.MY_SETTING.ACCOUNT_SETTING</span></a>
+                </li>
+                <li a-if="oPerm.bPersonProfile">
+                    <a href="#!/personProfile" class="{{curs.pro}}"><span class="bg-ico c-profile"><div class="bg-ico cur-mark"></div></span><span i18n>MODULE.MY_SETTING.PERSON_PROFILE</span></a>
+                </li>
+                <li a-if="oPerm.bPassword">
+                    <a href="#!/setPassword" class="{{curs.pw}}"><span class="bg-ico c-password "><div class="bg-ico cur-mark"></div></span><span i18n>MODULE.MY_SETTING.CHANGE_PWD</span></a>
+                </li>
+                <li a-if="oPerm.bBusiness">
+                    <a href="#!/setBusiness" class="{{curs.bs}}"><span class="bg-ico c-business"><div class="bg-ico cur-mark"></div></span><span i18n>MODULE.MY_SETTING.PREFERENCE_SET</span></a>
+                </li>
+                <li a-if="oPerm.bStatistics">
+                    <a href="#!/setStatistics" class="{{curs.ps}}"><span class="bg-ico c-push"><div class="bg-ico cur-mark"></div></span><span i18n>MODULE.MY_SETTING.PUSH_STATE</span></a>
+                </li>
+                <li a-if="oPerm.bExpresss">
+                    <a href="#!/setExpresss" class="{{curs.ex}}"><span class="bg-ico c-express"><div class="bg-ico cur-mark"></div></span><span i18n>MODULE.MY_SETTING.EXPRESS</span></a>
+                </li>
+				<li a-if="oPerm.bAllAccount">
+                    <a href="#!/setAllAccount" class="{{curs.aac}}"><span class="bg-ico c-express"><div class="bg-ico cur-mark"></div></span><span i18n>MODULE.MY_SETTING.ACCOUNT_MANAGEMENT</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</script>
+<!-- 账号信息 -->
+<script type="text/tpl" id="my-setAC">
+	<div class="mod-col clear setting-warp">
+		<div class="extra"> 
+		   {{{> sb}}}
+		</div>
+		<div class="main">
+			<div class="tips-s4">
+				<span class="ico"></span>
+				<div class="des" i18n>MODULE.MY_SETTING.TITLE_TIPS</div>
+			</div>
+		    <div class="mod-form-s1 form-account">
+				<div class="field">
+					<label class="col" i18n>MODULE.MY_SETTING.ACCOUNT</label>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.account }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col" i18n>MODULE.MY_SETTING.COMPANY_NAME</label>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.companyName }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.CATEGORY</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el category ">
+						<div class="el-cont">
+							<div class="text">
+								<div class="mod-item-q" a-if="data.industry" a-repeat="data.industry"><span>{{val}}</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.BUSINESS_TYPE</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.businessType }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.ESTABLISHED</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.established }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.MAIN_KEYWORD</span>
+					</label>
+					<div class="el">
+						<div class="el-cont">
+							<div class="inner">
+								<div class="text" id="inProducts">
+										<div class="mod-item-q mainKeywords" a-repeat="data.mainKeywords">
+											<span>{{val}}</span>
+											<a href="javascript:" class="bg-ico btn-close p-close"></a>
+										</div>
+										<input type="text" id="productKeyword" class="w100 ipt a-edit hidden" name="productKeyword" />
+										<a href="javascript:" class="btn-add" id="btn-add"></a>
+										<a href="javascript:" class="btn-add hidden" id="btn-pro"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.REGION</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ region }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.ADDRESS</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.address }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.ZIP_CODE</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.zipCode }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.EMPLOYEE</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.employees }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.REGISTER_CAPITAL</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.registeredCapital }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.LEGAL_REPRESENTATIVE</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.legal }}</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label class="col">
+						<span class="bg-ico required"></span>
+						<span i18n>MODULE.MY_SETTING.BUSINESS_LICENSE</span>
+					</label>
+					<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+					<div class="el">
+						<div class="el-cont">
+							<div class="text">{{ data.businesslicense }}</div>
+						</div>
+					</div>
+				</div>
+				<form class="form mod-form-s1" action="" mothed ="post" validator>
+					<div class="field f-category">
+						<label class="col" i18n>MODULE.MY_SETTING.WEBSITE</label>
+						<div class="el">
+							<div class="el-cont">
+								<div class="inner">
+									<input type="text" class="w300 ipt" pattern="{{ rules.url.strRegex }}|^.{0}$" error="TEXT_BUTTON_VIEW.URL" name="webSite" id="webSite" value = "{{ data.website }}"  validator />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="actions">
+						<a id="submit" href="javascript:;" class="btn btn-s11" i18n>MODULE.MY_SETTING.SAVE</a>
+						<div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+					</div>
+				</form>
+			</div>
+		 </div> 
+	</div>
+</script>
+<!-- 个人信息 -->
+<script type="text/tpl" id="my-setPF">
+	<div class="mod-col clear setting-warp">
+		<div class="extra"> 
+		   {{{> sb}}}
+		</div>
+		<div class="main">                  	
+			<div class="tips-s4">
+				<span class="ico"></span>
+				<div class="des" i18n>MODULE.MY_SETTING.TITLE_TIPS</div>
+			</div>
+			<div class="mod-form-s1 form-profile">
+				<form class="form1" action="" method ="post" validator>
+					<div id="file-parent" class="upload-pro-pic">
+						<div class="pic">
+							<img can-src="{{data.photo}}?{{pGender}}" avatar="{{pGender}}" width="100" height="100" />
+						</div>
+						<div class="des">
+							<p class="op">
+								<span class="upload">
+									<input type="file"  fileSize="200" id="uploadPic" uploader="MODULE.MY_SETTING.UPLOAD" class="btn btn-s12 uploadPic" width="70" height="24" />
+								</span>
+								<span class="tips-upload" i18n>MODULE.MY_SETTING.UPLOAD_TIPS1</span>
+						    </p>
+						    <div class="el-cont" style="width: 465px;">
+	                               <div class="inner">
+	                            	<input id="supplierPhoto" type="hidden" name="supplierPhoto"  value="{{data.photo}}"/>
+	                        	</div>
+	                        </div>
+						    <div for="gk" class="gk">
+						    	<input class="vertical" name="buyerPhoto" type="checkbox" checked="checked">
+						    	<label i18n>MODULE.MY_SETTING.UPLOAD_TIPS2</label>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col" i18n>MODULE.MY_SETTING.ACCOUNT1</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="text">{{data.account}}</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.NAME</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input i18n class="ipt w140 " pattern="^.{0,32}$" error="TEXT_BUTTON_VIEW.LIMIT32" type="text" name="firstName" a-model="data.firstName" placeholder="MODULE.MY_SETTING.FIRST_NAME" required>
+								    <input i18n class="ipt w140 ml-out" pattern="^.{0,32}$" error="TEXT_BUTTON_VIEW.LIMIT32" type="text" name="lastName" a-model="data.lastName" placeholder="MODULE.MY_SETTING.LAST_NAME" required>
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field gender">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.GENDER</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input type="radio" value="1" a-model="data.gender" name="gender" class="" >
+								    <label i18n>MODULE.MY_SETTING.MALE</label>
+								    <input type="radio" value="2" a-model="data.gender" name="gender" class="" >
+								    <label i18n>MODULE.MY_SETTING.FEMALE</label>
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col" i18n>MODULE.MY_SETTING.POST</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input class="ipt w300" type="text" maxlength="64" name="position" a-model="data.postion" placeholder="">
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.AREA</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+									<select class="province" id="province" a-model="data.provinceCode" name="province" dropDown>
+							            <option a-repeat="data.provinceList" value="{{code}}">{{enName}}</option>
+							        </select>
+									<select class="city" id="city" name="districtId" dropDown>
+							            <option a-repeat="cityList" value="{{code}}">{{enName}}</option>
+							        </select>
+									
+								</div>
+							</div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.ADDRESS</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+						        <div class="inner">
+							    	<input type="text" class="w500 ipt" pattern="^.{0,256}$" error="TEXT_BUTTON_VIEW.NOTWOFI" name="officeAddress" a-model= "data.address" required />
+							    </div>
+						    </div>
+						</div>
+				    </div>
+                    <div class="field">
+                        <label class="col">
+                            <span class="bg-ico required"></span>
+                            <span i18n>MODULE.MY_SETTING.ADDRESS_EN</span>
+                        </label>
+                        <div class="el">
+                            <div class="el-cont">
+                                <div class="inner">
+                                    <input type="text" class="w500 ipt" pattern="^.{0,256}$" error="TEXT_BUTTON_VIEW.NOTWOFI" name="officeEnAddress" a-model= "data.addressEn" required />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.ZIP_CODE</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input type="text" class="w140 ipt" maxlength="16" pattern="^[\-\+]?\d+$" error="TEXT_BUTTON_VIEW.NUMBER" name="zipCode" a-model = "data.zipCode" required />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.TELEPHONE</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								     <input type="text" pattern="^(\+\d{1,3})$|^\d{1,3}$" error="TEXT_BUTTON_VIEW.PHONE_ZONENUM" class="w80 ipt deal" name="telCountryNo" a-model = "data.telephone.countryNum" required  />
+								     <input type="number" pattern="^\d{1,4}$" error="TEXT_BUTTON_VIEW.PHONE_CODE" class="w80 ipt ml-out deal" name="telZoneNo" a-model = "data.telephone.zoneNum" required />
+								     <input type="text" maxlength="16" pattern="^[\-\+]?\d+$"  error="TEXT_BUTTON_VIEW.NUMBER" class="w150 ipt ml-out deal" name="telephone" a-model = "data.telephone.codeNum" required />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.FAX</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input type="text" class="w80 ipt deal" pattern="^(\+\d{1,3})$|^\d{1,3}$" error="TEXT_BUTTON_VIEW.PHONE_ZONENUM" name="faxCountryNo" a-model = "data.fax.countryNum" required />
+								    <input type="number" class="w80 ipt ml-out deal"  pattern="^\d{1,4}$" error="TEXT_BUTTON_VIEW.PHONE_CODE" name="faxZoneNo" a-model = "data.fax.zoneNum" required />
+								    <input type="text" class="w150 ipt ml-out deal"  maxlength="16" pattern="^[\-\+]?\d+$"  error="TEXT_BUTTON_VIEW.NUMBER" name="fax" a-model ="data.fax.codeNum" required />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">
+							<span class="bg-ico required"></span>
+							<span i18n>MODULE.MY_SETTING.MOBILE_PHONE</span>
+						</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+									<input type="text" pattern="^(\+\d{1,3})$|^\d{1,3}$" error="TEXT_BUTTON_VIEW.PHONE_ZONENUM" class="w80 ipt deal" name="mobCountryNo"  a-model="data.mobile.countryNum" required />
+									<input type="number" pattern="^\d{11}$" error="TEXT_BUTTON_VIEW.ONLY_PHONE" class="w150 ipt ml-out deal" name="mobile" a-model = "data.mobile.codeNum"
+									required />    
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col" i18n>MODULE.MY_SETTING.EMAIL</label>
+						<div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="text">{{data.email}}</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col" i18n>MODULE.MY_SETTING.ALTERNATE_EMAIL</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input class="ipt w300" pattern="{{ rules.email.strRegex }}|^.{0}$" error="TEXT_BUTTON_VIEW.EMAIL" type="text" name="emailSpare" a-model="data.alternateEmail" validator />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">Skype :</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input class="ipt w300" pattern="^$|^[a-zA-Z][a-zA-Z0-9_\.\-\,]{5,31}$" error="TEXT_BUTTON_VIEW.SKYPE_ERROR" type="text" name="skype" a-model="data.skype" validator />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col">Facebook :</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div class="inner">
+								    <input class="ipt w300" pattern="^.{0,128}$" error="TEXT_BUTTON_VIEW.TOLONG_LIMIT" type="text" name="facebook" a-model="data.facebooke" validator />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field f-rdchk-lg">
+						<label class="col" i18n>MODULE.MY_SETTING.LANGUAGE</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div id="set-personal-lang" class="inner">	
+
+									<label a-repeat="data.language">
+										<input type="checkbox" value="{{code}}" name="language" class="vertical" a-model="isSelect" >{{name}}
+									</label>  
+
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col" i18n>MODULE.MY_SETTING.WORK_TIME</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div id="workSet" class="inner settimes">
+									<input type="text" pattern="^.{0}$|^(([1-9]{1})|([0-1][0-9])|([1-2][0-3])):([0-5][0-9])$" error="TEXT_BUTTON_VIEW.SEETING_TIME" a-model="data.startWorkedTime" class="w150 ipt" name="tempStartWorkTime" placeholder="HH:mm" validator />
+								    <input type="text" pattern="^.{0}$|^(([1-9]{1})|([0-1][0-9])|([1-2][0-3])):([0-5][0-9])$" error="TEXT_BUTTON_VIEW.SEETING_TIME" a-model="data.endWorkeTime" class="w150 ipt ml-out" name="tempEndWorkTime" placeholder="HH:mm" validator />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <div class="field">
+						<label class="col" i18n>MODULE.MY_SETTING.MEETING_TIME</label>
+						<div class="el">
+						    <div class="el-cont">
+								<div id="meetSet" class="inner settimes">
+									<input type="text" pattern="^.{0}$|^(([1-9]{1})|([0-1][0-9])|([1-2][0-3])):([0-5][0-9])$" error="TEXT_BUTTON_VIEW.SEETING_TIME" a-model="data.startMettingTime" class="w150 ipt" name="tempStartMeetingTime" placeholder="HH:mm" validator />
+								    <input type="text" pattern="^.{0}$|^(([1-9]{1})|([0-1][0-9])|([1-2][0-3])):([0-5][0-9])$" error="TEXT_BUTTON_VIEW.SEETING_TIME" a-model="data.endMettingTime" class="w150 ipt ml-out" name="tempEndMeetingTime" placeholder="HH:mm" validator />
+								</div>
+						    </div>
+						</div>
+				    </div>
+				    <input type="hidden"  name="supplierId" value = "{{data.supplierId}}" />
+				    <div class="actions">
+				    	<a id="submit" href="javascript:;" class="btn btn-s11" i18n>MODULE.MY_SETTING.SAVE</a>
+				     	<div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</script>
+<!-- 修改密码 -->
+<script type="text/tpl" id="my-setPW">
+	<div class="mod-col clear setting-warp">
+		<div class="extra"> 
+		   {{{> sb}}}
+		</div>
+		<div class="main">
+			<form class="form1" validator>
+				<div class="mod-form-s1 form-psw">
+				    <div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.CURRENT_PWD</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" id="oldPassword" pattern="^[a-zA-Z0-9]*$" maxlength="50" error="TEXT_BUTTON_VIEW.PASSWORD_NOLIMIT" type="password" name="oldPassword" value="" placeholder="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.NEW_PWD</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" id="newPassword" type="password" name="newPassword" pattern="^[a-zA-Z0-9]{6,20}$" error="TEXT_BUTTON_VIEW.PASSWORD" value="" placeholder="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.CONFIRM_PWD</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" id="confirmPassword" type="password" name="confirmPassword" pattern="^[a-zA-Z0-9]{6,20}$" error="TEXT_BUTTON_VIEW.PASSWORD" value="" placeholder="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="actions">
+					    <a id="submit" href="javascript:;" class="btn btn-s11" i18n>MODULE.MY_SETTING.SAVE</a>
+					    <div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+				    </div>
+				</div>
+		    </form>
+		</div>
+	</div>
+</script>
+<!-- 商业规则设置 -->
+<script type="text/tpl" id="my-setBS">
+	<div class="mod-col clear setting-warp">
+		<div class="extra"> 
+		   {{{> sb}}}
+		</div>
+		<form id="form1" action="" method ="post">
+	        <div class="main">
+	            <div class="tips-s4">
+	                <span class="ico"></span>
+	                <div class="des" i18n>MODULE.MY_SETTING.TITLE_TIPS</div>
+	            </div>
+	            <div class="mod-form-s1 form-business">
+	                <div class="mod-part">
+	                    <div class="field">
+	                        <label class="col">
+	                        	<span class="bg-ico required"></span>
+	                        	<span i18n>MODULE.MY_SETTING.CATEGORY</span>
+	                        </label>
+	                        <div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+	                        <div class="el category">
+	                            <div class="el-cont">
+	                                <div class="inner">
+	                                    <div class="text"> 
+	                                        <div class="mod-item-q" a-repeat="data.indusBizRule">
+	                                            <span>{{val}}</span>
+	                                        </div>
+	                                        <br/>
+	                                        <div class="mod-item-q" a-repeat="data.productBizRule">
+	                                            <span>{{val}}</span>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="field">
+	                        <label class="col">
+	                        	<span class="bg-ico required"></span>
+	                        	<span i18n>MODULE.MY_SETTING.TARGET_MARKET</span>
+	                        </label>
+	                        <div class="bg-ico ico-verified" i18n>MODULE.MY_SETTING.VERIFIED</div>
+	                        <div class="el category">
+	                            <div class="el-cont">
+	                                <div class="inner">
+	                                    <div class="text">
+	                                        <div class="mod-item-q" a-repeat="data.exportMarketBizRule">
+	                                            <span>{{val}}</span>
+	                                        </div>
+	                                        <br/>
+	                                        <div class="mod-item-q" a-repeat="data.countryBizRule">
+	                                            <span>{{val}}</span>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="mod-part">
+	                    <div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.BUSINESS_TIT_1</h3></div>
+	                    <div class="field f-rdchk">
+	                        <label class="col">
+	                        	<span class="bg-ico required"></span>
+	                        	<span i18n>MODULE.MY_SETTING.BUSINESS_TIT_2</span>
+	                        </label>
+	                        <div class="el">
+	                            <div class="el-cont">
+	                                <div class="inner">
+	                                   <label a-repeat="data.exhibNoList">
+	                                   		<input class="vertical" name="exhib" type="radio" value="{{code}}" a-model="exhib" />{{name}}
+	                                   	</label>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="field f-rdchk">
+	                        <label class="col">
+	                        	<span class="bg-ico required"></span>
+	                        	<span i18n>MODULE.MY_SETTING.BUSINESS_TIT_3</span>
+	                        </label>
+	                        <div class="el">
+	                            <div class="el-cont">
+	                                <div class="inner"> 
+	                                    <label for="b1" a-repeat="data.lastExhibNoList">
+	                                    	<input id="lastExhib" class="vertical" name="lastExhib" type="radio" value="{{code}}" a-model="lastExhib">{{name}}
+	                                    </label>
+	                                </div>
+	                                <div class="fm-error hidden" i18n>MODULE.MY_SETTING.MARK_SELECT</div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+	                <div class="mod-part">
+	                    <div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.BUSINESS_TIT_4</h3></div>
+	                    <div class="field f-rdchk-lx">
+	                        <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_TIT_5</label>
+	                        <div class="el">
+	                            <div class="el-cont">
+	                                <div class="inner">                            		 
+	                                    <label a-repeat="data.companyTypeList">
+	                                    	<input class="vertical" name="companyType" type="checkbox" value="{{code}}" a-model="isSelect" >
+	                                    	{{name}}
+	                                    </label>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="field f-rdchk-xz">
+	                        <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_TIT_6</label>
+	                        <div class="el">
+	                            <div class="el-cont">
+	                                <div class="inner">
+	                                    <label a-repeat="data.companyPropertyList">
+	                                    	<input class="vertical" name="companyProperty" type="checkbox" value="{{code}}" a-model="isSelect" />{{name}}
+	                                    </label>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="actions">
+	                	<a id="submit" href="javascript:;" class="btn btn-s11" i18n>MODULE.MY_SETTING.SAVE</a>
+	                    <div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+	                </div>
+
+	            </div>
+	        </div>
+	    </form>
+    </div>
+</script>
+<!-- 推送统计 -->
+<script type="text/tpl" id="my-setPS">
+	<div class="mod-col clear setting-warp">
+			<div class="extra"> 
+			   {{{> sb}}}
+			</div>
+		<div class="main" id="push">
+			<div class="push-things">
+				<div class="tit-s2">
+					<h3 i18n>MODULE.MY_SETTING.PUSH_CONSUMPTION</h3>
+				</div>
+				<ul class="p-tj clear">
+					<li>
+						<div class="item">
+							<strong>{{data.usedMoneyString}}<br />
+							<span>(C {{data.unit}})</span></strong>
+						</div>
+						<p class="item-tit" i18n>MODULE.MY_SETTING.PUSH_CONSUMPTION</p>
+					</li>
+					<li class="p-frequency">
+						<div class="item">
+							<strong>{{data.supPushInfoCount}}</strong>
+						</div>
+						<p class="item-tit" i18n>MODULE.MY_SETTING.TIMES</p>
+					</li>
+					<li>
+						<div class="item">
+							<strong>{{data.average}}<br />
+							<span>(C {{data.unit}})</span></strong>
+						</div>
+						<p class="item-tit" i18n>MODULE.MY_SETTING.AVERAGE</p>
+					</li>
+				</ul>
+			</div>
+			<div class="push-effects">
+				<div class="tit-s2">
+					<h3 i18n>MODULE.MY_SETTING.PUSH_STATE_1</h3>
+				</div>
+				<div class="cavs">
+					<!--canvas 处理-->
+					<div class="grapharea views">
+						<div class="total">
+							<div class="graphcontainer">
+								<h4 class="views-total valTotal">{{data.collectIsTypeList[0].total}}</h4>
+								<img src="/C/css/supplier/bgimg/total.png" width="42" height="315" class="graphbar gTotal"> 
+								<img src="/C/css/supplier/bgimg/total-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.TOTAL</div>
+						</div>
+						<div class="total">
+							<div class="graphcontainer two">
+								<h4 class="views-total">{{data.collectIsTypeList[0].sumProduct}}</h4>
+								<img src="/C/css/supplier/bgimg/product.png" width="42" height="315" class="graphbar"> 
+								<img src="/C/css/supplier/bgimg/product-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.PRODUCT</div>
+						</div>
+						<div class="total">
+							<div class="graphcontainer two">
+								<h4 class="views-total">{{data.collectIsTypeList[0].sumCompany}}</h4>
+								<img src="/C/css/supplier/bgimg/company.png" width="42" height="315" class="graphbar"> 
+								<img src="/C/css/supplier/bgimg/company-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.COMPANY</div>
+						</div>
+						<div class="check-times" i18n>MODULE.MY_SETTING.VIEWS</div>
+					</div>
+					<!--查看次数-->
+					<div class="grapharea collect">
+						<div class="total">
+							<div class="graphcontainer">
+								<h4 class="views-total valTotal">{{data.collectIsTypeList[1].total}}</h4>
+								<img src="/C/css/supplier/bgimg/total.png" width="42" height="315" class="graphbar gTotal"> 
+								<img src="/C/css/supplier/bgimg/total-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.TOTAL</div>
+						</div>
+						<div class="total">
+							<div class="graphcontainer two">
+								<h4 class="views-total">{{data.collectIsTypeList[1].sumProduct}}</h4>
+								<img src="/C/css/supplier/bgimg/product.png" width="42" height="315" class="graphbar"> 
+								<img src="/C/css/supplier/bgimg/product-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.PRODUCT</div>
+						</div>
+						<div class="total">
+							<div class="graphcontainer two">
+								<h4 class="views-total">{{data.collectIsTypeList[1].sumCompany}}</h4>
+								<img src="/C/css/supplier/bgimg/company.png" width="42" height="315" class="graphbar"> 
+								<img src="/C/css/supplier/bgimg/company-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.COMPANY</div>
+						</div>
+						<div class="check-times" i18n>MODULE.MY_SETTING.COLLECTED</div>
+					</div>
+					<!--/收藏次数-->
+					<!--收藏率-->
+					<div class="grapharea collect">
+						<div class="total">
+							<div class="graphcontainer percent">
+								<h4 class="views-total">{{data.collectIsTypeList[2].total}}%</h4>
+								<img src="/C/css/supplier/bgimg/total.png" width="42" height="315" class="graphbar">
+								<img src="/C/css/supplier/bgimg/total-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.TOTAL</div>
+						</div>
+						<div class="total">
+							<div class="graphcontainer percent">
+								<h4 class="views-total">{{data.collectIsTypeList[2].sumProduct}}%</h4>
+								<img src="/C/css/supplier/bgimg/product.png" width="42" height="315" class="graphbar">
+								<img src="/C/css/supplier/bgimg/product-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.PRODUCT</div>
+						</div>
+
+						<div class="total">
+							<div class="graphcontainer percent">
+								<h4 class="views-total">{{data.collectIsTypeList[2].sumCompany}}%</h4>
+								<img src="/C/css/supplier/bgimg/company.png" width="42" height="315" class="graphbar">
+								<img src="/C/css/supplier/bgimg/company-foot.png" width="42" height="10" class="graphforeground">
+							</div>
+							<div class="gather" i18n>MODULE.MY_SETTING.COMPANY</div>
+						</div>
+						<div class="check-times" i18n>MODULE.MY_SETTING.COLLECTED_RATE</div>
+					</div>
+					<!--/收藏率-->
+					<!--canvas 处理-->
+				</div>
+			</div>
+			<div class="push-records">
+				<div class="tit-s2">
+					<h3 i18n>MODULE.MY_SETTING.PUSH_RECORD</h3>
+				</div>
+				<table cellspacing="0" cellpadding="0"
+					class="mod-table tbl-push-records">
+					<colgroup>
+						<col class="w180" />
+						<col class="w150" />
+						<col />
+						<col class="w150" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th><div class="th-gap" i18n>MODULE.MY_SETTING.TIME</div></th>
+							<th><div class="th-gap" i18n>MODULE.MY_SETTING.CONSUMPTION</div></th>
+							<th><div class="th-gap" i18n>MODULE.MY_SETTING.TO</div></th>
+							<th><div class="th-gap" i18n>MODULE.MY_SETTING.PERFORMANCE</div></th>
+						</tr>
+					</thead>
+					<tbody a-if="data.supPushInfolist.items.length">
+						<tr a-repeat="data.supPushInfolist.items">
+							<td class="time">{{createTime}}</td>
+							<td class="spend">{{moneyChg}}C {{data.unit}}</td>
+							<td class="target">
+								<div class="mod-person clear">
+									<div class="pic">
+										<a href="" show-buyer="{{buyerId}}"><img class="dataPhoto" width="60" height="60" alt="" can-src="{{buyerPhoto}}" avatar="{{gender}}"></a>
+									</div>
+									<div class="info">
+										<p class="name">
+											<a title="{{firstName}} {{lastName}}" show-buyer="{{buyerId}}"
+												href="">{{firstName}}&nbsp;{{lastName}}</a>
+										</p>
+										<p class="country">
+											<span class="flags fs{{countryId}}"></span><span class="txt">{{countryName}}</span>
+										</p>
+									</div>
+								</div>
+							</td>
+							<td class="effects">
+                                <span can-tip="MODULE.MY_SETTING.NO_FAV" a-if="^buyerCollect" class="icons collect"></span>
+                                <span can-tip="MODULE.MY_SETTING.IS_FAV" a-if="buyerCollect" class="icons iscollect"></span>
+                                <span can-tip="MODULE.BUYING_LEAD.UNREAD" a-if="^buyerRead"  class="ico-b4"></span>
+                                <span can-tip="MODULE.BUYING_LEAD.READ" a-if="buyerRead"  class="ico-b5"></span>
+							</td>
+						</tr>
+					</tbody>
+					<tbody a-if="^data.supPushInfolist.items.length">
+						<tr class="no-cont">
+							<td colspan="4">
+								<div class="data-none">
+									<p class="txt2" i18n>MODULE.MY_SETTING.NO_PUSH</p>
+									<a class="btn btn-s10" href="#!/match-buyer" i18n>MODULE.MY_SETTING.PUSH_NOW</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div page-current="{{data.supPushInfolist.page}}" page-total="{{data.supPushInfolist.total}}" page-limit="15" paging></div>
+			</div>
+		</div>
+	</div>
+</script>
+<!-- 企业速递 -->
+<script type="text/tpl" id="my-setEP">
+	<div class="mod-col clear setting-warp">
+		<div class="extra"> 
+		   {{{> sb}}}
+		</div>
+		<div class="main">
+			<div a-if="isShowList" class="push-things">
+				<div class="tit-s2">
+					<h3 i18n>MODULE.MY_SETTING.SEVRVER_INFO</h3>
+				</div>
+				<div class="business-express">
+					<span i18n>MODULE.MY_SETTING.BUSINESS_EXPRESS</span>
+					<span class="packages btn btn-s12">{{data.packageName}}
+						<label i18n>MODULE.MY_SETTING.EXP_PACKAGES</label>
+					</span>
+				</div>
+				<ul class="business-info">
+					<li>
+	                    <p class="each-push">
+	                    	<span i18n>MODULE.MY_SETTING.EACH_BUYER</span><span class="orange">{{data.pushTotal}}</span>
+	                    </p>
+	                    <p class="each-push">
+	                    	<span i18n>MODULE.MY_SETTING.PUSH_TIME1</span><span class="orange">{{data.pushTimes}}</span>
+	                    </p>
+	                </li>
+	                <li>
+	                    <p>
+	                    	<span i18n>MODULE.MY_SETTING.EXP_STATE</span><span>{{data.state}}</span>
+	                    </p>
+	                    <p>
+	                    	<span i18n>MODULE.MY_SETTING.EXP_STATETIME</span><span>{{data.startTime}}</span>
+	                    </p>
+	                    <p>
+	                    	<span i18n>MODULE.MY_SETTING.EXP_EXTIME</span><span>{{data.startTime}}</span>
+	                    </p>
+	                </li>
+	                <li class="no-line">
+	                    <p class="service-time">
+	                    	<span i18n>MODULE.MY_SETTING.EXP_SERTIME</span><span class="orange">{{data.availTimes}}</span>
+	                    </p>
+	                    <p class="service-time">
+	                    	<span i18n>MODULE.MY_SETTING.EXP_HASTIME</span><span>{{data.usedTimes}}</span></p>
+	                </li>
+				</ul>
+				<div class="business-record">
+					<div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.EXP_RECORD</h3></div>
+					<table cellspacing="0" cellpadding="0" class="mod-table tbl-push-records" id="listRecord">
+						<colgroup><col class="w150" /><col class="w180" /><col /><col class="w180" /></colgroup>
+						<thead>
+							<tr>
+								<th><div class="th-gap" i18n>MODULE.MY_SETTING.EXP_TIME</div></th>
+								<th><div class="th-gap" i18n>MODULE.MY_SETTING.EXP_PUSHBUYER</div></th>
+								<th><div class="th-gap" i18n>MODULE.MY_SETTING.EXP_COUNTRY</div></th>
+								<th><div class="th-gap" i18n>MODULE.MY_SETTING.EXP_DETAIL</div></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr a-repeat="recode">
+								<td>{{confirmTime}}</td>
+								<td>{{pushTotal}}</td>
+								<td>{{countryTotal}}</td>
+								<td>
+									<div class="btn btn-s12 detail" timeId="{{confirmTime}}" dataId="{{expressId}}">Detail</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div page-current="{{recodePage.page}}" page-total="{{recodePage.total}}" page-limit="15" paging></div>
+				</div>
+			</div>
+			<div a-if="^isShowList" class="exp-detail">
+				<div class="record-detail">
+					<div class="detail-s1">Business Express Record Detail</div>
+					<div class="time-title">Time:<span class="time">{{time}}</span></div>
+					<div class="btn btn-s12 back">back</div>
+				</div>
+				<table cellspacing="0" cellpadding="0" class="mod-table tbl-records-detail">
+					<colgroup><col class="w250" /><col /><col class="w80" /></colgroup>
+					<thead>
+		                 <tr>
+		                    <th><div class="th-gap">Country/Region</div></th>
+		                    <th><div class="th-gap th-buyer">Push The Buyers</div></th>
+		                    <th><div class="th-gap th-buyer">Read</div></th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<tr a-repeat="detail">
+		            		<td class="business-td">
+			            		<p class="country">
+			            			<span class="flags fs{{countryId}}"></span>
+			            			<span class="txt">{{countryEnName}}</span>
+			            		</p>
+			            	</td>
+			            	<td>{{pushTotal}}</td>
+			            	<td>{{readYes}}</td>
+		            	</tr>
+		            </tbody>
+				</table>
+				<div id="detailPage" page-current="{{detailPage.page}}" page-total="{{detailPage.total}}" page-limit="15" paging detailPaging="{{expressId}}" time="{{time}}"></div>
+			</div>
+		</div>
+	</div>
+</script>
+<!--账号管理 -->
+<script type="text/tpl" id="my-setALLAC">
+	<div class="mod-col clear setting-warp">
+		<div class="extra"> 
+		   {{{> sb}}}
+		</div>
+		<div class="main">
+			<div a-if="isShowList" class="push-things">
+			</div>
+			<div a-if="^isShowList" class="exp-detail">
+				<div class="record-detail">
+					<div class="detail-s1"><h3 i18n>MODULE.MY_SETTING.ACCOUNT_MANAGEMENT</h3></div>
+				</div>
+				<table cellspacing="0" cellpadding="0" class="mod-table tbl-records-detail">
+					<colgroup><col class="w250" /><col /><col class="w80" /></colgroup>
+					<thead>
+		                 <tr>
+		                    <th><div class="th-gap" i18n>MODULE.MY_SETTING.ACCOUNT_NAME</div></th>
+		                    <th><div class="th-gap th-buyer" i18n>MODULE.MY_SETTING.OPERATE</div></th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<tr a-repeat="userList">
+		            		<td class="business-td">
+			            		{{userAccount}}
+			            	</td>
+			            	<td><a a-if="accountType" href="#!/setPassword" i18n>MODULE.MY_SETTING.UPDATE_PWD</a>
+							<p a-if="^accountType">
+								<a data-id="{{userId}}" href="javascript:;" class="update" i18n>MODULE.MY_SETTING.UPDATE</a>
+								&nbsp;|&nbsp;
+								<a data-id="{{userId}}" href="javascript:;" class="del" i18n>MODULE.MY_SETTING.DELETE</a><p>
+							</td>
+		            	</tr>
+		            </tbody>
+				</table>
+				<div a-if="hasAdd"><a href="javascript:;" class="add" i18n>MODULE.MY_SETTING.ADD_SUB_ACCOUNT</a></div>
+				<div id="detailPage" page-current="{{detailPage.page}}" page-total="{{detailPage.total}}" page-limit="15" paging detailPaging="{{expressId}}" time="{{time}}"></div>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- 新增或修改账号信息 -->
+<script type="text/tpl" id="my-setACInfo">
+	<div class="mod-col clear setting-warp">
+		<div class="extra"> 
+		   {{{> sb}}}
+		</div>
+		<div class="main">
+			<form class="form1" validator name="form1">
+				<div class="mod-form-s1 form-psw">
+				    <div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.ACCOUNT1</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" pattern="^.{0,32}$" error="TEXT_BUTTON_VIEW.LIMIT32" id="userAccount" a-model="user.userAccount" type="text" name="userAccount" value="" placeholder="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+					<div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.NAME</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w100" id="firstName" placeholder="first name" a-model="user.firstName" pattern="^.{0,32}$" error="TEXT_BUTTON_VIEW.LIMIT32" type="text" name="firstName" value="" placeholder="" required>
+									<input class="ipt w100" id="lastName" placeholder="last name" a-model="user.lastName" pattern="^.{0,32}$" error="TEXT_BUTTON_VIEW.LIMIT32" type="text" name="lastName" value="" placeholder="" required>
+				                	<select name="gender" id="gender" class="input-small gender" a-model="user.gender">
+										<option value="1" i18n>MODULE.MY_SETTING.MALE</option>
+										<option value="2" i18n>MODULE.MY_SETTING.FEMALE</option>
+									</select>
+								</div>
+				            </div>
+				        </div>
+				    </div>
+					<div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.POST</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" id="position" a-model="user.position" maxlength="32" error="TEXT_BUTTON_VIEW.LIMIT32" type="text" name="position" value="" placeholder="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+					<div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.TELEPHONE</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w50" id="telCountryNo" placeholder="+86" a-model="user.telCountryNo"  pattern="^(\+\d{1,3})$|^\d{1,3}$" error="TEXT_BUTTON_VIEW.PHONE_ZONENUM" type="text" name="telCountryNo" required>
+									<input class="ipt w50" id="telZoneNo" placeholder="地区代号"  a-model="user.telZoneNo" pattern="^\d{1,4}$" error="TEXT_BUTTON_VIEW.PHONE_CODE" type="text" name="telZoneNo" required>
+				                	<input class="ipt w170" id="telephone" placeholder="号码"  a-model="user.telephone" maxlength="16" pattern="^[\-\+]?\d+$"  error="TEXT_BUTTON_VIEW.NUMBER" type="text" name="telephone" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+					<div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.MOBILE_PHONE</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+									<input class="ipt w50" id="mobCountryNo" value="" placeholder="+86" a-model="user.mobCountryNo" pattern="^(\+\d{1,3})$|^\d{1,3}$" error="TEXT_BUTTON_VIEW.PHONE_ZONENUM" type="text" name="mobCountryNo" required>
+				                    <input class="ipt w235" id="mobile" placeholder="" pattern="^\d{11}$" error="TEXT_BUTTON_VIEW.ONLY_PHONE"  a-model="user.mobile" type="text" name="mobile" value="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+					<div class="field">
+				        <label class="col" i18n>MODULE.MY_SETTING.EMAIL</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" id="email"  a-model="user.email" pattern="{{ rules.email.strRegex }}|^.{0}$" error="TEXT_BUTTON_VIEW.EMAIL" type="text" name="email" value="" placeholder="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="field" id="newPasswordDiv">
+				        <label class="col" i18n>MODULE.MY_SETTING.NEW_PWD</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" id="newPassword"  a-model="user.newPassword" type="password" name="newPassword" pattern="^[a-zA-Z0-9]{6,20}$" error="TEXT_BUTTON_VIEW.PASSWORD" value="" placeholder="" required>
+				                </div>
+				            </div>
+				        </div>
+				    </div>
+				    <div class="field" id="confirmPasswordDiv">
+				        <label class="col" i18n>MODULE.MY_SETTING.CONFIRM_PWD</label>
+				        <div class="el">
+				            <div class="el-cont">
+				                <div class="inner">
+				                    <input class="ipt w300" id="confirmPassword" type="password" name="confirmPassword" pattern="^[a-zA-Z0-9]{6,20}$" error="TEXT_BUTTON_VIEW.PASSWORD" value="" placeholder="" required>
+				                </div>
+								<input type="hidden" id="password" a-model="user.password" name="password">
+				            </div>
+				        </div>
+				    </div>
+				    <div class="actions">
+					    <a id="submit" href="javascript:;" class="btn btn-s11" i18n>MODULE.MY_SETTING.SAVE</a>
+						<a id="bottom" href="javascript:;" class="btn btn-s11" style="margin-left:10px" i18n>MODULE.MY_SETTING.BACK</a>
+					    <div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+				    </div>
+				</div>
+		    </form>
+		</div>
+	</div>
+</script>

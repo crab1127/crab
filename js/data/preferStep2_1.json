@@ -1,0 +1,39 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "label":"",
+            "name":"ryGM",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":0,
+                    "text":"不限",
+                    "icon":"data-icon s104000"
+                },
+                {
+                    "value":100,
+                    "text":"1~100人",
+                    "icon":"data-icon s104001"
+                },
+                {
+                    "value":500,
+                    "text":"101~500人",
+                    "icon":"data-icon s104002"
+                },
+                {
+                    "value":1000,
+                    "text":"501~1000人",
+                    "icon":"data-icon s104003"
+                },
+                {
+                    "value":1001,
+                    "text":"1001人以上",
+                    "icon":"data-icon s104004"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "message": "",
+    "type": "json",
+    "data": {
+        "isExist": false
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

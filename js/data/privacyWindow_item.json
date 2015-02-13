@@ -1,0 +1,26 @@
+{
+
+    "message": "",
+    "type": null,
+    "data": [{
+        "code": "903040",
+        "enName": "Consumer Electronics",
+        "cnName": "鞋"
+    },{
+    	"code": "903040",
+        "enName": "Food",
+        "cnName": "鞋"
+    },{
+    	"code": "903040",
+        "enName": "Shoes",
+        "cnName": "鞋"
+    }],
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+
+}

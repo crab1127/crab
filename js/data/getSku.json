@@ -1,0 +1,20 @@
+{
+	"status": "success",
+	"data": [
+		{
+			"industryId": 1,
+			"industryName": "Office Supplier",
+			"skuList": "Apparel Agents, Apparel Design Services, Moulds Pulleys, Valves"
+		},
+		{
+			"industryId": 2,
+			"industryName": "Office Supplier",
+			"skuList": "Apparel Agents, Apparel Design Services, Moulds Pulleys, Valves, Apparel Design Services, Moulds Pulleys, Valves, Apparel Design Services, Moulds Pulleys, Valves, Apparel Design Services, Moulds Pulleys, Valves, Apparel Design Services, Moulds Pulleys, Valves"
+		},
+		{
+			"industryId": 3,
+			"industryName": "Office Supplier",
+			"skuList": "Apparel Agents, Apparel Design Services, Moulds Pulleys, Valves"
+		}
+	]
+}

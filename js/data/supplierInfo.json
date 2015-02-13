@@ -1,0 +1,132 @@
+{
+	"status": "success",
+	"data": {
+		"profile": {
+			"userId": 15454,
+			"legalPerson": "Simon Wang",
+			"cantonfair": false,
+			"companyId": 269882,
+			"companyName": "CANTON FAIR E-COMMERCE CO.,LTD.",
+			"region": "Guangzhou, Gunagdong",
+			"countryId": 233,
+			"avatar": null
+		},
+		"product": {
+			"mainProduct": ["Kitchen Light", "Led Light", "Women's Dress Shoe"],
+			"productList": [
+				{
+					"productId": 134,
+					"newProduct": true,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile) Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile) Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				},
+				{
+					"productId": 134,
+					"newProduct": true,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				},
+				{
+					"productId": 134,
+					"newProduct": false,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				},
+				{
+					"productId": 134,
+					"newProduct": false,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				},
+				{
+					"productId": 134,
+					"newProduct": false,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				},
+				{
+					"productId": 134,
+					"newProduct": false,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				},
+				{
+					"productId": 134,
+					"newProduct": false,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				},
+				{
+					"productId": 134,
+					"newProduct": false,
+					"image": "http://58.248.138.13:81/group1/M00/39/AC/wKgKEVIN2XOAIosgAAGJVE7_epM788.jpg",
+					"productName": "Acoustic Tiles for Soundproofing (Acoustic Soundproof Tile)"
+				}
+			]
+		},
+		"contact": {
+			"gender": 1,
+			"position": "Administrative Manager",
+			"email": "simon.wang@gmail.com",
+			"telephone": "020-84587457",
+			"fax": "020-84587457",
+			"address": "R401, BaiKangJu Decorative Material Center"
+		},
+		"intro": {
+			"description": "<p>Established in 2003, Shenzhen Sailors Electronic Limited is a professional manufacturer and exporter that is integrated with development, manufacture, and marketing. We specialize in the manufacture of car camera, CCTV camera and car smart key engine start sytem, and also we supply car monitor, car black box etc. All our products have passed certificates of ISO9001, CE and ROHS. We promised to offer our customers with high quality products and best after-sale service.</p><p>Covering an area of 1100 square meters, we now have over 50 employees, boast an annual sales figure that exceeds USD 2000000 and currently export over 70 percent of our production worldwide.</p>",
+			"brandExp": ["Osram", "Philips", "Carrefour"]
+		},
+		"exhibit": [
+			{
+				"times": 114,
+				"view": [
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg"
+				],
+				"360view": "http://www.e-cantonfair.com/quanjing/450_115/20130903_0001.jpg",
+				"booth": [
+					{
+						"boothId": 22742,
+						"companyId": 248021,
+						"periodId": 148,
+						"sesId": 114,
+						"periodNum": 1,
+						"actualBoothNo": ["5.1F37", "5.1F38"]
+					}
+				]
+			},
+			{
+				"times": 115,
+				"view": [
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg",
+					"http://58.248.138.13:81/group1/M00/39/BE/wKgKEVIkL_KAABL4AAOswlbpvPI579.jpg"
+				],
+				"360view": "http://www.e-cantonfair.com/quanjing/450_115/20130903_0001.jpg",
+				"booth": [
+					{
+						"boothId": 22742,
+						"companyId": 248021,
+						"periodId": 148,
+						"sesId": 114,
+						"periodNum": 1,
+						"actualBoothNo": ["5.1F37", "5.1F38"]
+					},
+					{
+						"boothId": 22742,
+						"companyId": 248021,
+						"periodId": 148,
+						"sesId": 114,
+						"periodNum": 2,
+						"actualBoothNo": ["5.1F37", "5.1F38"]
+					}
+				]
+			}
+		]
+	}
+}

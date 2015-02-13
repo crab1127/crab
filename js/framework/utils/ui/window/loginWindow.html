@@ -1,0 +1,82 @@
+<style>
+  .win-login{padding:0 !important;}
+  .win-main{padding:10px 50px 20px;}
+  input{-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}
+  .cc{zoom: 1;}
+  .cc:after{content: '.';display: block;clear: both;height: 0;overflow: hidden;}
+  .win-tit-tab{border-bottom:1px solid #ddd;position: relative;top:-1px}
+  .win-tit-tab li{float:left;border-right:1px solid #ddd;position: relative;top:1px}
+  .win-tit-tab li:last-child{border-right:none;}
+  .win-tit-tab li a{display: block;padding:10px 15px;font:16px/18px "微软雅黑";}
+  .win-tit-tab li.act{border-bottom: 1px solid #fff;border-right:1px solid #ddd;position: relative;top:1px;}
+  .win-tit-tab li.act a,.win-tit-tab li a:hover{color:#e04d2c;}
+  .authCode-input{float:left;}
+  #authCode{width:120px;}
+  .authCode-img{line-height:30px}
+  .authCode-img img{display: inline-block;vertical-align:middle;padding: 0 10px;}
+</style>
+<div class="win-inner win-login">
+    <ul class='win-tit-tab cc'>
+        <li class='act'><a href="javascript:;" id='sign-in'>SIGN IN</a></li>
+        <li><a href="javascript:;" id='join-free'>JOIN FREE</a></li>
+    </ul>
+    <div class="win-main">
+    <div class="title hidden">Sign in to your account</div>
+    <form class="signIn">
+        <div class="inner">
+            <p>Have E-Cantonfair account? Please sign in to continue.</p>
+        </div>
+        <div class="inner">
+            <input type="text" class="sign-name" name="account" value="" placeholder="Canton Fair ID or Email：">
+            <div class="err-msg"></div>
+        </div>
+        <div class="inner h15">
+            <input type="password" class="sign-pwd" name="password" value="" placeholder="Password：">
+            <div class="err-msg"></div>
+            <span class="capslock hidden"></span>
+            <div class="tips hidden"><span></span>Warning: Caps Lock is on.</div>
+        </div>
+        <div class="inner hidden cc" id="authCode-box">
+            <div class="authCode-input">
+                <input class="ipn" type="text" id="authCode" value="" name="authCode" placeholder="code">
+                <div id="authCodereq" class="err-msg">Verification code error</div>
+            </div>
+            <div class='authCode-img' id="authCodeimg">
+                <img src="" alt="authCode" height="30px">
+                <a href="javascript:;" class="code-refresh">Refresh</a>
+            </div>
+        </div>
+        <div class="inner" style="overflow:hidden;">
+            <div class="remember">
+                <select switch width="60">
+                    <option value="1" selected>Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <input type="checkbox" class="hidden"/>
+                <div class="remember-text">Remember Me</div>
+            </div>
+            <a href="/cfone/user/applyUpdatePassword.cf" class="forget">I forgot password?</a>
+        </div>
+        <div class="inner">
+            <input type="submit" value="Sign In" id="login" class="btn-sign">
+        </div>
+        <div id="sign-up" class="inner code up">Not a member?  <a href="javascript:;" rel="nofollow">join free</a></div>
+    </form>
+</div>
+<!-- popup window { -->
+<div id="js-popup-win" class="popup-win hidden">
+    <div class="win-wrap">
+        <a href="javascript:void(0);" id="js-win-close" class="win-close"></a>
+        <div class="win-content">
+            <h3 class="title">Email Login Activation</h3>
+            <div class="win-info">
+                <div>A verification email has been sent to your email</div>
+                <div>(<span class="email-info js-email-info"></span>) to complete actication.</div>
+            </div>
+            <div class="win-actions js-win-actions">
+                <a href="" class="btn btn-s11"><span>Go to mailbox</span></a>
+            </div>
+        </div>
+    </div>
+</div></div>
+<!-- } -->

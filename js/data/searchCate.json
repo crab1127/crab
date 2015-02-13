@@ -1,0 +1,66 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "categoryId":121,
+            "categoryName":"Apparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":122,
+            "categoryName":"ApparelApparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":123,
+            "categoryName":"ApparelApparelApparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":124,
+            "categoryName":"Apparel Apparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":125,
+            "categoryName":"Apparel Apparel Apparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":126,
+            "categoryName":"ApparelApparel ApparelApparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":127,
+            "categoryName":"Apparel ApparelApparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":128,
+            "categoryName":"ApparelApparel Apparel Apparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":129,
+            "categoryName":"ApparelApparel ApparelApparel Apparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":130,
+            "categoryName":"Apparel ApparelApparel Apparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":132,
+            "categoryName":"Apparel Apparel ApparelApparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        },
+        {
+            "categoryId":133,
+            "categoryName":"ApparelApparel Apparel ApparelApparel",
+            "categoryPath":["Computer", "Office Equipment", "Printer"]
+        }
+    ]
+}

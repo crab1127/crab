@@ -1,0 +1,436 @@
+<form name="companyInforForm" id="companyInforFormId">
+<div class="mod-form-s1" id="setShowroomompanyInfo">
+<div class="company_info" id="companyInfoView">
+    <!--<a class="bg-ico btn-edit-s1" href="javascript:;" id="editCompanyId"></a>-->
+    <div class="field">
+        <label class="col">{{_ "TPL_SHOWROOM.COMP_NAME"}}:</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="companyName_label"></div>
+                <input type="hidden" name="companyName" id="companyName">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>{{_ "TPL_SHOWROOM.ESTABLISHED"}}:</label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="found_label"></div>
+                <input type="hidden" name="found" id="found">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+
+        <label class="col"><span class="bg-ico required"></span>{{_ "TPL_SHOWROOM.INDUSTRY"}}:</label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="industry_label" style="width:550px;"></div>
+                <input type="hidden" name="industry">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+
+        <label class="col"><span class="bg-ico required"></span>{{_ "CATEGORY"}}:</label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="category_label" style="width:550px;"></div>
+                <input type="hidden" name="category" id="category">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.COMP_TYPE"}}:
+        </label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="companyType_label"></div>
+                <!--<input type="text" id="companyType" class="w300 ipt valid" style="display: none;">-->
+                <div id="companyType_warp" style="display: none">
+                    <select id="companyType" name="companyType" class="uniformselect" style="">
+                        <option selected="" value="">{{_ "TPL_SHOWROOM.SELECTED"}}</option>
+                        <option value="201004">{{_ "TPL_SHOWROOM.DOMESTIC"}}</option>
+                        <option value="201003">{{_ "TPL_SHOWROOM.MANUFACTURE_TRADING"}}</option>
+                        <option value="201999">{{_ "TPL_SHOWROOM.OTHERS"}}</option>
+                        <option value="201001">{{_ "TPL_SHOWROOM.MANUFACTURER"}}</option>
+                        <option value="201002">{{_ "TPL_SHOWROOM.TRADING"}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.MPC"}}:
+        </label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <div class="text" id="mainProducts_label"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.REGION"}}:
+        </label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="region"></div>
+                <div class="region_warp" id="region_warp" style="display: none;">
+                    <select id="province" name="province" style="width:120px">
+                        <option>{{_ "TPL_SHOWROOM.SELECTED"}}</option>
+                    </select>
+                    <select id="city" name="city">
+                        <option>{{_ "TPL_SHOWROOM.SELECTED"}}</option>
+                    </select>
+                    <select id="districtId" name="districtId">
+                        <option value="">{{_ "TPL_SHOWROOM.SELECTED"}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.ADDRESS"}}:
+        </label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="address_label"></div>
+                <input type="text" id="address" name="address" class="w300 ipt  valid" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.ZIP_CODE"}}:
+        </label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="zipCode_label"></div>
+                <input type="text" id="zipCode" name="zipCode" class="w300 ipt  valid" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.NOE"}}:
+        </label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="employees_label"></div>
+                <div class="employees" id="employees" style="display: none">
+                    <select id="companyEmpNum" name="companyEmpNum" alt='请选择公司人数'>
+                        <option value="">{{_ "TPL_SHOWROOM.SELECTED"}}</option>
+                        <option value="104001">{{_ "TPL_SHOWROOM.BELOW_100"}}</option>
+                        <option value="104002">{{_ "TPL_SHOWROOM.PEOPLE_499"}}</option>
+                        <option value="104003">{{_ "TPL_SHOWROOM.PEOPLE_999"}}</option>
+                        <option value="104004">{{_ "TPL_SHOWROOM.PEOPLE_999"}}</option>
+                        <option value="104005">{{_ "TPL_SHOWROOM.OVER_5000"}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.REG_CAP"}}:
+        </label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="registeredCapitalUsd_label"></div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.BUS_LICE"}}:
+        </label>
+
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="commercialLicense_label"></div>
+                <input type="text" id="commercialLicense" name="bizLicense" class="w300 ipt  valid" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div class="field f-category">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.WEBSITE"}}
+            :</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" placeholder="" name="webSite" class="w300 ipt url" id="webSite">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="tit-s2"><h3>
+    {{_ "TPL_SHOWROOM.COMP_INTRO"}}
+
+</h3></div>
+<div class="field f-category">
+    <label class="col"><span class="bg-ico required"></span>
+        {{_ "TPL_SHOWROOM.SLOGAN"}}
+        :</label>
+
+    <div class="el">
+        <div class="el-cont">
+            <div class="inner">
+                <input type="text" placeholder=""  maxlength="100" name="companyAd" id="companyAd" style="height:24px; width:400px;" class="ipt ">
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="field f-introd">
+    <label class="col"><span class="bg-ico required"></span>
+        {{_ "TPL_SHOWROOM.BRIEF_INTRO"}}
+
+        :</label>
+
+    <div class="el">
+        <div class="el-cont">
+            <div class="inner">
+                <textarea rows="" cols="" name="companyIntro" maxlength="4000" id="introduction" class="ipt "></textarea>
+            </div>
+        </div>
+        <div class="description"><span id="lenleft">4000</span>
+            {{_ "TPL_SHOWROOM.CHAR_LEFT"}}
+
+        </div>
+
+    </div>
+</div>
+
+<div class="tit-s2"><h3>
+    {{_ "TPL_SHOWROOM.CONTACT_INFO"}}
+
+</h3></div>
+<div class="cantact_info" id="contactInfoView">
+    <a class="bg-ico btn-edit-s1" href="javascript:;" id="eidtContactId"></a>
+
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.TEL"}}
+
+            :</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="telephone_label"></div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>
+            {{_ "TPL_SHOWROOM.FAX"}}
+
+            :</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="fax_label"></div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico "></span>
+            {{_ "TPL_SHOWROOM.MOBILE"}}
+
+            :</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="mobilePhone_label"></div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico "></span>
+            {{_ "TPL_SHOWROOM.SKYPE"}}
+
+            :</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="skype_label"></div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico"></span>
+            {{_ "TPL_SHOWROOM.FACEBOOK"}}
+            :</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="facebook_label"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cantact_info_edit"  id="contactInfoEdit" style="display: none">
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>{{_ "TPL_SHOWROOM.TEL"}}:</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" id="tel1" value="" name="tel1" class="ipt w140 ">
+                    <input type="text" id="tel2" value="" name="tel2" class="ipt w140 ml-out">
+                    <input type="text" value="" name="tel3" id="tel3" class="ipt w140 ml-out">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico required"></span>{{_ "TPL_SHOWROOM.FAX"}}:</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" id="fax1" name="fax1" value="" class="ipt w140 " placeholder="">
+                    <input type="text" id="fax2" name="fax2" value="" class="ipt w140 ml-out">
+                    <input type="text" value="" id="fax3" name="fax3" class="ipt w140 ml-out">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico "></span>{{_ "TPL_SHOWROOM.MOBILE"}}:</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" value="" name="mobile1" id="mobile1" class="ipt w140 " placeholder="">
+                    <input type="text" value="" id="mobile2" name="mobile2" class="ipt w200 ml-out">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico "></span>{{_ "TPL_SHOWROOM.SKYPE"}}:</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" id="skype" value="" name="skype" class="ipt w400">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col"><span class="bg-ico "></span>{{_ "TPL_SHOWROOM.FACEBOOK"}}:</label>
+
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" id="facebook" value="" name="facebook" class="ipt w400">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tit-s2"><h3>
+    {{_ "TPL_SHOWROOM.VI_PRE"}}
+</h3></div>
+
+<div class="field f-upload">
+    <label class="col"><span class="bg-ico required"></span>
+        {{_ "TPL_SHOWROOM.COMP_LOGO"}}
+
+        :</label>
+
+    <div class="el">
+        <div class="el-cont">
+            <div class="inner">
+                <span class="tips-upload">
+                    {{{_ "TPL_SHOWROOM.UPLOAD_LOGO_FORMAT"}}}
+
+                </span>
+                <input type="hidden" id="companyLogo" name="companyLogo" value=""/>
+                <div id="sr-logo"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="field f-upload">
+    <label class="col"><span class="bg-ico"></span>
+        {{_ "TPL_SHOWROOM.COMP_TOUR"}}
+        :
+    </label>
+
+    <div class="el">
+        <div class="el-cont">
+            <div class="inner">
+                <span class="tips-upload">
+                    {{{_ "TPL_SHOWROOM.UPLOAD_VIDEO_FORMAT"}}}
+
+                </span>
+                <input type="hidden" id="companyVideo" name="companyVideo" value=""/>
+                <div id="sr-tour"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="field f-upload">
+    <label class="col"><span class="bg-ico required"></span>
+        {{_ "TPL_SHOWROOM.COMP_VISION"}}
+        :
+    </label>
+
+    <div class="el">
+        <div class="el-cont">
+            <div class="inner">
+                <span class="tips-upload">
+                    {{{_ "TPL_SHOWROOM.UPLOAD_IMAGE_FORMAT"}}}
+
+                </span>
+                <input type="hidden" id="companyImages" name="companyImages" value=""/>
+                <div id="sr-vis"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="actions">
+    <a id="setshowroom_savebtn" class="btn btn-s11" href="javascript:;">
+        {{_ "BUTTON.SAVE"}}</a>
+</div>
+
+</div>
+</form>

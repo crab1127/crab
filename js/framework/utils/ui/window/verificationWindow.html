@@ -1,0 +1,169 @@
+<style>
+  .win-login{padding:0 !important;background:#ccc;}
+  	.verification {width: 470px;margin: 0 auto 0; overflow: hidden;}
+	.verification .mt0 {margin-top: 0 !important;}
+	.verification .mt10 {margin-top: 10px !important;}
+	.verification .mr0 {margin-right: 0 !important;}
+	
+	.verification .part { float: left; min-height: 100px; min-width: 100px;}
+	.verification .left { width: 230px;}
+	.verification .left li {margin: 40px 0; cursor: pointer; overflow: hidden;}
+	.verification .left li i{width: 61px; height: 61px; background: url("bgimg/vali.png") no-repeat; display: inline-block;float: left;}
+	.verification .left li a {font-size: 14px; font-weight: bold; color: #999; display: block; margin: 12px 0 0 68px;}
+	.verification .left li.cur a, .verification .left li:hover a {color: #e04d2c; border-right: 5px solid #F16A45;}
+	
+	.verification .left li.nav-act i {background-position: 0 0;}
+	.verification .left li.nav-reg i {background-position: -62px 0;}
+	.verification .left li.nav-sup i {background-position: -124px 0;}
+	.verification .left li.nav-act:hover i, .verification .left li.nav-act.cur i {background-position: 0 -62px;}
+	.verification .left li.nav-reg:hover i, .verification .left li.nav-reg.cur i {background-position: -62px -62px;}
+	.verification .left li.nav-sup:hover i, .verification .left li.nav-sup.cur i {background-position: -124px -62px;}
+	
+	
+	.verification .middle { width: 500px; min-height: 550px; border-left: 1px solid #eaeaea;}
+	.verification .panel {margin-bottom: 50px;}
+	.verification .panel .title {margin-top: 32px; padding: 20px 0 0 20px; font-size: 18px; font-weight: bold; color: #575757;}
+	.verification .panel .tips {color: #999; padding-left: 20px;}
+	.verification .panel .tips2 {padding-bottom: 5px; max-width: 320px; overflow: hidden;}
+	.verification .panel .tips2 a{color: #40a46d;}
+	.verification .panel .tips2 a:hover{text-decoration: underline;}
+	.verification .item {margin-top: 30px;}
+	.verification .label {width:145px; height: 30px; line-height: 30px; text-align: right; color: #3a3a33; display: inline-block; vertical-align: top; font-weight: 700;}
+	.verification .control {width:277px; display: inline-block; margin-left: 5px;}
+	.verification .control.action {width: auto;}
+	.verification .inner {position: relative;}
+	
+	.verification input, .verification select {width: 265px; height: 30px; line-height: 30px; padding-left: 10px; border: 1px solid #dcdcdc; box-shadow: 0px 1px 1px #f4f4f4 inset;}
+	.verification input.txt1 {width: 130px;}
+	.verification input.txt2 {width: 122px; margin-right: 5px;}
+	.verification input.txt3 {width: 60px; margin-right: 5px;}
+	.verification input.txt4 {width: 100px; margin-right: 0;}
+	.verification .control select {width: 277px;height: auto; padding: 7px 0 7px 10px;float:left;}
+	.verification .fm-error { margin-top: -2px; color:#999; position:relative; clear:both; zoom:1; padding: 5px 10px; border: 1px solid #EC929C !important; background: #FFF0F2;}
+	.verification .a-error {border:1px solid #ec929c; border-bottom: 0px; border-bottom-left-radius:0px; border-bottom-right-radius:0px; position:relative; zoom:1; z-index:2;}
+	
+	.verification .vcode img{display: inline-block;vertical-align: middle; cursor: pointer; margin-left: 10px;}
+	.verification .vcode .refresh { cursor: pointer; margin-left: 10px;}
+	.verification .btn{width: auto;border:none;}
+	.verification .btn-green { display:inline-block;font-size: 14px; color: #fff; border-top: 0; border-bottom: 2px solid #41945B; text-shadow: 0 1px 0 #41945B; font-weight: bold;
+	    background: #57b883; /* Old browsers */
+	    background: -moz-linear-gradient(top,  #57b883 0%, #4db07a 100%); /* FF3.6+ */
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#57b883), color-stop(100%,#4db07a)); /* Chrome,Safari4+ */
+	    background: -webkit-linear-gradient(top,  #57b883 0%,#4db07a 100%); /* Chrome10+,Safari5.1+ */
+	    background: -o-linear-gradient(top,  #57b883 0%,#4db07a 100%); /* Opera 11.10+ */
+	    background: -ms-linear-gradient(top,  #57b883 0%,#4db07a 100%); /* IE10+ */
+	    background: linear-gradient(to bottom,  #57b883 0%,#4db07a 100%); /* W3C */
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57b883', endColorstr='#4db07a',GradientType=0 ); /* IE6-9 */
+	
+	}
+	.verification .btn-red { display:inline-block; font-size: 14px; color: #fff; border-top: 0; border-bottom: 2px solid #c84224; text-shadow: 0 1px 0 #41945B; font-weight: bold;
+    background: #e85737; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e85737 0%, #e04d2c 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e85737), color-stop(100%,#e04d2c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e85737 0%,#e04d2c 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e85737 0%,#e04d2c 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e85737 0%,#e04d2c 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e85737 0%,#e04d2c 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e85737', endColorstr='#e04d2c',GradientType=0 ); /* IE6-9 */
+	
+	}
+	.verification .btn-green:hover {opacity: 0.9;filter: alpha(opacity=90);}
+	.verification .btn-green.disable {opacity: 0.5;filter: alpha(opacity=50);}
+	.verification .field-set {margin-left: 20px; margin-top: 30px; color: #999; font-size: 14px; font-weight: bold; border-bottom: 1px solid #eaeaea;}
+	
+	.pic { margin: 20px 0 10px 20px; overflow: hidden;}
+	.pic img { width: 120px; height: 120px; background-color: #dcdcdc; float: left;}
+	.pic p { float: left; margin-left: 10px; color: #b7ada1;}
+	.pic p span { font-weight: bold; color: #e04d2c;}
+	.pic a {font-weight: bold;}
+	
+	.verification .panel.supplier {margin: 120px 0 50px 140px; font-family: "微软雅黑", "宋体"; color: #575757;}
+	.verification .panel.supplier p {padding-bottom: 10px; line-height: 30px;}
+	.verification .panel.supplier .btn-green {padding-left: 50px; padding-right: 50px;}
+	
+	.verification .win-loading {margin: 0 auto;background-color: transparent;display: none;}
+	.verification .def-avatar {float: left;}
+	.verification .pic-tips {position:absolute;width:244px;height:340px;left:280px;top:-126px;display:none; z-index: 100;}
+	.verification .pic-tips.buy-id {background:url(/buyerVali/css/bgimg/buy-id.png) no-repeat;}
+	.verification .pic-tips.passport {background:url(/buyerVali/css/bgimg/passport-id.png) no-repeat;}
+	.verification .avatar-list { overflow: hidden;display: none;width:330px;margin-left: 5px}
+	.verification .avatar-list li {width: 60px; height: 60px; display: inline-block; margin-right: 9px; margin-top: 10px;border: 1px solid #dcdcdc;position: relative;cursor: pointer;}
+	.verification .avatar-list li img {width: 60px; height: 60px;}
+	.verification .avatar-list li i { position: absolute; right: 0;bottom: 0;display: none;}
+	.verification .avatar-list li:hover .select-0{display: block;}
+	.verification .avatar-list li.selected {border-color: #4db07a;}
+	.verification .avatar-list li.selected .select-1 {display: block;}
+	
+
+	
+	
+	/* default avatar */
+	
+	.label-left{float:left;margin-left: -150px;}
+</style>
+
+<div class="win-inner win-login">
+    <div class="verification" id="verification">
+    <form id="confirm-id" class="panel" validator>
+    <div class="item cid">
+        <div class="item"><label class="label">Canton Fair ID:</label><div class="control"> <input type="text" name="tempcid" disabled></div></div>
+        <div class="control">
+            <div>
+                <!-- <input type="text" name="cantonfairId" a-model="cid" placeholder="Please input your Canton Fair ID" pattern="{{pattern.cantonfairId}}" required error="{{errorMsg.cantonfairId}}" /> -->
+                <div class="pic-tips buy-id"></div>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <label class="label">Verification Question: </label>
+        <div class="control">
+            <div>
+                <select name="type" required>
+                    <option value="" selected>select your verification question </option>
+                    <option value="1">My passport number is:</option>
+                    <option value="2">The last four digits of my registered phone is:</option>
+                    <option value="3">My email address is:</option>
+                    <option value="4">My profile picture is:</option>
+                </select>
+            </div>
+        </div>
+    </div>
+	<div id="question" class="item mt10 hidden">
+       <div class="label"></div>
+       <div style="width:277px; display: inline-block;">
+           <div>
+               <div class="pic-tips passport"></div>
+               <ul class="avatar-list">
+                   <li a-repeat="avatarList">
+                       <img src="{{photo}}" data-code="{{photoCode}}"/>
+                       <i class="icons select-0"></i>
+                       <i class="icons select-1"></i>
+                   </li>
+               </ul>
+               <div class="control">
+               		<div>
+               			<input type="text" name="var" required placeholder="Input  your answer here" />
+               		</div>
+               </div>
+               <div class="control">
+               		<div>
+
+               		   <label class="label label-left hidden">Country/Region: </label>
+		               <select name="countryId" class="hidden">
+		                   <option value="" selected>Please Select your country</option>
+		                   <option a-repeat="countryList" value="{{countryId}}">{{countryEnName}}</option>
+		               </select>
+	                </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   <div class="item">
+   		 <label class="label"></label>
+   		<div class="control">
+   			<input type="button" name="confirm" id="confirm" value="Verify Now" class="btn btn-red"/> <input type="button" class="btn btn-green" name="cancel" id="cancel" value="Cancel"/>
+   		</div>
+   </div>
+</form>
+</div>
+</div>

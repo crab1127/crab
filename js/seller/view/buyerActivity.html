@@ -1,0 +1,735 @@
+<script type="text/tpl" id="item-0">
+    <!-- 交换名片 no-->
+</script>
+
+<script type="text/tpl" id="item-10">
+    <!-- 和别人交换名片 no -->
+</script>
+
+<script type="text/tpl" id="item-1">
+    <!-- 收藏供应商-->
+    <div>
+        <div class="type-box">
+            <i class="icons fave"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.COLLECTED_INFO</span>
+                    <i class="icons my-status"></i>
+                </h3>
+                <p class="desc" i18n>
+             
+                    BUYER_ACTIVITY.DESC.COLLECTED_INFO
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                </p>
+            </div>
+
+            <div class="cont">
+                <div class="img-boxs" max-length="6" img-boxs>
+                    <a a-repeat="products" href="#!/view-product?id={{productId}}" width="120" height="120" title="{{productName}}">{{productImg}}</a>
+                    
+                </div>
+                
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/tpl" id="item-11">
+    <!-- 收藏别的供应商-->
+    <div >
+        <div class="type-box">
+            <i class="icons fave"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.COLLECTED_INFO_ALL</span>
+                </h3>
+                <p class="desc" i18n>
+             
+                    BUYER_ACTIVITY.DESC.COLLECTED_INFO_ALL
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <span class="red" >{{categoryName}}</span>
+                    
+                </p>
+            </div>
+
+            <div class="cont">
+            <div class="img-boxs" max-length="6" img-boxs>
+                    <a a-repeat="products" href="#!/view-product?id={{productId}}" width="120" height="120" title="{{productName}}">{{productImg}}</a>
+                    
+                </div>
+                
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</script>
+
+<script type="text/tpl" id="item-2">
+    <!-- 收藏产品-->
+    <div>
+        <div class="type-box">
+            <i class="icons fave-info"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.COLLECTED_PRO</span>
+                    <i class="icons my-status"></i>
+                </h3>
+                <p class="desc" i18n>
+             
+                    BUYER_ACTIVITY.DESC.COLLECTED_PRO
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <span class="red" >{{categoryName}}</span>
+                    
+                </p>
+            </div>
+
+            <div class="cont">
+            <div class="img-boxs" max-length="6" img-boxs>
+                    <a a-repeat="products" href="#!/view-product?id={{productId}}" width="120" height="120" title="{{productName}}">{{productImg}}</a>
+                    
+                </div>
+                
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</script>
+
+<script type="text/tpl" id="item-12">
+    <!-- 收藏别人的产品-->
+    <div>
+        <div class="type-box">
+            <i class="icons fave-info"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.COLLECTED_PRO_ALL</span>
+                  
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.COLLECTED_PRO_ALL
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <span class="red" >{{categoryName}}</span>
+                </p>
+            </div>
+
+            <div class="cont">
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/tpl" id="item-3">
+    <!-- 查看了供应商信息-->
+    <div>
+        <div class="type-box">
+            <i class="icons view-com"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.BROWSE_INFO</span>
+                    <i class="icons my-status"></i>
+
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.BROWSE_INFO
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+
+                </p>
+            </div>
+
+            <div class="cont">
+
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/tpl" id="item-13">
+    <!-- 查看别的供应商信息-->
+    <div>
+        <div class="type-box">
+            <i class="icons view-com"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.BROWSE_INFO_ALL</span>
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.BROWSE_INFO_ALL
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <span class="red">{{categoryName}}</span>
+                </p>
+            </div>
+
+            <div class="cont">
+
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/tpl" id="item-4">
+    <!-- 浏览产品-->
+    <div>
+        <div class="type-box">
+            <i class="icons view-pro"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>                     </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.BROWSE_PRO</span>
+                    
+                    <i class="icons my-status"></i>
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.BROWSE_PRO
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <span class="red" >{{categoryName}}</span>
+                </p>
+            </div>
+
+            <div class="cont">
+                <div class="img-boxs" max-length="6" img-boxs>
+                    <a a-repeat="products" time="{{time}}" href="#!/view-product?id={{productId}}" width="120" height="120" title="{{productName}}">{{productImg}}</a>
+                    
+                </div>
+                
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div>
+
+                <h4 a-if="isShowHistory" i18n>BUYER_ACTIVITY.DESC.RBH</h4>
+
+                <div a-if="isShowHistory" max-length="3" box-width="200" height="70" con-boxs>
+                    <div a-repeat="historyProducts" class="box rbh">
+                        <div class="left">
+                            <a href="#!/view-product?id={{productId}}">
+                                <img alt="" width="60" height="60" can-src="{{productImg}}">
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <p substr="30" title="{{productName}}">{{productName}}</p>
+                            <p class="time" format-date="hh:mm M DD, YYYY" short="1" en-month="1">{{time}}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</script>
+
+<script type="text/tpl" id="item-14">
+    <!-- 浏览别人的产品-->
+    <div >
+        <div class="type-box">
+            <i class="icons view-pro"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.BROWSE_PRO_ALL</span>
+                </h3>
+                <p class="desc" i18n>
+             
+                    BUYER_ACTIVITY.DESC.BROWSE_PRO_ALL
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <span class="red" >{{categoryName}}</span>
+                    
+                </p>
+                <p class="desc" a-if="private" i18n>BUYER_ACTIVITY.PRIVATE_TIP</p>
+            </div>
+
+            <div class="cont">
+                <div class="other-cont">
+                    <div class="other-product" >
+                        <div max-length="6" box-width="120" height="280" width="900" con-boxs>
+                            <div a-repeat="products" class="box">
+                                <div class="other-item">
+                                    <a a-if="^isSecret" >
+                                        <img can-src="{{productImg}}" width="120" height="120" alt="">
+                                    </a>
+                                    <img a-if="isSecret" src="../css/common/bgimg/default-product.png" width="120" height="120" alt="">
+                                    <p substr="45" title="{{productName}}">{{productName}}</p>
+                                    <p>
+                                        <label>Category: </label>
+                                        <span title="{{productCategory}}" substr="25">{{productCategory}}</span>
+                                    </p>
+
+                                    <p a-if="^isSecret">
+                                        <span class="flags fs{{countryId}}"></span>
+                                        <span class="txt" title="{{supplierDistrictName}}">{{supplierDistrictName}}</span>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/tpl" id="item-5">
+    <!-- 询盘-->
+    <div>
+        <div class="type-box">
+            <i class="icons inquire-2"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.SEND_INQ</span>
+                    <i class="icons my-status"></i>
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.SEND_INQ
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <a href="#!/view-product?id={{productId}}">{{productName}}</a>
+                </p>
+            </div>
+
+            <div class="cont">
+                <div style="padding:12px 0; max-height: 25px; overflow: hidden;">{{{messageDetail}}}</div>
+                
+                <a href="#!/view-product?id={{productId}}">
+                    <img can-src="{{productImg}}" alt="{{productName}}" width="120" height="120">
+                </a>
+
+
+                <div class="tools">
+                    <a i18n read-email="{{messageId}}" href="#" class="ui-btn btn-gray-2">BUTTON.VIEW_DETAIL</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/tpl" id="item-15">
+    <!-- 对别人发询盘 no-->
+</script>
+
+<script type="text/tpl" id="item-6">
+    <!-- 设定商业规则 no-->
+</script>
+
+<script type="text/tpl" id="item-7">
+    <!-- 感兴趣-->
+    <div>
+        <div class="type-box">
+            <i class="icons love"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.INTEREST</span>
+                    <i class="icons my-status"></i>
+
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.INTEREST
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                </p>
+            </div>
+
+            <div class="cont">
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/tpl" id="item-18">
+    <!-- 搜索-->
+    <div>
+        <div class="type-box">
+            <i class="icons find"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.SEARCH</span>
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.SEARCH
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <span class="red">{{keyword}}</span>
+                </p>
+            </div>
+
+            <div class="cont">
+
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+
+</script>
+
+<script type="text/tpl" id="item-19">
+    <!-- 发布采购需求-->
+    <div>
+        <div class="type-box">
+            <i class="icons demand"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.POST_BL</span>
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.POST_BL
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                    |data: <a target="_blank" href="/buyinglead/supplier.html?id={{buyingleadId}}">{{buyingleadTitle}}</a>
+                </p>
+            </div>
+
+            <div class="cont">
+                <br>
+                <div class="lead-link" a-if="isShowImg" >
+                    <a target="_blank" href="/buyinglead/supplier.html?id={{buyingleadId}}" a-repeat="images">
+                        <img can-src="{{.}}" alt="" width="120" height="120">
+                    </a>
+                </div>
+
+
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+</script>
+
+<script type="text/tpl" id="item-20">
+    <!-- 阅读了企业速递-->
+    <div >
+        <div class="type-box">
+            <i class="icons courier"></i>
+            <i class="icons left-arw-lin"></i>
+        </div>
+        <div class="con-box">
+            <div class="date">
+                <strong format-date="hh:mm">{{eventTime}}</strong> 
+                <span format-date="M DD, YYYY" short="1" en-month="1">{{eventTime}}</span>
+            </div>
+
+            <div class="title">
+                <h3 class="live-act">
+                    <strong >
+                        <a href="#" show-buyer="{{buyerId}}" >{{buyerName}}</a> 
+                        <i a-if="isPartCurrentSession" can-tip="BUYER_ACTIVITY.LIVE_TIP" class="icons live"></i>
+                    </strong>
+                    <span i18n>BUYER_ACTIVITY.TIT.BROWSE_BE</span>
+                    <i class="icons my-status"></i>
+
+                </h3>
+                <p class="desc" i18n>
+                    BUYER_ACTIVITY.DESC.BROWSE_BE
+                    |user: {{buyerName}}
+                    |region: <span class="flags fs{{buyerCountryId}}"></span><span class="txt" title="{{buyerCountryName}}">{{buyerCountryName}}</span>
+                </p>
+            </div>
+
+            <div class="cont">
+                <div class="tools">
+                    <a i18n push-info="{{buyerId}}" href="" class="ui-btn btn-gray-2">BUTTON.PUSH_INFO</a>
+
+                    <!--<a href=""><i class="icons follow"></i> Follow</a>-->
+                </div> 
+            </div>
+
+        </div>
+
+    </div>
+</script>
+
+
+<script type="text/tpl" id="content-tpl">
+<div class="bl-list activities-list">
+    <!--搜索条--> 
+    <div class="mod-filter clear">
+        <form action="">        
+            <select style="width: 220px;" id="categoryField" name="categoryId" dropDown>
+                <option value="" i18n>MODULE.BUYER_ACTIVITY.CATEGORY</option>
+                <option value="{{value}}" a-repeat="tool.categoryFields">{{label}}</option>
+            </select>
+            <select style="width: 180px;" id="countryField" name="countryId" dropDown>
+                <option value="" i18n>MODULE.BUYER_ACTIVITY.COUNTRY</option>
+                <option value="{{value}}" a-repeat="tool.regionFields">{{label}}</option>
+            </select>
+            <select style="width: 160px;" id="activityTypeField" name="actionId" dropDown>
+                <option value="" i18n>MODULE.BUYER_ACTIVITY.ACTION_TYPE</option>
+                <option value="{{value}}" a-repeat="tool.activityTypeFields">{{label}}</option>
+            </select>
+            <select style="width: 160px;" id="latestField" name="timeRange" dropDown>
+                <option value="" i18n>MODULE.BUYER_ACTIVITY.LATEST</option>
+                <option value="{{value}}" a-repeat="tool.latestFields">{{label}}</option>
+            </select>
+            <div class="action">
+                <span class="brace"></span>
+                <button type="submit" class="btn-s17 btn-s18" id="buyleadSearchBtn" i18n>
+                    BUTTON.SEARCH_BTN
+                </button>
+            </div>
+        </form>
+    </div>
+
+    
+    <!--内容-->
+    <div a-repeat="activities" class="activitie-item">
+        <div id="item-4"></div>
+        <div id="item-14"></div>
+        <div id="item-2"></div>
+        <div id="item-12"></div>
+        <div id="item-5"></div>
+        <div id="item-20"></div>
+        <div id="item-7"></div>
+        <div id="item-19"></div>
+        <div id="item-18"></div>
+        <div id="item-3"></div>
+        <div id="item-13"></div>
+        <div id="item-1"></div>
+        <div id="item-11"></div>
+
+    </div>
+   
+    <div a-if="isShowLoad" class="loading" >
+        <span></span>
+        Loading...
+    </div>
+    
+    <div a-if="^isShowLoad">
+        <div a-if="isNoData" class="data-none">
+            <p class="txt2" i18n>NOT_ACTIVITY</p>
+            <p class="txt3" i18n>NOT_ACTIVITY_SUGGEST</p>
+            <a href="#!/buyinglead" class="btn btn-s10" i18n>BUTTON.SEARCH_NOW</a>
+        </div>
+    </div>
+
+    <a class="load-more" a-if="^isShowLoad" page-current="{{page}}" page-total="-1" page-limit="0" href="javascript:;" more-paging i18n>BUYER_ACTIVITY.MORE_TIP</a>
+
+</div>
+</script>
+

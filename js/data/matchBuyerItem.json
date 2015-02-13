@@ -1,0 +1,67 @@
+{
+    "message": null,
+    "type": null,
+    "data": {
+        "region": [{
+            "enName": "Zimbabwe",
+            "cnName": "津巴布韦",
+            "code": 193
+        },{
+            "enName": "Zimbabwe",
+            "cnName": "津巴布韦",
+            "code": 193
+        },{
+            "enName": "Zimbabwe",
+            "cnName": "津巴布韦",
+            "code": 193
+        }],
+        "category": [{
+            "enName": "903006",
+            "cnName": "自行车",
+            "code": 6
+        },{
+            "enName": "Zimbabwe",
+            "cnName": "津巴布韦",
+            "code": 193
+        },{
+            "enName": "Zimbabwe",
+            "cnName": "津巴布韦",
+            "code": 193
+        }],
+        "purchaserLevel": [{
+            "code": "101001",
+            "enName": "Manufacturers and Wholesalers",
+            "cnName": "制造商及大批发商"
+        },{
+            "code": "101001",
+            "enName": "Manufacturers and Wholesalers",
+            "cnName": "制造商及大批发商"
+        }],
+        "numberOfExhibition": [{
+            "code": "205001",
+            "enName": "",
+            "cnName": "不限"
+        },{
+            "code": "101001",
+            "enName": "Manufacturers and Wholesalers",
+            "cnName": "制造商及大批发商"
+        }],
+        "recently": [{
+            "code": "206001",
+            "enName": "",
+            "cnName": "不限"
+        }],
+        "companyType": [{
+            "code": "100001",
+            "enName": "Buying Office",
+            "cnName": "采购办事处"
+        }]
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

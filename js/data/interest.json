@@ -1,0 +1,97 @@
+{
+    "message":null,
+    "type":null,
+    "data":[
+        {
+            "buyerId":1,
+            "countryId":233,
+            "buyerPhoto":"/img/user_pic/default_60.jpg",
+            "category":"Building and Decorative Materials",
+            "pushInfoId":1261,
+            "countryLogo":null,
+            "countryShortName":"CHN",
+            "buyerFullName":"Bill Gates",
+            "buyerMatch":80,
+            "buyerCredit":"A"
+        },
+        {
+            "buyerId":2,
+            "countryId":124,
+            "buyerPhoto":"/img/80_80.jpg",
+            "category":"Bags",
+            "pushInfoId":1262,
+            "countryLogo":null,
+            "countryShortName":"USA",
+            "buyerFullName":"Kerry Lee",
+            "buyerMatch":75,
+            "buyerCredit":"A"
+        },
+        {
+            "buyerId":3,
+            "countryId":212,
+            "buyerPhoto":"/img/120_120.jpg",
+            "category":"Chemical Products",
+            "pushInfoId":1263,
+            "countryLogo":null,
+            "countryShortName":"KRO",
+            "buyerFullName":"Leo Tse",
+            "buyerMatch":65,
+            "buyerCredit":"A"
+        },
+        {
+            "buyerId":4,
+            "countryId":214,
+            "buyerPhoto":"/img/user_pic/default_120.jpg",
+            "category":"Apparel",
+            "pushInfoId":1264,
+            "countryLogo":null,
+            "countryShortName":"JPN",
+            "buyerFullName":"Simon White",
+            "buyerMatch":90,
+            "buyerCredit":"A"
+        },
+        {
+            "buyerId":5,
+            "countryId":185,
+            "buyerPhoto":"/img/90_90.jpg",
+            "category":"Computer",
+            "pushInfoId":1265,
+            "countryLogo":null,
+            "countryShortName":"UNK",
+            "buyerFullName":"Kobe Bryant",
+            "buyerMatch":85,
+            "buyerCredit":"B"
+        },
+        {
+            "buyerId":6,
+            "countryId":145,
+            "buyerPhoto":"/img/user_pic/default_120.jpg",
+            "category":"Printer",
+            "pushInfoId":1266,
+            "countryLogo":null,
+            "countryShortName":"AUT",
+            "buyerFullName":"Wayne Rooney",
+            "buyerMatch":80,
+            "buyerCredit":"B"
+        },
+        {
+            "buyerId":7,
+            "countryId":154,
+            "buyerPhoto":"/img/user_pic/default_60.jpg",
+            "category":"Apparel, Agriculture",
+            "pushInfoId":1267,
+            "countryLogo":null,
+            "countryShortName":"ITA",
+            "buyerFullName":"C Ronaldo",
+            "buyerMatch":75,
+            "buyerCredit":"A"
+        }
+    ],
+    "status":"success",
+    "page":{
+        "total":3,
+        "page":1,
+        "maxPage":0,
+        "pageSize":15
+    }
+}

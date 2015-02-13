@@ -1,0 +1,161 @@
+{
+	"status": "success",
+	"message": "",
+	"data": [
+		{
+			"buyerId": 128,
+			"buyerPhoto": null,
+			"buyerFullName": "James ma",
+			"countryId": 233,
+			"countryShortName": "China",
+			"numOfExh": 6,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Building and Decorative Materials": ["Building", "Decorative", "Materials"],
+				"Chemical Products": ["Building", "Decorative", "Materials", "Decorative", "Materials", "Building", "Decorative", "Materials"],
+				"Toiletries": ["Building", "Decorative", "Materials"],
+				"Chemical": ["Decorative", "Materials"],
+				"Personal Care Products": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 85,
+			"buyerCredit": "A",
+			"coins": 90
+		},
+		{
+			"buyerId": 123,
+			"buyerPhoto": null,
+			"buyerFullName": "Vincent",
+			"countryId": 49,
+			"countryShortName": "Denmark",
+			"numOfExh": 4,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Sanitary and Bathroom Equipment": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 75,
+			"buyerCredit": "A",
+			"coins": 80
+		},
+		{
+			"buyerId": 121,
+			"buyerPhoto": null,
+			"buyerFullName": "Joseph",
+			"countryId": 58,
+			"countryShortName": "Eritrea",
+			"numOfExh": 3,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Chemical Products": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 75,
+			"buyerCredit": "A",
+			"coins": 70
+		},
+		{
+			"buyerId": 122,
+			"buyerPhoto": null,
+			"buyerFullName": "William",
+			"countryId": 61,
+			"countryShortName": "Faroe Islands",
+			"numOfExh": 3,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"General Ceramics": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 70,
+			"buyerCredit": "A",
+			"coins": 60
+		},
+		{
+			"buyerId": 123,
+			"buyerPhoto": null,
+			"buyerFullName": "Michael",
+			"countryId": 63,
+			"countryShortName": "Finland",
+			"numOfExh": 6,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Household Items": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 60,
+			"buyerCredit": "A",
+			"coins": 40
+		},
+		{
+			"buyerId": 124,
+			"buyerPhoto": null,
+			"buyerFullName": "Thomas",
+			"countryId": 69,
+			"countryShortName": "Gambia",
+			"numOfExh": 2,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Kitchenware & Tableware": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 50,
+			"buyerCredit": "A",
+			"coins": 50
+		},
+		{
+			"buyerId": 124,
+			"buyerPhoto": null,
+			"buyerFullName": "Joseph",
+			"countryId": 89,
+			"countryShortName": "India",
+			"numOfExh": 1,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Personal Care Products": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 45,
+			"buyerCredit": "A",
+			"coins": 20
+		},
+		{
+			"buyerId": 126,
+			"buyerPhoto": null,
+			"buyerFullName": "Jack",
+			"countryId": 97,
+			"countryShortName": "Japan",
+			"numOfExh": 2,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Toiletries": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 40,
+			"buyerCredit": "A",
+			"coins": 30
+		},
+		{
+			"buyerId": 127,
+			"buyerPhoto": null,
+			"buyerFullName": "Benjamin",
+			"countryId": 102,
+			"countryShortName": "Korea of Republic",
+			"numOfExh": 3,
+			"isEmail": true,
+			"isPhone": true,
+			"category": {
+				"Computer & Communication Products": ["Building", "Decorative", "Materials"]
+			},
+			"buyerMatch": 20,
+			"buyerCredit": "A",
+			"coins": 90
+		}
+	],
+	"page": {
+		"total": 16,
+		"page": 1,
+		"pageSize": 15,
+		"maxPage": 2
+	},
+	"errorCode": null
+}

@@ -1,0 +1,32 @@
+{
+    "message": "",
+    "type": null,
+    "data": [{
+        "sortOrder": 10,
+        "groupId": 1,
+        "groupName": "Universal Car Camera",
+        "productNum": 23
+    }, {
+        "sortOrder": 10,
+        "groupId": 3,
+        "groupName": "Sex boby",
+        "productNum": 124
+    },{
+        "sortOrder": null,
+        "groupId": 52,
+        "groupName": "Angle love",
+        "productNum": 32
+    }, {
+        "sortOrder": null,
+        "groupId": 4,
+        "groupName": "Beauty girl",
+        "productNum": 44
+    }],
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

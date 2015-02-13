@@ -1,0 +1,140 @@
+{
+    "message": "",
+    "type": "json",
+    "data": {
+        "list": [{
+            "content": "message is testetestest222",
+            "read": false,
+            "subject": "testmessage222",
+            "actionType": "send",
+            "messageId": "513fdc1590e587c1199c79ac",
+            "messageType": "email",
+            "contacter": {
+                "name": "Christina Dior",
+                "id": 1,
+                "type": 1,
+                "header": "/img/user_pic/default_60.jpg",
+                "countryId": 477,
+                "countryName": "Feixiang",
+                "customer": true
+            },
+            "createDate": "2013-03-13 09:53:25",
+            "attachments": null
+        }, {
+            "content": "message is testetestest222",
+            "read": true,
+            "subject": "testmessage222",
+            "actionType": "receive",
+            "messageId": "513fdc1590e587c1199c79ac",
+            "messageType": "email",
+            "contacter": {
+                "name": "Christina Dior",
+                "id": 1,
+                "type": 1,
+                "header": "/img/user_pic/default_60.jpg",
+                "countryId": 477,
+                "countryName": "Feixiang",
+                "customer": true
+            },
+            "createDate": "2013-03-13 09:53:25",
+            "attachments": null
+        }, {
+            "content": "message is testetestest222",
+            "read": false,
+            "subject": "testmessage222",
+            "actionType": "receive",
+            "messageId": "513fdc1590e587c1199c79ac",
+            "messageType": "email",
+            "contacter": {
+                "name": "Christina Dior",
+                "id": 1,
+                "type": 1,
+                "header": "/img/user_pic/default_60.jpg",
+                "countryId": 477,
+                "countryName": "Feixiang",
+                "customer": false
+            },
+            "createDate": "2013-03-13 09:53:25",
+            "attachments": null
+        }, {
+            "content": "message is testetestest222",
+            "read": false,
+            "subject": "testmessage222",
+            "actionType": "-1",
+            "messageId": "513fdc1590e587c1199c79ac",
+            "messageType": "email",
+            "contacter": {
+                "name": "Christina Dior",
+                "id": 1,
+                "type": 1,
+                "header": "/img/user_pic/default_60.jpg",
+                "countryId": 477,
+                "countryName": "Feixiang",
+                "customer": false
+            },
+            "createDate": "2013-03-13 09:53:25",
+            "attachments": null
+        }, {
+            "content": "message is testetestest222",
+            "read": true,
+            "subject": "testmessage222",
+            "actionType": "-1",
+            "messageId": "513fdc1590e587c1199c79ac",
+            "messageType": "email",
+            "contacter": {
+                "name": "Christina Dior",
+                "id": 1,
+                "type": 1,
+                "header": "/img/user_pic/default_60.jpg",
+                "countryId": 477,
+                "countryName": "Feixiang",
+                "customer": false
+            },
+            "createDate": "2013-03-13 09:53:25",
+            "attachments": null
+        }, {
+            "content": "message is testetestest222",
+            "read": true,
+            "subject": "testmessage222",
+            "actionType": "send",
+            "messageId": "513fdc1590e587c1199c79ac",
+            "messageType": "email",
+            "contacter": {
+                "name": "Christina Dior",
+                "id": 1,
+                "type": 1,
+                "header": "/img/user_pic/default_60.jpg",
+                "countryId": 477,
+                "countryName": "Feixiang",
+                "customer": false
+            },
+            "createDate": "2013-03-13 09:53:25",
+            "attachments": null
+        }, {
+            "content": "message is testetestest222",
+            "read": true,
+            "subject": "testmessage222",
+            "actionType": "send",
+            "messageId": "513fdc1590e587c1199c79ac",
+            "messageType": "email",
+            "contacter": {
+                "name": "Christina Dior",
+                "id": 1,
+                "type": 1,
+                "header": "/img/user_pic/default_60.jpg",
+                "countryId": 477,
+                "countryName": "Feixiang",
+                "customer": false
+            },
+            "createDate": "2013-03-13 09:53:25",
+            "attachments": null
+        }]
+    },
+    "status": "success",
+    "page": {
+        "total": 50,
+        "page": 1,
+        "maxPage": 1,
+        "pageSize": 15
+    }
+}

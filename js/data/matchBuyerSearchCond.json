@@ -1,0 +1,172 @@
+{
+    "message": "",
+    "type": null,
+    "data": {
+        "region": [{
+                "enName": "Bhutan",
+                "cnName": "不丹",
+                "code": 23
+            },
+            {
+                "enName": "Botswana",
+                "cnName": "博茨瓦纳",
+                "code": 26
+            },
+            {
+                "enName": "Canada",
+                "cnName": "加拿大",
+                "code": 36
+            },{
+                "enName": "Austria",
+                "cnName": "加拿大",
+                "code": 46
+            },{
+                "enName": "Cuba",
+                "cnName": "加拿大",
+                "code": 56
+            },{
+                "enName": "France",
+                "cnName": "加拿大",
+                "code": 66
+            }],
+        "category": [{
+            "enName": "General Ceramics",
+            "cnName": "不丹",
+            "code": 23
+        },
+            {
+                "enName": "Household Items",
+                "cnName": "博茨瓦纳",
+                "code": 26
+            },
+            {
+                "enName": "Kitchenware & Tableware",
+                "cnName": "加拿大",
+                "code": 16
+            }, {
+                "enName": "Personal Care Products",
+                "cnName": "加拿大",
+                "code": 36
+            }, {
+                "enName": "Toiletries",
+                "cnName": "加拿大",
+                "code": 46
+            }, {
+                "enName": "Consumer Electronics",
+                "cnName": "加拿大",
+                "code": 56
+            }],
+        "purchaserLevel": [{
+            "code": "101001",
+            "enName": "Manufacturers and Wholesalers",
+            "cnName": "制造商及大批发商"
+        },
+            {
+                "code": "101002",
+                "enName": "Small and Medium-sized Wwholesalers Group",
+                "cnName": "中小批发商群体"
+            },
+            {
+                "code": "101003",
+                "enName": "Small Retailers Group",
+                "cnName": "小零售商群体"
+            },
+            {
+                "code": "101004",
+                "enName": "Small Trader Group",
+                "cnName": "小贸易商群体"
+            },
+            {
+                "code": "101999",
+                "enName": "Other Group",
+                "cnName": "其它群体"
+            }],
+        "numberOfExhibition": [{
+            "code": "205000",
+            "enName": "Not limited",
+            "cnName": "不限"
+        },
+            {
+                "code": "205002",
+                "enName": "At least 1 session",
+                "cnName": "至少1届"
+            },
+            {
+                "code": "205003",
+                "enName": "At least 5 session",
+                "cnName": "至少5届"
+            },
+            {
+                "code": "205004",
+                "enName": "At least 10 session",
+                "cnName": "至少10届"
+            },
+            {
+                "code": "205005",
+                "enName": "At least 15 session(VIP)",
+                "cnName": "至少15届（VIP采购商）"
+            }],
+        "recently": [{
+            "code": "206000",
+            "enName": "Not limited",
+            "cnName": "不限"
+        },
+            {
+                "code": "206002",
+                "enName": "The last five sessions to attend at least twice",
+                "cnName": "最近5届至少参加两次"
+            },
+            {
+                "code": "206003",
+                "enName": "The last five sessions to attend at least once",
+                "cnName": "最近5届至少参加1次"
+            }],
+        "companyType": [{
+            "code": "100001",
+            "enName": "Buying Office",
+            "cnName": "采购办事处"
+        },
+            {
+                "code": "100002",
+                "enName": "Manufacturer",
+                "cnName": "制造商"
+            },
+            {
+                "code": "100003",
+                "enName": "Trade Company",
+                "cnName": "贸易公司"
+            },
+            {
+                "code": "100004",
+                "enName": "Wholesaler/Distributor",
+                "cnName": "批发商/经销商"
+            },
+            {
+                "code": "100005",
+                "enName": "Retailer",
+                "cnName": "零售商"
+            },
+            {
+                "code": "100006",
+                "enName": "Broker/Consultant commission-based",
+                "cnName": "经纪人/顾问委员会"
+            },
+            {
+                "code": "100007",
+                "enName": "Government Agency/Organization",
+                "cnName": "政府及机构"
+            },
+            {
+                "code": "100999",
+                "enName": "Other",
+                "cnName": "其他"
+            }]
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

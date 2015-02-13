@@ -1,0 +1,62 @@
+{
+    "message": "",
+    "type": "json",
+    "data": {
+        "groupList": [{
+            "groupId": 3,
+            "groupName": "test"
+        },
+            {
+                "groupId": 4,
+                "groupName": "aaaa"
+            },
+            {
+                "groupId": 12,
+                "groupName": "鍥介檯閮 "
+            },
+            {
+                "groupId": 13,
+                "groupName": "ox"
+            },
+            {
+                "groupId": 14,
+                "groupName": "1"
+            },
+            {
+                "groupId": 15,
+                "groupName": "oa"
+            },
+            {
+                "groupId": 16,
+                "groupName": "oxa"
+            },
+            {
+                "groupId": 17,
+                "groupName": "ab12"
+            },
+            {
+                "groupId": 18,
+                "groupName": "dfsf"
+            },
+            {
+                "groupId": 19,
+                "groupName": "a23"
+            },
+            {
+                "groupId": 20,
+                "groupName": "abwe"
+            },
+            {
+                "groupId": 21,
+                "groupName": "abox"
+            }],
+        "countNumber": 17
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "pageSize": 0,
+        "maxPage": 0
+    }
+}

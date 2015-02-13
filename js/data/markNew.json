@@ -1,0 +1,11 @@
+{
+    "status": "success",
+    "type":null,
+    "data":null,
+    "page":{
+        "total":0,
+        "page":1,
+        "maxPage":1,
+        "pageSize":2
+    }
+}

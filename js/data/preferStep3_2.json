@@ -1,0 +1,34 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "label":"",
+            "name":"gjhQK",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":0,
+                    "text":"Not limit"
+                },
+                {
+                    "value":1,
+                    "text":"zhi shao 1 jie"
+                },
+                {
+                    "value":2,
+                    "text":"zhi shao zui jin 1 jie"
+                },
+                {
+                    "value":3,
+                    "text":"zhi shao zui jin 2 jie"
+                },
+                {
+                    "value":6,
+                    "text":"5 jie yi shang"
+                }
+            ]
+        }
+    ]
+}

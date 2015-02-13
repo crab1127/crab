@@ -1,0 +1,47 @@
+{
+    "status": "success",
+    "message": null,
+    "type": null,
+    "data": {
+        "company": {
+            "companyId":1,
+            "companyName": "INCH Tricycle three alloy wheels",
+            "district": "GuangDong China",
+            "countryId": 6,
+            "visitTimes":5,
+            "matchValue":20,
+            "contacter": "simon.wang",
+            "mainProduct": "LED LCD 、 Spot light LED LCD 、 Spot light LED 、 Spot light LED",
+            "certificationNo": "IOS 9001:2000"
+        },
+        "product": {
+            "productId":2582,
+            "productName": "Brake System Parts for Russian, Chinese",
+            "fobPrice": "To be determined",
+            "startPort": "Ningbo",
+            "minOrder": "10,000 Pieces",
+            "monthSupply": "S300,000 Piece/Pieces per Month",
+            "payMethods": "T/T",
+            "supplierId":1,
+            "categoryId":3,
+            "categoryName":"Electronic and Electrical Products",
+            "newest":1,
+            "keywords": {
+                "tag1": "opp ortunities",
+                "tag2": "opp",
+                "tag3": "ortunities",
+                "tag4": "ortunities"
+            },
+            "shortDescription": "We're specialized in munufacture of various kinds of parking disc, parking disk, parking clock.",
+            "groupName":"Universal Car Camera"
+        },
+        "picture": {
+            "pic1": "../../img/120_120.jpg",
+            "pic2": "../../img/120_120.jpg",
+            "pic3": "../../img/60_60.jpg",
+            "pic4": "../../img/120_120.jpg",
+            "pic5": "../../img/60_60.jpg"
+        },
+        "specifications": "Importer It's target market is : Eastern Europe&Northern Europe.If your products Brake System Parts for Russian, Chinese and Korea Cars Importer It's target market is : Eastern Europe&Northern Europe.If your products Brake System Parts for Russian, Chinese and Korea Cars Importer It's target market is : Eastern Europe&Northern Europe.If your products Brake System Parts for Russian, Chinese and Korea Cars Importer It's target market is : Eastern Europe&Northern Europe.If your products Brake System Parts for Russian, Chinese and Korea Cars Importer It's target market is : Eastern Europe&Northern Europe."
+    }
+}

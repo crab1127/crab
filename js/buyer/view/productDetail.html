@@ -1,0 +1,111 @@
+<div class="pro-detail-info clear" id="pro-detail-info">
+    <div class="txt-info cpy-info">
+        <h3><a href="{{data.domainUrl}}" target="_blank">{{data.company.companyName}}</a></h3>
+        <div class="country">
+            <span class="flags fs{{data.company.countryId}}"></span>
+            <span class="txt">{{data.company.region}}</span>
+            <span class="mth" a-if="data.company.visitTimes" can-tip-type="left" can-tip="CAN_TITLE.EXP_NUM | {{data.company.visitTimes}}">{{data.company.visitTimes}}</span>
+        </div>
+        <div match="{{data.company.matchValue}}">
+            <span i18n>MODULE.PRODUCT_DETAIL.MATCH</span>
+            <em>{{data.company.matchValue}}%</em>
+        </div> 
+        <p class="txt-tit">
+            <span i18n>MODULE.PRODUCT_DETAIL.CONTACTER</span>
+            <em>{{data.company.contacter}}</em>
+        </p>
+        <p class="txt-tit" a-if="data.company.mainProduct">
+            <span i18n>MODULE.PRODUCT_DETAIL.MAIN_PRODUCT</span>
+            <em substr="46">{{data.company.mainProduct}}</em>
+            <span a-if="oData.company.showPM" cantitle="left:{{data.company.mainProduct}}">...</span>
+        </p>
+
+        <p class="txt-tit">
+            <span i18n>MODULE.PRODUCT_DETAIL.CERT</span>
+            <em>{{data.company.certificationNo}}</em>
+        </p>
+    </div>
+    <div class="det-l">
+        <div pic-view="{{data.pictureJSON}}"></div>
+        
+        <div class="des">
+            <h3>{{data.product.productName}}</h3>
+            <div class="row">
+                <label class="tit" i18n>MODULE.PRODUCT_DETAIL.PRICE</label>
+                <div class="txt">{{data.product.fobPrice}}</div>
+            </div>
+            <div class="row" a-if="data.product.model">
+                <label class="tit" i18n>MODULE.PRODUCT_FORM.PRODUCT_MODEL</label>
+                <div class="txt">{{data.product.model}}</div>
+            </div>
+
+            <div class="row" a-if="data.product.startPort">
+                <label class="tit" i18n>MODULE.PRODUCT_DETAIL.PORT</label>
+                <div class="txt">{{data.product.startPort}}</div>
+            </div>
+            <div class="row" a-if="data.product.minOrder">
+                <label class="tit" i18n>MODULE.PRODUCT_DETAIL.QUANTITY</label>
+                <div class="txt">{{data.product.minOrder}}</div>
+            </div>
+            <div class="row" a-if="data.product.monthSupply">
+                <label class="tit" i18n>MODULE.PRODUCT_DETAIL.ABILITY</label>
+                <div class="txt">{{data.product.monthSupply}}</div>
+            </div>
+            <div class="row" a-if="data.product.payMethods">
+                <label class="tit" i18n>MODULE.PRODUCT_DETAIL.PAYMENT</label>
+                <div class="txt">{{data.product.payMethods}}</div>
+            </div>
+            <div class="row" a-if="data.product.tags.length">
+                <label class="tit" i18n>MODULE.PRODUCT_DETAIL.TAGS</label>
+                <div class="txt">
+                    <span a-repeat="data.product.tags" class="tags-item">{{.}}</span>
+                </div>
+            </div>
+            <div class="row" a-if="data.product.shortDescription">
+                <label class="tit" i18n>MODULE.PRODUCT_DETAIL.INTRO</label>
+                <div class="txt">{{data.product.shortDescription}}</div>
+            </div>
+            <div class="action">
+                <a href="javascript:;" class="btn btn-s11" id="inquireBtn"><i style="display:inline-block;width:16px;height:14px;position: relative;top: 3px;margin-right: 8px;background: url(/image/inquire-icon.png) 0px 0px no-repeat;"></i><span i18n>MODULE.PRODUCT_DETAIL.INQUIRY</span></a>
+                <!--<a href="javascript:;" class="bg-ico btn-chat" id="imBtn"  style="margin-top: 0px;" i18n>IM.OFFLINE</a>-->
+                <div id="SkypeButton{{data.company.companyId}}" class="io-skype io-skype-min" style="margin: 0;vertical-align:middle;margin-left: 10px;"></div>
+                <a href="javascript:;" class="bg-ico btn-fav" id="favoritesBtn" i18n>MODULE.PRODUCT_DETAIL.FAVORITES</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-base-info" a-if="data.product.videoUrl">
+    <div class="tit-s2">
+        <h3 i18n>MODULE.PRODUCT_DETAIL.VIDEO_DISPLAY</h3>
+    </div>
+    <div class="pro-detail" id="view_wrap"></div>
+</div>
+<div class="box-base-info" a-if="data.specifications">
+    <div class="tit-s2">
+        <h3 i18n>MODULE.PRODUCT_DETAIL.SPEC</h3>
+    </div>
+    <div class="pro-detail">{{{data.specifications}}}</div>
+</div>
+
+<form class="reply-box">
+    <div class="tit-s2"><h3 i18n>MODULE.PRODUCT_DETAIL.CONTACT_NOW</h3></div>
+    <div class="field">
+        <label class="col" i18n>MODULE.PRODUCT_DETAIL.SUBJECT</label>
+        <div class="el">
+            <div class="search-s2" style="width: 650px;">
+                <input class="txt" type="text" autocomplete="off" name="subject" i18n placeholder="MODULE.PRODUCT_DETAIL.SUBJECT_PLACEHOLDER" style="width: 630px;">
+            </div>
+        </div>
+        <input type="hidden" name="referId" value="{{data.product.productId}}">
+        <input type="hidden" name="referType" value="product_inquiry">
+        <input type="hidden" name="receiver" value="{{data.product.supplierId}}">
+    </div>
+    <div class="field">
+        <label class="col" i18n>MODULE.PRODUCT_DETAIL.CONTENT</label>
+        <div class="el" class-name="checktextarea" kindEditor="content" max-length="500" width="650" height="200" ></div>
+    </div>
+    <div class="action">
+        <button class="btn btn-s11" id="save-replay" type="submit" i18n>BUTTON.SEND</button>
+        <div class="feedback hide" style="display: none;"></div>
+    </div>
+</form>

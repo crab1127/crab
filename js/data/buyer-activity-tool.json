@@ -1,0 +1,28 @@
+{
+    "status":"success",
+    "message":"",
+    "data":{ 
+        "categoryFields": [
+            {"value": 1, "label": "Building and Decorative Materials"},
+            {"value": 2, "label": "Building and Decorative Materials"},
+            {"value": 3, "label": "Building and Decorative Materials"}
+        ],
+        "regionFields": [
+            {"value": 1, "label": "Building and Decorative Materials"},
+            {"value": 2, "label": "Building and Decorative Materials"},
+            {"value": 3, "label": "Building and Decorative Materials"}
+        ],
+        "activityTypeFields": [
+            {"value": 1, "label": "Building and Decorative Materials"},
+            {"value": 2, "label": "Building and Decorative Materials"},
+            {"value": 3, "label": "Building and Decorative Materials"}
+        ],
+        "latestFields": [
+            {"value": 1, "label": "Building and Decorative Materials"},
+            {"value": 2, "label": "Building and Decorative Materials"},
+            {"value": 3, "label": "Building and Decorative Materials"}
+        ]
+    },
+    "page":{
+    }
+}

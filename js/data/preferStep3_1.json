@@ -1,0 +1,34 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "label":"",
+            "name":"gysXZ",
+            "type":"checkbox",
+            "normal":null,
+            "options":[
+                {
+                    "value":0,
+                    "text":"No limit"
+                },
+                {
+                    "value":201001,
+                    "text":"Manufacturer"
+                },
+                {
+                    "value":201002,
+                    "text":"Trading Company"
+                },
+                {
+                    "value":201003,
+                    "text":"Manufacture & trade Company"
+                },
+                {
+                    "value":201999,
+                    "text":"Others"
+                }
+            ]
+        }
+    ]
+}

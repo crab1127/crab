@@ -1,0 +1,96 @@
+<!--搜索条-->
+<script type="text/tpl" id="tool-tpl">
+    <div class="mod-filter coins-filter clear">
+
+    	<input id="startTime" name="startTime">
+   		<div class="c-line">--</div>
+   		<input id="endTime" name="endTime">
+
+   		<div class="coins-type">
+   			<select class="type" id="coinsType" name="coinsType" dropDown>
+	            <option value="0" i18n>MODULE.COINS_DETAIL.ALL</option>
+	            <option value="1" i18n>MODULE.COINS_DETAIL.GIFT</option>
+	            <option value="2" i18n>MODULE.COINS_DETAIL.CONSUME</option>
+	            <option value="3" i18n>MODULE.COINS_DETAIL.REWARD</option>
+	            <option value="4" i18n>MODULE.COINS_DETAIL.RECHARGE</option>
+	        </select>
+   		</div>
+    </div>
+</script>
+<!--C Coins 总数-->
+<script type="text/tpl" id="total-tpl">
+	<div class="hd-tit">
+		<div class="opt-box">
+			<div class="ctitle">
+				<span i18n>MODULE.COINS_DETAIL.COST</span>
+				<span class="c-color">{{title.totalMoney}}</span>
+				C&nbsp;<span i18n>MODULE.COINS_DETAIL.UNIT</span>
+				<span class="c-color2">|</span>
+				<span i18n>MODULE.COINS_DETAIL.BALANCE</span>&nbsp;:
+				<span class="c-color">{{title.blance}}</span>
+				C&nbsp;<span i18n>MODULE.COINS_DETAIL.UNIT</span>
+			</div>
+		</div>
+		<h2 i18n>MODULE.COINS_DETAIL.TITLE</h2>
+	</div>
+</script>
+<!--主内容-->
+<script type="text/tpl" id="content-tpl">
+	<div class="coins-detail">
+		<div class="bl-list lead-express">
+        {{{> tool}}}
+	    </div>
+	    <table class="mod-table coins-table">
+	    	<colgroup>
+				<col class="w140" />
+				<col class="w160" />
+				<col />
+				<col class="w170" />
+				<col class="w150" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th><div class="th-gap th-noline" i18n>MODULE.COINS_DETAIL.TIME</div></th>
+					<th><div class="th-gap" i18n>MODULE.COINS_DETAIL.TYPE</div></th>
+					<th><div class="th-gap" i18n>MODULE.COINS_DETAIL.DETAIL</div></th>
+					<th><div class="th-gap" i18n>MODULE.COINS_DETAIL.PAYMENT</div></th>
+					<th><div class="th-gap" i18n>MODULE.COINS_DETAIL.BALANCE</div></th>
+				</tr>
+			</thead>
+			<tbody a-if="data.dataList.length">
+				<tr a-repeat="data.dataList">
+					<td class="time">{{createTime}}</td>
+					<td>{{virtualMoneyCategory}}</td>
+					<td>{{virtualMoneyDetail}}</td>
+					<td>
+						<span a-if="^flag" class="icons coins-0"></span>
+						<span a-if="flag" class="icons coins-1"></span>
+						<span class="label">
+							<span class="c-color">{{payment}}</span>
+							&nbsp;C&nbsp;<span i18n>MODULE.COINS_DETAIL.UNIT</span>
+						</span>
+					</td>
+					<td>
+						<span class="c-color">{{balance}}</span>
+						&nbsp;C&nbsp;<span i18n>MODULE.COINS_DETAIL.UNIT</span>
+					</td>
+				</tr>
+			</tbody>
+			<tbody a-if="^data.dataList.length">
+				<tr class="no-cont">
+					<td colspan="5">
+						<div a-if="^page.total" class="fil-none">
+				            <p class="txt2" i18n>MODULE.COINS_DETAIL.TIPS</p>
+				        </div>
+					</td>
+				</tr>
+			</tbody>
+	    </table>
+	    <div a-if="isShowLoad" class="loading" >
+	        <span></span>
+	        Loading...
+	    </div>
+	    <div a-if="^isShowLoad" class="page-toop" page-current="{{data.page.page}}" page-total="{{data.page.total}}" page-limit="{{data.page.pageSize}}" paging></div>
+	</div>
+	
+</script>

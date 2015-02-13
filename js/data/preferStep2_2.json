@@ -1,0 +1,44 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "label":"",
+            "name":"zcZJ",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":-1,
+                    "text":"No Request",
+                    "icon":"data-icon s105000"
+                },
+                {
+                    "value":100,
+                    "text":"Below 1 M",
+                    "icon":"data-icon s105001"
+                },
+                {
+                    "value":500,
+                    "text":"1M - 5M ",
+                    "icon":"data-icon s105002"
+                },
+                {
+                    "value":2000,
+                    "text":"5M - 20M ",
+                    "icon":"data-icon s105003"
+                },
+                {
+                    "value":5000,
+                    "text":"20M - 50M ",
+                    "icon":"data-icon s105004"
+                },
+                {
+                    "value":10000,
+                    "text":"Above 100M",
+                    "icon":"data-icon s105005"
+                }
+            ]
+        }
+    ]
+}

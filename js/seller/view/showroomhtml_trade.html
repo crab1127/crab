@@ -1,0 +1,90 @@
+<form name="saleInfoForm" id="setShowroom_saleInfoFormId">
+    <div class="field">
+        <label class="col">{{_ "TPL_SHOWROOM.MAIN_TARGET_MARKET"}}:</label>
+        <div class="bg-ico ico-verified">{{_ "TPL_SHOWROOM.VERIFIED"}}</div>
+        <div class="el">
+            <div class="el-cont">
+                <div class="text" id="export">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="field f-rdchk">
+        <label class="col">{{_ "TPL_SHOWROOM.DELIVERY_TERMS"}}:</label>
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner" id="payTip_checkboxes">
+
+
+                </div>
+
+                <div class="fm-error hidden"> This field is required.</div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="field f-rdchk">
+        <label class="col">{{_ "TPL_SHOWROOM.PAYMENT_ACCEPTABLE"}}:</label>
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner" id="expectPay_checkboxes">
+
+
+                </div>
+
+                <div class="fm-error hidden">This field is required.</div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="field f-rdchk">
+        <label class="col">{{_ "TPL_SHOWROOM.PAYMENT"}}:</label>
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner" id="payMethods_checkboxes">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col">{{_ "TPL_SHOWROOM.LOADING_PORT"}}:</label>
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" placeholder="" name="fobPort" id="fobPort" class="w300 ipt">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="col">{{_ "TPL_SHOWROOM.LEAD_TIME"}}:</label>
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <input type="text" placeholder="" name="deliveryDeadline" id="delivery" class="w150 ipt"> {{_ "TPL_SHOWROOM.DAY"}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field f-rdchk">
+        <label class="col">{{_ "TPL_SHOWROOM.SAMPLE_AVAILABLE"}}:</label>
+        <div class="el">
+            <div class="el-cont">
+                <div class="inner">
+                    <label for="a1"><input type="radio" class="vertical" id="a1" name="sendSamples" value="1">{{_ "TPL_SHOWROOM.YES"}}</label>
+                    <label for="a2"><input type="radio" class="vertical" id="a2" name="sendSamples" value="0">{{_ "TPL_SHOWROOM.NO"}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions" id="saveBtnContainer">
+        <a class="btn btn-s11" id="saveBtn" href="javascript:;">{{_ "TPL_SHOWROOM.SAVE"}}</a>
+    </div>
+</form>

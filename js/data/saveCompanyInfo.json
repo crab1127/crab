@@ -1,0 +1,13 @@
+{
+    "message":"success",
+    "type":"json",
+    "data":{
+    },
+    "status":"success",
+    "page":{
+        "total":0,
+        "page":1,
+        "maxPage":0,
+        "pageSize":0
+    }
+}

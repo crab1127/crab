@@ -1,0 +1,648 @@
+{
+    "status": "success",
+    "type": "json",
+    "message": null,
+    "data": {
+        "informationIntegrity": 85,
+        /* 基本信息 */
+        "companyInfo": {
+            "companyName": {
+                "cn": "xxx",
+                "en": "xxx"
+            },
+            "found": "2000",
+            "category": {
+                /* 行业分类 */
+                "industryCategories": [
+                    {
+                        "cn": "xxx",
+                        "en": "xxx"
+                    },
+                    {
+                        "cn": "xxx",
+                        "en": "xxx"
+                    }
+                ],
+                /* 产品分类 */
+                "productCategories": [
+                    {
+                        "cn": "xxx",
+                        "en": "xxx"
+                    },
+                    {
+                        "cn": "xxx",
+                        "en": "xxx"
+                    }
+                ]
+            },
+            "companyType": {
+                "cn": "xxx",
+                "en": "xxx"
+            },
+            "mainProducts": ["product1", "product2", "product3"],
+            "area": {
+                "cn": "xxx",
+                "en": "xxx"
+            },
+            "address": {
+                "cn": "xxx",
+                "en": "xxx"
+            },
+            "zipCode": "510000",
+            "employees": {
+                "cn": "xxx",
+                "en": "xxx"
+            },
+            "registeredCapital": "$1,000,000.00",
+            "registeredCapitalUsd": "$100w",
+            "commercialLicense": "234234234234",
+            "telephone": "86-020-87687983",
+            "fax": "86-020-89843987",
+            "mobilePhone": "86-1343333876",
+            "skype": "sdfsdf@123.com",
+            "facebook": "asdfsad@213.com",
+            "companyLogo": {
+                "url": "xxx",
+                "abslouteUrl": "xxx"
+            },
+            "companyVideo": {
+                "url": "xxx",
+                "abslouteUrl": "xxx"
+            },
+            "companyImages": [
+                {
+                    "imageId": 1,
+                    "url": "xxx",
+                    "abslouteUrl": "xxx"
+                },
+                {
+                    "imageId": 2,
+                    "url": "xxx",
+                    "abslouteUrl": "xxx"
+                }
+            ],
+            "form": {
+                "supplierId": {
+                    "type": "hidden",
+                    "name": "supplierId",
+                    "default": 1
+                },
+                "companyId": {
+                    "type": "hidden",
+                    "name": "companyId",
+                    "default": 1
+                },
+                "mainProducts": {
+                    "type": "hidden",
+                    "name": "mainProducts",
+                    "default": "product1,product2,product3"
+                },
+                "webSite": {
+                    "type": "text",
+                    "name": "webSite",
+                    "default": "http://www.google.com"
+                },
+                "companyAd": {
+                    "type": "text",
+                    "name": "companyAd",
+                    "default": "xxx"
+                },
+                "companyIntro": {
+                    "type": "textarea",
+                    "name": "companyIntro",
+                    "default": "xxx"
+                },
+                "tel1": {
+                    "type": "text",
+                    "name": "tel1",
+                    "default": "86"
+                },
+                "tel2": {
+                    "type": "text",
+                    "name": "tel2",
+                    "default": "020"
+                },
+                "tel3": {
+                    "type": "text",
+                    "name": "tel3",
+                    "default": "87687983"
+                },
+                "fax1": {
+                    "type": "text",
+                    "name": "fax1",
+                    "default": "86"
+                },
+                "fax2": {
+                    "type": "text",
+                    "name": "fax2",
+                    "default": "020"
+                },
+                "fax3": {
+                    "type": "text",
+                    "name": "fax3",
+                    "default": "89843987"
+                },
+                "mobile1": {
+                    "type": "text",
+                    "name": "mobile1",
+                    "default": "86"
+                },
+                "mobile2": {
+                    "type": "text",
+                    "name": "mobile2",
+                    "default": "1343333876"
+                },
+                "skype": {
+                    "type": "text",
+                    "name": "skype",
+                    "default": "sdfsdf@123.com"
+                },
+                "facebook": {
+                    "type": "text",
+                    "name": "facebook",
+                    "default": "asdfsad@213.com"
+                },
+                "companyLogo": {
+                    "type": "hidden",
+                    "name": "companyLogo",
+                    "default": "xxx"
+                },
+                "companyVideo": {
+                    "type": "hidden",
+                    "name": "companyVideo",
+                    "default": "xxx"
+                },
+                "companyImages": {
+                    "type": "hidden",
+                    "name": "companyImages",
+                    "default": "xxx,xxx"
+                }
+            }
+        },
+        /* 生产信息 */
+        "productionInfo": {
+            "form": {
+                "supplierId": {
+                    "type": "hidden",
+                    "name": "supplierId",
+                    "default": 1
+                },
+                "companyId": {
+                    "type": "hidden",
+                    "name": "companyId",
+                    "default": 1
+                },
+                "factoryArea": {
+                    "type": "text",
+                    "name": "factoryArea",
+                    "default": "500"
+                },
+                "odmExper": {
+                    "type": "radio",
+                    "name": "odmExper",
+                    "default": 1,
+                    "options": [
+                        {
+                            "text": "是",
+                            "value": 1
+                        },
+                        {
+                            "text": "否",
+                            "value": 0
+                        }
+                    ],
+                },
+                "odmDesc": {
+                    "type": "text",
+                    "name": "odmDesc",
+                    "default": "xxx",
+                },
+                "oemExper": {
+                    "type": "radio",
+                    "name": "oemExper",
+                    "default": 1,
+                    "options": [
+                        {
+                            "text": "是",
+                            "value": 1
+                        },
+                        {
+                            "text": "否",
+                            "value": 0
+                        }
+                    ],
+                },
+                "oemDesc": {
+                    "type": "text",
+                    "name": "oemDesc",
+                    "default": "xxx",
+                },
+                "engineerNum": {
+                    "type": "select",
+                    "name": "engineerNum",
+                    "default": "207001",
+                    "options": [
+                        {
+                            "text": "10人以下",
+                            "value": "207001"
+                        },
+                        {
+                            "text": "10-50人",
+                            "value": "207002"
+                        }
+                    ]
+                },
+                "researchNum": {
+                    "type": "select",
+                    "name": "researchNum",
+                    "default": "208001",
+                    "options": [
+                        {
+                            "text": "10人以下",
+                            "value": "208001"
+                        },
+                        {
+                            "text": "10-50人",
+                            "value": "208002"
+                        }
+                    ]
+                },
+                "qualityTestNum": {
+                    "type": "select",
+                    "name": "qualityTestNum",
+                    "default": "209001",
+                    "options": [
+                        {
+                            "text": "10人以下",
+                            "value": "209001"
+                        },
+                        {
+                            "text": "10-50人",
+                            "value": "209002"
+                        }
+                    ]
+                },
+                "systemCertification": {
+                    "type": "checkbox",
+                    "name": "systemCertification",
+                    "default": ["210001", "210002"],
+                    "options": [
+                        {
+                            "text": "HACCP",
+                            "value": "210001"
+                        },
+                        {
+                            "text": "ISO 9001:2000",
+                            "value": "210002"
+                        }
+                    ]
+                }
+            }
+        },
+        "marketingInfo": {
+            /* 营业情况 */
+            "salesInfo": {
+                "list": [
+                    {
+                        "salesInfoId": 1,
+                        "fiscalYear": "2010",
+                        "yearTurnover": "1,000,000 USD",
+                        "exportProportion": "15.5%"
+                    }
+                ],
+                "fiscalYears": [
+                    {
+                        "text": "2010",
+                        "value": "2010"
+                    },
+                    {
+                        "text": "2011",
+                        "value": "2011"
+                    },
+                    {
+                        "text": "2012",
+                        "value": "2012"
+                    }
+                ],
+                "form": [
+                    {
+                        "salesInfoId": {
+                            "type": "hidden",
+                            "name": "salesInfoId",
+                            "default": 1
+                        },
+                        "fiscalYear": {
+                            "type": "select",
+                            "name": "fiscalYear",
+                            "default": "2010"
+                        },
+                        "yearTurnover": {
+                            "type": "text",
+                            "name": "yearTurnover",
+                            "default": 1000000
+                        },
+                        "exportProportion": {
+                            "type": "text",
+                            "name": "exportProportion",
+                            "default": 15.5
+                        }
+                    }
+                ]
+            },
+            /* 各地出口情况 */
+            "exportSales": {
+                "accountingYear": "2013",
+                "annualExportSales": "200,000 USD",
+                "list": [
+                    {
+                        "exportSalesId": 1,
+                        "exportRegion": "东南亚",
+                        "exportRegion": "xxx",
+                        "yearTurnover": "1,000,000 USD",
+                        "majorCustomer": "GUCCI,NIKE"
+                    }
+                ],
+                /* 会计年份，用于生成下拉列表 */
+                "accountingYears": [
+                    {
+                        "text": "2010",
+                        "value": "2010"
+                    },
+                    {
+                        "text": "2011",
+                        "value": "2011"
+                    },
+                    {
+                        "text": "2012",
+                        "value": "2012"
+                    }
+                ],
+                /* 所有贸易区(中文)，用于生成下拉列表 */
+                "exportRegions": [
+                    {
+                        "text": "东南亚",
+                        "value": 1
+                    }
+                ],
+                /* 所有贸易区(英文)，用于生成下拉列表 */
+                "exportRegionsEn": [
+                    {
+                        "text": "xxx",
+                        "value": 1
+                    }
+                ],
+                "accountingForm": {
+                    "accountingYear": {
+                        "type": "select",
+                        "name": "accountingYear",
+                        "default": "2012"
+                    },
+                    "annualExportSales": {
+                        "type": "text",
+                        "name": "annualExportSales",
+                        "default": "200000"
+                    }
+                },
+                "form": [
+                    {
+                        "exportSalesId": {
+                            "type": "hidden",
+                            "name": "exportSalesId",
+                            "default": "1"
+                        },
+                        "exportRegion": {
+                            "type": "select",
+                            "name": "exportRegion",
+                            "default": 1
+                        },
+                        "yearTurnover": {
+                            "type": "text",
+                            "name": "yearTurnover",
+                            "default": 1000000
+                        },
+                        "majorCustomer1": {
+                            "type": "text",
+                            "name": "majorCustomer1",
+                            "default": "GUCCI"
+                        },
+                        "majorCustomer2": {
+                            "type": "text",
+                            "name": "majorCustomer2",
+                            "default": "NIKE"
+                        },
+                        "majorCustomer3": {
+                            "type": "text",
+                            "name": "majorCustomer3",
+                            "default": ""
+                        }
+                    }
+                ]
+            },
+            /* 贸易条款 */
+            "tradeClause": {
+                "mainExportMarkets": {
+                    /* 贸易区列表 */
+                    "tradeAreas": [
+                        {
+                            "cn": "xxx",
+                            "en": "xxx"
+                        },
+                        {
+                            "cn": "xxx",
+                            "en": "xxx"
+                        }
+                    ],
+                    /* 国家列表 */
+                    "countries": [
+                        {
+                            "cn": "xxx",
+                            "en": "xxx"
+                        },
+                        {
+                            "cn": "xxx",
+                            "en": "xxx"
+                        }
+                    ]
+                },
+                "form": {
+                    "expectPayTerms" : {
+                        "type": "checkbox",
+                        "name": "expectPayTerms",
+                        "default": ["211001"],
+                        "options": [
+                            {
+                                "text": "EXW",
+                                "value": "211001"
+                            }
+                        ]
+                    },
+                    "expectPayCurrency": {
+                        "type": "checkbox",
+                        "name": "expectPayCurrency",
+                        "default": ["905001"],
+                        "options": [
+                            {
+                                "text": "USD",
+                                "value": "905001"
+                            }
+                        ]
+                    },
+                    "payMethod": {
+                        "type": "checkbox",
+                        "name": "payMethod",
+                        "default": ["904001"],
+                        "options": [
+                            {
+                                "text": "L/C",
+                                "value": "904001"
+                            }
+                        ]
+                    },
+                    "fobPort": {
+                        "type": "text",
+                        "name": "fobPort",
+                        "default": "HongKong"
+                    },
+                    "deliveryDeadline": {
+                        "type": "text",
+                        "name": "deliveryDeadline",
+                        "default": 30
+                    },
+                    "sendSamples": {
+                        "type": "radio",
+                        "name": "sendSamples",
+                        "default": 1,
+                        "options": [
+                            {
+                                "text": "Yes",
+                                "value": 1
+                            },
+                            {
+                                "text": "No",
+                                "value": 0
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "productsInfo": {
+            /* 主营产品 */
+            "mainSales": {
+                "list": [
+                    {
+                        "mainSalesId": 1,
+                        "mainCategory": "建筑及装饰材料",
+                        "salesAccounting": 50
+                    }
+                ],
+                "mainCategories": [
+                    {
+                        "text": "建筑及装饰材料",
+                        "value": 1
+                    },
+                    {
+                        "text": "卫浴设备",
+                        "value": 2
+                    }
+                ],
+                "form": [
+                    {
+                        "mainSalesId": {
+                            "type": "hidden",
+                            "name": "mainSalesId",
+                            "default": 1
+                        },
+                        "mainCategory": {
+                            "type": "select",
+                            "name": "mainCategory",
+                            "default": 1
+                        },
+                        "salesAccounting": {
+                            "type": "text",
+                            "name": "salesAccounting",
+                            "default": 50
+                        }
+                    }
+                ]
+            },
+            /* 热销产品 */
+            "hotSales": {
+                "list": [
+                    {
+                        "hotSalesId": 1,
+                        "productName": "Jiangsu pure white garlic price",
+                        "annualSales": "1,000,000 USD",
+                        "minOrder": "5000 Piece",
+                        "majorBuyers": "NIKE,GOOGLE,SONY"
+                    }
+                ],
+                "orderUnits": [
+                    {
+                        "text": "Piece",
+                        "value": "906001"
+                    }
+                ],
+                "form": [
+                    {
+                        "hotSalesId": {
+                            "type": "hidden",
+                            "name": "hotSalesId",
+                            "default": 1
+                        },
+                        "productName": {
+                            "type": "text",
+                            "name": "productName",
+                            "default": "Jiangsu pure white garlic price"
+                        },
+                        "annualSales": {
+                            "type": "text",
+                            "name": "annualSales",
+                            "default": 1000000
+                        },
+                        "minOrderNum": {
+                            "type": "text",
+                            "name": "minOrderNum",
+                            "default": 5000
+                        },
+                        "minOrderUnit": {
+                            "type": "select",
+                            "name": "minOrderUnit",
+                            "default": "906001"
+                        },
+                        "majorBuyer1": {
+                            "type": "text",
+                            "name": "majorBuyer1",
+                            "default": "NIKE"
+                        },
+                        "majorBuyer2": {
+                            "type": "text",
+                            "name": "majorBuyer2",
+                            "default": "GOOGLE"
+                        },
+                        "majorBuyer3": {
+                            "type": "text",
+                            "name": "majorBuyer3",
+                            "default": "SONY"
+                        }
+                    }
+                ]
+            },
+            /* 新产品 */
+            "newProducts": {
+                "total": 5,
+                "list": [
+                    {
+                        "productId": 1,
+                        "productName": "Jiangsu pure white garlic price",
+                        "productImage": "/img/120_120.jpg",
+                        "minOrder": "1000 Pieces",
+                        "fobPrice": "100~200 USD / Pieces",
+                        "paymentTerms": "L/C,T/T",
+                        "supplyAbility": "1000 Pieces / Month"
+                    }
+                ]
+            }
+        }
+    }
+}

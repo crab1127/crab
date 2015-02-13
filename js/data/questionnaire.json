@@ -1,0 +1,148 @@
+{
+	"status": "success",
+	"message": "",
+	"data": [
+		{
+			"label": "Your Preference of Buyers' Participation?",
+			"items": [
+				{
+					"label": "Participation",
+					"name": "",
+					"type": "radio",
+					"questionId": 205,
+					"options": [
+						{
+							"text": "不限",
+							"en_text": "Not Required",
+							"value": 205000
+						},
+						{
+							"text": "至少一届",
+							"en_text": "No less than 1 time",
+							"value": 205002
+						},
+						{
+							"text": "至少5界",
+							"en_text": "No less than 5 times",
+							"value": 205003
+						},
+						{
+							"text": "至少10界",
+							"en_text": "No less than 10 times",
+							"value": 205004
+						},
+						{
+							"text": "至少15界（VIP采购商）",
+							"en_text": "No less than 15 times",
+							"value": 205005
+						}
+					]
+				},
+				{
+					"label": "Lately Participation",
+					"name": "",
+					"type": "radio",
+					"questionId": 206,
+					"options": [
+						{
+							"text": "不限",
+							"en_text": "Not Required",
+							"value": 206000
+						},
+						{
+							"text": "最近5届至少参加两次",
+							"en_text": "No less than 1 time in recent 5 Fair",
+							"value": 206002
+						},
+						{
+							"text": "最近5届至少参加一次",
+							"en_text": "No less than 2 time in recent 5 Fair",
+							"value": 206003
+						}
+					]
+				}
+			]
+		},
+		{
+			"label": "Your Preference on Buyers' Business Type.",
+			"name": "",
+			"type": "checkbox",
+			"questionId": 100,
+			"options": [
+				{
+					"text": "采购办事处",
+					"en_text": "Buying Office",
+					"value": 100001
+				},
+				{
+					"text": "制造商",
+					"en_text": "Manufacturer",
+					"value": 100002
+				},
+				{
+					"text": "贸易公司",
+					"en_text": "Trading Company",
+					"value": 100003
+				},
+				{
+					"text": "批发商/经销商",
+					"en_text": "Wholesaler/Distributor",
+					"value": 100004
+				},
+				{
+					"text": "零售商",
+					"en_text": "Retailer",
+					"value": 100005
+				},
+				{
+					"text": "经纪人/顾问委员会",
+					"en_text": "Consulting Company",
+					"value": 100006
+				},
+				{
+					"text": "政府及机构",
+					"en_text": "Government/Organization",
+					"value": 100007
+				},
+				{
+					"text": "其他",
+					"en_text": "Others",
+					"value": 100999
+				}
+			]
+		},
+		{
+			"label": "Your Preference on Buyers' Business Nature.",
+			"name": "",
+			"type": "checkbox",
+			"questionId": 101,
+			"options": [
+				{
+					"text": "制造商及大批发商",
+					"en_text": "Manufacturer/Large wholesaler",
+					"value": 101001
+				},
+				{
+					"text": "中小批发商群体",
+					"en_text": "Small/Medium-sized wholesaler",
+					"value": 101002
+				},
+				{
+					"text": "小零售商群体",
+					"en_text": "Small-sized wholesaler",
+					"value": 101003
+				},
+				{
+					"text": "小贸易商群体",
+					"en_text": "Trader",
+					"value": 101004
+				},
+				{
+					"text": "其它群体",
+					"en_text": "Others",
+					"value": 101999
+				}
+			]
+		}
+	]
+}

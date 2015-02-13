@@ -1,0 +1,39 @@
+{
+    "message":"success",
+    "type":"json",
+    "data":{
+        "compId":"201",
+        "year":"2013",
+        "amount":"200000",
+        "areas":[
+            {
+                "id":"1",
+                "areaId":"8",
+                "label":"大洋洲" ,
+                "amount":"100000",
+                "customers":"GUCCI,NIKE"
+            },
+            {
+                "id":"2",
+                "areaId":"9",
+                "label":"东南亚",
+                "amount":"50000",
+                "customers":"GUCCI,NIKE,GOOGLE"
+            },
+            {
+                "id":"3",
+                "areaId":"10",
+                "label":"中东",
+                "amount":"50000",
+                "customers":"CCTV,GZTV"
+            }
+        ]
+    },
+    "status":"success",
+    "page":{
+        "total":0,
+        "page":1,
+        "maxPage":0,
+        "pageSize":0
+    }
+}

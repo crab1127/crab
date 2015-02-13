@@ -1,0 +1,766 @@
+{
+    "message": "",
+    "type": "json",
+    "data": {
+        "informationIntegrity": 0,
+        "productsInfo": {
+            "newProducts": {
+                "total": 1,
+                "list": [{
+                    "minOrder": "11 20'container",
+                    "supplyAbility": "12 20'container / Month",
+                    "productImage": "http://58.248.138.13:81/group1/M00/39/84/wKgKEVFeM0SAMP3EAA1rIuRd3Es889.jpg",
+                    "paymentTerms": "",
+                    "fobPrice": "$12.00~$21.00 USD / Foot",
+                    "productName": "fd",
+                    "productId": 14285
+                }]
+            },
+            "hotSales": {
+                "form": [],
+                "list": [{
+                    "hotSalesId": 1,
+                    "productName": "Jiangsu pure white ",
+                    "annualSales": "1,000,000 USD",
+                    "minOrder": "5000 Piece",
+                    "majorBuyers": "NIKE,GOOGLE"
+                },
+                    {
+                        "hotSalesId": 5,
+                        "productName": "Jiangsu pure white",
+                        "annualSales": "1,000,000 USD",
+                        "minOrder": "5000 Piece",
+                        "majorBuyers": "NIKE,GOOGLE"
+                    },
+                    {
+                        "hotSalesId": 11,
+                        "productName": "Jiangsu pure whit",
+                        "annualSales": "1,000,000 USD",
+                        "minOrder": "5000 Piece",
+                        "majorBuyers": "NIKE"
+                    }
+
+
+                ],
+                "orderUnits": [{
+                    "text": "Pieces",
+                    "value": "906001"
+                },
+                    {
+                        "text": "20'container",
+                        "value": "906002"
+                    },
+                    {
+                        "text": "40'container",
+                        "value": "906003"
+                    },
+                    {
+                        "text": "40'HQ container",
+                        "value": "906004"
+                    },
+                    {
+                        "text": "Bags",
+                        "value": "906005"
+                    },
+                    {
+                        "text": "Boxes",
+                        "value": "906006"
+                    },
+                    {
+                        "text": "Foot",
+                        "value": "906007"
+                    },
+                    {
+                        "text": "Meter",
+                        "value": "906008"
+                    },
+                    {
+                        "text": "Pairs",
+                        "value": "906009"
+                    },
+                    {
+                        "text": "Reams",
+                        "value": "906010"
+                    },
+                    {
+                        "text": "Rolls",
+                        "value": "906011"
+                    },
+                    {
+                        "text": "Sets",
+                        "value": "906012"
+                    },
+                    {
+                        "text": "Square meters",
+                        "value": "906013"
+                    },
+                    {
+                        "text": "Tons",
+                        "value": "906014"
+                    },
+                    {
+                        "text": "Others",
+                        "value": "906999"
+                    }]
+            },
+            "mainSales": {
+                "form": [
+                    {
+                    "mainSalesId": {
+                        "type": "hidden",
+                        "name": "mainSalesId",
+                        "default": 1
+                    },
+                    "mainCategory": {
+                        "type": "select",
+                        "name": "mainCategory",
+                        "default": 1544
+                    },
+                    "salesAccounting": {
+                        "type": "text",
+                        "name": "salesAccounting",
+                        "default": 30
+                    }
+                },
+                    {
+                        "mainSalesId": {
+                            "type": "hidden",
+                            "name": "mainSalesId",
+                            "default": 5
+                        },
+                        "mainCategory": {
+                            "type": "select",
+                            "name": "mainCategory",
+                            "default": 1655
+                        },
+                        "salesAccounting": {
+                            "type": "text",
+                            "name": "salesAccounting",
+                            "default": 40
+                        }
+                    },
+                    {
+                        "mainSalesId": {
+                            "type": "hidden",
+                            "name": "mainSalesId",
+                            "default": 17
+                        },
+                        "mainCategory": {
+                            "type": "select",
+                            "name": "mainCategory",
+                            "default": 12154
+                        },
+                        "salesAccounting": {
+                            "type": "text",
+                            "name": "salesAccounting",
+                            "default": 50
+                        }
+                    }
+                ],
+                "list": [{
+                    "mainSalesId": 1,
+                    "mainCategory": "建筑及装饰材料",
+                    "mainCategoryId":1224,
+                    "salesAccounting": 50
+                },
+                    {
+                        "mainSalesId": 1,
+                        "mainCategory": "建筑及装饰材料",
+                        "mainCategoryId":1234,  //接口加入这个ID
+                        "salesAccounting": 50
+                    },
+                    {
+                        "mainSalesId": 1,
+                        "mainCategory": "建筑及装饰材料",
+                        "mainCategoryId":1244,
+                        "salesAccounting": 50
+                    }
+
+
+                ],
+                "mainCategories": [{
+                    "text": 78,
+                    "value": 78
+                }]
+            }
+        },
+        "marketingInfo": {
+            "exportSales": {
+                "form": [],
+                "annualExportSales": "",
+                "list": [{
+                    "exportSalesId": 1,
+                    "exportRegion": "东南亚",
+                    "yearTurnover": "1,000,000 USD",
+                    "majorCustomer": "GUCCI,NIKE"
+                },
+                    {
+                        "exportSalesId": 10,
+                        "exportRegion": "东南亚",
+                        "yearTurnover": "1,000,000 ",
+                        "majorCustomer": "GUCCI,NIKE"
+                    },
+                    {
+                        "exportSalesId": 15,
+                        "exportRegion": "东南亚",
+                        "yearTurnover": "1,000,000 ",
+                        "majorCustomer": "GUCCI,NIKE"
+                    }
+
+
+                ],
+                "accountingYear": "",
+                "exportRegions": [{
+                    "text": "鍖楃編",
+                    "value": 1
+                },
+                    {
+                        "text": "涓滀簹",
+                        "value": 11
+                    },
+                    {
+                        "text": "鍗椾簹",
+                        "value": 10
+                    },
+                    {
+                        "text": "涓笢",
+                        "value": 9
+                    },
+                    {
+                        "text": "涓滃崡浜�",
+                        "value": 8
+                    },
+                    {
+                        "text": "闈炴床",
+                        "value": 7
+                    },
+                    {
+                        "text": "鍗楁",
+                        "value": 6
+                    },
+                    {
+                        "text": "涓滄",
+                        "value": 5
+                    },
+                    {
+                        "text": "鍖楁",
+                        "value": 4
+                    },
+                    {
+                        "text": "瑗挎",
+                        "value": 3
+                    },
+                    {
+                        "text": "鎷変竵缇庢床",
+                        "value": 2
+                    },
+                    {
+                        "text": "澶ф磱娲�",
+                        "value": 12
+                    }]
+            },
+            "tradeClause": {
+                "form": {
+                    "expectPayCurrency": {
+                        "default": [905002,905005,905006],
+                        "name": "expectPayCurrency",
+                        "type": "checkbox",
+                        "options": [{
+                            "text": "USD",
+                            "value": "905001"
+                        },
+                            {
+                                "text": "GBP",
+                                "value": "905002"
+                            },
+                            {
+                                "text": "RMB",
+                                "value": "905003"
+                            },
+                            {
+                                "text": "EUR",
+                                "value": "905004"
+                            },
+                            {
+                                "text": "AUD",
+                                "value": "905002"
+                            },
+                            {
+                                "text": "CAD",
+                                "value": "905006"
+                            },
+                            {
+                                "text": "CHF",
+                                "value": "905007"
+                            },
+                            {
+                                "text": "JPY",
+                                "value": "905008"
+                            },
+                            {
+                                "text": "HKD",
+                                "value": "905009"
+                            },
+                            {
+                                "text": "NZD",
+                                "value": "905010"
+                            },
+                            {
+                                "text": "SGD",
+                                "value": "905011"
+                            },
+                            {
+                                "text": "NTD",
+                                "value": "905012"
+                            },
+                            {
+                                "text": "Other",
+                                "value": "905999"
+                            }]
+                    },
+                    "fobPort": {
+                        "default": "GD",
+                        "name": "fobPort",
+                        "type": "text"
+                    },
+                    "sendSamples": {
+                        "default": 0,
+                        "name": "sendSamples",
+                        "type": "radio"
+                    },
+                    "expectPayTerms": {
+                        "default": [211001,211005,211006],
+                        "name": "expectPayTerms",
+                        "type": "checkbox",
+                        "options": [{
+                            "text": "EXW",
+                            "value": "211001"
+                        },
+                            {
+                                "text": "FAS",
+                                "value": "211002"
+                            },
+                            {
+                                "text": "FOB",
+                                "value": "211003"
+                            },
+                            {
+                                "text": "FCA",
+                                "value": "211004"
+                            },
+                            {
+                                "text": "CFR",
+                                "value": "211005"
+                            },
+                            {
+                                "text": "CPT",
+                                "value": "211005"
+                            },
+                            {
+                                "text": "CIF",
+                                "value": "211007"
+                            },
+                            {
+                                "text": "CIP",
+                                "value": "211008"
+                            },
+                            {
+                                "text": "DES",
+                                "value": "211009"
+                            },
+                            {
+                                "text": "DAF",
+                                "value": "211010"
+                            },
+                            {
+                                "text": "DEQ",
+                                "value": "211011"
+                            },
+                            {
+                                "text": "DDP",
+                                "value": "211012"
+                            },
+                            {
+                                "text": "DDU",
+                                "value": "211013"
+                            },
+                            {
+                                "text": "Other",
+                                "value": "211999"
+                            }]
+                    },
+                    "deliveryDeadline": {
+                        "default": "200",
+                        "name": "deliveryDeadline",
+                        "type": "text"
+                    },
+                    "payMethod": {
+                        "default": [904001,904005,904006],
+                        "name": "payMethod",
+                        "type": "checkbox",
+                        "options": [{
+                            "text": "L/C",
+                            "value": "904001"
+                        },
+                            {
+                                "text": "T/T",
+                                "value": "904002"
+                            },
+                            {
+                                "text": "D/P",
+                                "value": "904003"
+                            },
+                            {
+                                "text": "Money Gram",
+                                "value": "904004"
+                            },
+                            {
+                                "text": "Credit Card",
+                                "value": "904005"
+                            },
+                            {
+                                "text": "Paypal",
+                                "value": "904006"
+                            },
+                            {
+                                "text": "Western Union",
+                                "value": "904007"
+                            },
+                            {
+                                "text": "Cash",
+                                "value": "904008"
+                            },
+                            {
+                                "text": "Escrow",
+                                "value": "904009"
+                            },
+                            {
+                                "text": "Other",
+                                "value": "904999"
+                            }]
+                    }
+                },
+                "mainExportMarkets": ["asdfsd","adsfd","ssssss"]
+            },
+            "salesInfo": {
+                "form": [],
+                "list": [],
+                "fiscalYears": [{
+                    "text": "2004",
+                    "value": "2004"
+                },
+                    {
+                        "text": "2005",
+                        "value": "2005"
+                    },
+                    {
+                        "text": "2006",
+                        "value": "2006"
+                    },
+                    {
+                        "text": "2007",
+                        "value": "2007"
+                    },
+                    {
+                        "text": "2008",
+                        "value": "2008"
+                    },
+                    {
+                        "text": "2009",
+                        "value": "2009"
+                    },
+                    {
+                        "text": "2010",
+                        "value": "2010"
+                    },
+                    {
+                        "text": "2011",
+                        "value": "2011"
+                    },
+                    {
+                        "text": "2012",
+                        "value": "2012"
+                    },
+                    {
+                        "text": "2013",
+                        "value": "2013"
+                    }]
+            }
+        },
+        "productionInfo": {
+            "form": {
+                "engineerNum": {
+                    "default": "",
+                    "name": "engineerNum",
+                    "type": "select",
+                    "options": [{
+                        "text": "10浜轰互涓�",
+                        "value": "207001"
+                    },
+                        {
+                            "text": "10-50",
+                            "value": "207002"
+                        },
+                        {
+                            "text": "50-100",
+                            "value": "207003"
+                        },
+                        {
+                            "text": "100-150",
+                            "value": "207004"
+                        },
+                        {
+                            "text": "150浜轰互涓�",
+                            "value": "207005"
+                        }]
+                },
+                "oemExper": {
+                    "default": 1,
+                    "name": "oemExper",
+                    "type": "radio",
+                    "options": [{
+                        "text": "鍚�",
+                        "value": 0
+                    },
+                        {
+                            "text": "鍚�",
+                            "value": 0
+                        }]
+                },
+                "odmExper": {
+                    "default": 1,
+                    "name": "odmExper",
+                    "type": "radio",
+                    "options": [{
+                        "text": "鍚�",
+                        "value": 0
+                    }]
+                },
+                "supplierId": {
+                    "default": 7185,
+                    "name": "supplierId",
+                    "type": "hidden"
+                },
+                "oemDesc": {
+                    "default": "",
+                    "name": "oemDesc",
+                    "type": "text"
+                },
+                "qualityTestNum": {
+                    "default": "",
+                    "name": "qualityTestNum",
+                    "type": "select",
+                    "options": [{
+                        "text": "10浜轰互涓�",
+                        "value": "209001"
+                    },
+                        {
+                            "text": "10-50",
+                            "value": "209002"
+                        },
+                        {
+                            "text": "50-100",
+                            "value": "209003"
+                        },
+                        {
+                            "text": "100-150",
+                            "value": "209004"
+                        },
+                        {
+                            "text": "150浜轰互涓�",
+                            "value": "209005"
+                        }]
+                },
+                "odmDesc": {
+                    "default": "dsafsdafdsa",
+                    "name": "odmDesc",
+                    "type": "text"
+                },
+                "factoryArea": {
+                    "default": "1255",
+                    "name": "factoryArea",
+                    "type": "text"
+                },
+                "companyId": {
+                    "default": 10456,
+                    "name": "companyId",
+                    "type": "hidden"
+                },
+                "researchNum": {
+                    "default": "",
+                    "name": "researchNum",
+                    "type": "select",
+                    "options": [{
+                        "text": "10浜轰互涓�",
+                        "value": "208001"
+                    },
+                        {
+                            "text": "10-50",
+                            "value": "208002"
+                        },
+                        {
+                            "text": "50-100",
+                            "value": "208003"
+                        },
+                        {
+                            "text": "100-150",
+                            "value": "208004"
+                        },
+                        {
+                            "text": "150浜轰互涓�",
+                            "value": "208005"
+                        }]
+                },
+                "systemCertification": {
+                    "default": [210002,210003],
+                    "name": "systemCertification",
+                    "type": "select",
+                    "options": [{
+                        "text": "HACCP",
+                        "value": "210001"
+                    },
+                        {
+                            "text": "ISO 9001:2000",
+                            "value": "210002"
+                        },
+                        {
+                            "text": "ISO 9001:2008",
+                            "value": "210003"
+                        },
+                        {
+                            "text": "QS-9000",
+                            "value": "210004"
+                        },
+                        {
+                            "text": "ISO 14001:2004",
+                            "value": "210005"
+                        },
+                        {
+                            "text": "ISO/TS 16949",
+                            "value": "210006"
+                        },
+                        {
+                            "text": "SA8000",
+                            "value": "210007"
+                        },
+                        {
+                            "text": "ISO 17799",
+                            "value": "210008"
+                        },
+                        {
+                            "text": "OHSAS 18001",
+                            "value": "210009"
+                        },
+                        {
+                            "text": "TL 9000",
+                            "value": "210010"
+                        },
+                        {
+                            "text": "Others",
+                            "value": "210999"
+                        }]
+                }
+            }
+        },
+        "companyInfo": {
+            "fax": "(86)222-22222222",
+            "form": {
+                "fax": {
+                    "default": "(86)222-22222222",
+                    "name": "fax",
+                    "type": "text"
+                },
+                "supplierId": {
+                    "default": 7185,
+                    "name": "supplierId",
+                    "type": "hidden"
+                },
+                "companyImages": {
+                    "default": "",
+                    "name": "companyImages",
+                    "type": "hidden"
+                },
+                "companyIntro": {
+                    "default": "",
+                    "name": "companyIntro",
+                    "type": "textarea"
+                },
+                "companyVideo": {
+                    "default": "",
+                    "name": "companyVideo",
+                    "type": "hidden"
+                },
+                "webSite": {
+                    "default": "http://www.cccc.com",
+                    "name": "webSite",
+                    "type": "text"
+                },
+                "facebook": {
+                    "default": "cccc.com",
+                    "name": "facebook",
+                    "type": "text"
+                },
+                "companyLogo": {
+                    "default": "afdfdad.jpg",
+                    "name": "companyLogo",
+                    "type": "hidden"
+                },
+                "companyId": {
+                    "default": 10456,
+                    "name": "companyId",
+                    "type": "hidden"
+                },
+                "companyAd": {
+                    "default": "afdsfsdaaaaaa",
+                    "name": "companyAd",
+                    "type": "text"
+                },
+                "telephone": {
+                    "default": "(86)222-22222222",
+                    "name": "telephone",
+                    "type": "text"
+                },
+                "mainProducts": {
+                    "default": "椋熷搧,",
+                    "name": "mainProducts",
+                    "type": "hidden"
+                },
+                "mobile": {
+                    "default": "(86)122345678",
+                    "name": "mobile",
+                    "type": "text"
+                },
+                "skype": {
+                    "default": "122345678122345678",
+                    "name": "skype",
+                    "type": "text"
+                }
+            },
+            "companyName": "yuejiabing鍏徃",
+            "registeredCapital": "",
+            "companyImages": [],
+            "category": "122345678",
+            "companyVideo": "122345678",
+            "area": "鍖椾含 鍖椾含甯�",
+            "mobilePhone": "(86)122345678",
+            "commercialLicense": "",
+            "address": "骞垮窞",
+            "facebook": "122345678",
+            "zipCode": "2123456",
+            "companyLogo": "122345678",
+            "companyType": "122345678",
+            "telephone": "(86)222-22222222",
+            "skype": "122345678",
+            "found": "122345678",
+            "mainProducts": ["椋熷搧"],
+            "employees": "122345678122345678"
+        }
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

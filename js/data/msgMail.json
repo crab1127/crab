@@ -1,0 +1,104 @@
+{
+    "status":"success",
+    "message":null,
+    "data":[
+        {
+            "mailID":10012,
+            "isRead":0,
+            "senderPic":"/img/user_pic/default_60.jpg",
+            "senderNam":"Mr Alfredo.wang",
+            "country":{
+                "name":"Canada",
+                "id":49
+            },
+            "myContacter":0,
+            "subject":"What is the FOB price on your dental chair unit, dental chairs and units,hydraulic dental chair",
+            "type":0,
+            "date":"2013-02-25"
+        },
+        {
+            "mailID":10452,
+            "isRead":0,
+            "senderPic":"/img/user_pic/default_60.jpg",
+            "senderNam":"Mr Alfredo.wang",
+            "country":{
+                "name":"Canada",
+                "id":6
+            },
+            "myContacter":1,
+            "subject":"What is the FOB price on your dental chaiunits,hydraulic dental chair",
+            "type":2,
+            "date":"2013-02-25"
+        },
+        {
+            "mailID":10452,
+            "isRead":0,
+            "senderPic":"/img/user_pic/default_60.jpg",
+            "senderNam":"Mr Alfredo.wang",
+            "country":{
+                "name":"Canada",
+                "id":8
+            },
+            "myContacter":1,
+            "subject":"What is the FOB price on your dental chair unit, d",
+            "type":2,
+            "date":"2013-02-25"
+        },
+        {
+            "mailID":10452,
+            "isRead":1,
+            "senderPic":"/img/user_pic/default_60.jpg",
+            "senderNam":"Mr Alfredo.wang",
+            "country":{
+                "name":"Canada",
+                "id":13
+            },
+            "myContacter":1,
+            "subject":"What is the FOB price on your dental chair unit, dental chairs and units,hydraulic dental chair",
+            "type":0,
+            "date":"2013-02-25"
+        },
+        {
+            "mailID":10012,
+            "isRead":0,
+            "senderPic":"/img/user_pic/default_60.jpg",
+            "senderNam":"Mr Alfredo.wang",
+            "country":{
+                "name":"Canada",
+                "id":16
+            },
+            "myContacter":0,
+            "subject":"What is the FOB price on your dental chair unit, dental chairs and units,hydraulic dental chair",
+            "type":1,
+            "date":"2013-02-25"
+        },
+        {
+            "mailID":10012,
+            "isRead":0,
+            "senderPic":"/img/user_pic/default_60.jpg",
+            "senderNam":"Mr Alfredo.wang",
+            "country":{
+                "name":"Canada",
+                "id":41
+            },
+            "myContacter":0,
+            "subject":"What is the FOB price on your dental chair unit, dental chairs and units,hydraulic dental chair",
+            "type":0,
+            "date":"2013-02-25"
+        },
+        {
+            "mailID":10012,
+            "isRead":0,
+            "senderPic":"/img/user_pic/default_60.jpg",
+            "senderNam":"Mr Alfredo.wang",
+            "country":{
+                "name":"Canada",
+                "id":51
+            },
+            "myContacter":1,
+            "subject":"What is the FOB price on your dental chair unit, dental chairs and units,hydraulic dental chair",
+            "type":2,
+            "date":"2013-02-25"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "message": "",
+    "type": "json",
+    "data": {
+        "region": [
+            {
+                "countryId": 6,
+                "countryEnName": "AustraliaFFFF",
+                "countryCnName": "澳大利亚",
+                "tradeArea": null,
+                "sortOrder": null,
+                "countrySuffix": "GW",
+                "countrShortName": null
+            }
+        ],
+        "category": [
+            {
+                "categoryEname": "Tools",
+                "categoryName": "工具",
+                "categoryId": 21
+            },
+            {
+                "categoryEname": "Medicines and Health Products",
+                "categoryName": "医药及保健品",
+                "categoryId": 34
+            },
+            {
+                "categoryEname": "Sport, Travel and Recreation Products",
+                "categoryName": "体育及旅游休闲用品",
+                "categoryId": 37
+            },
+            {
+                "categoryEname": "Bicycles",
+                "categoryName": "自行车",
+                "categoryId": 49
+            }
+        ]
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

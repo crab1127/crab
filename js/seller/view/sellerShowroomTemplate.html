@@ -1,0 +1,516 @@
+<script type="text/tpl" id="temple-cont">
+<div class="tips-s4" style="padding:10px 0px;">
+    <span class="ico" style="margin-top: 5px;"></span>
+    <div class="des-tips" i18n>MODULE.SHOWROOM_SET.TEMPLATE_TIPS1</div>
+    <a href="{{domainUrl}}/china-supplier/istransit/{{companyId}}.html" target="_blank" class="btn-falt" style="float:right;" i18n>MODULE.SHOWROOM_SET.PREVIEW</a>
+</div>
+<div class="box" a-repeat="data">
+    <div a-if="isShowBase">
+        <div class="title" style="padding:6px;">
+            <div class="tool">
+                <!--<span class="green" style="vertical-align: top;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_DEFAULT</span>-->
+                <!--<span class="line"></span> -->
+                <span class="green" id="base-recover" style="vertical-align: top;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_RECOVER</span>
+                <span class="line"></span>
+                <span class="green" id="base-diy" style="vertical-align: top;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_DIY</span>
+            </div>
+            <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_BASE</div>
+        </div>
+        <div class="cont base">
+            <div a-if="^moduleData.backgroundType">
+                <img can-src="{{moduleData.totalCustomImg}}" width="770" height="55">
+            </div>
+            <div a-if="moduleData.backgroundType">
+                <img can-src="{{moduleData.backgroundImg}}" width="770" height="55">
+                <div class="logo">
+                    <img can-src="{{moduleData.companyLogo}}" width="58" height="28">
+                </div>
+                <div class="name" style="color:{{moduleData.fontColor}}">{{moduleData.companyName}}</div>
+            </div>
+            <span a-if="moduleData.tips" class="base-tips" i18n>MODULE.SHOWROOM_SET.TEMPLATE_BASE_TIPS</span>       
+        </div>
+    </div>
+    <div a-if="isShowBanner">
+        <div class="title">
+            <div class="tool" moduleId="{{srModuleId}}">
+                <span id="edit-banner" class="green" style="vertical-align: top;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_EDIT</span>
+                <span class="line"></span>
+                <select width="50" switch a-model="moduleDisplay">
+                    <option i18n value="1">MODULE.SHOWROOM_SET.TEMPLATE_YES</option>
+                    <option i18n value="0">MODULE.SHOWROOM_SET.TEMPLATE_NO</option>
+                </select>            
+                
+            </div>
+            <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_BANNER</div>
+        </div>
+        <div class="cont">
+            <span class="notice-1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NOTICE</span>
+            <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_BANNER_TIPS</span>
+        </div>
+    </div>
+    <div a-if="isShowBooth">
+        <div class="title">
+            <div class="tool" moduleId="{{srModuleId}}">
+                <span id="win-booth" class="green" style="vertical-align: top;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_EDIT</span>
+                <span class="line"></span>
+                <select width="50" switch a-model="moduleDisplay">
+                    <option value="1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_YES</option>
+                    <option value="0" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NO</option>
+                </select>
+            </div>
+            <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_BOOTH</div>
+        </div>
+        <div class="cont">
+            <span class="notice-1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NOTICE</span>
+            <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_BOOTH_TIPS</span>
+        </div>
+    </div>
+    <div a-if="isShowCompany">
+        <div class="title">
+            <div class="tool" moduleId="{{srModuleId}}">
+                <select width="50" switch a-model="moduleDisplay">
+                    <option value="1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_YES</option>
+                    <option value="0" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NO</option>
+                </select>
+            </div>
+            <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_COMPANY</div>
+        </div>
+        <div class="cont">
+            <span class="notice-1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NOTICE</span>
+            <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_COMPANY_TIPS | {{moduleData.integrity}}%</span>
+        </div>
+    </div>
+    <div a-if="isShowCase">
+        <div a-if="moduleData.scOpen">
+            <div class="title">
+                <div class="tool"  moduleId="{{srModuleId}}">
+                    <select width="50" switch a-model="moduleDisplay">
+                        <option value="1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_YES</option>
+                        <option value="0" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NO</option>
+                    </select>
+                </div>
+                <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_CHANNEL</div>
+            </div>
+            <div class="cont">
+                <span class="notice-1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NOTICE</span>
+                <span a-if="^moduleData.lessProductCount" i18n>MODULE.SHOWROOM_SET.TEMPLATE_CHANNEL_TIPS | {{moduleData.scProductCount}} | {{moduleData.scProductMaxCount}}</span>
+                <span a-if="moduleData.lessProductCount" i18n>
+                    MODULE.SHOWROOM_SET.TEMPLATE_CHANNEL_TIPS4 | {{moduleData.scProductCount}} | {{moduleData.scProductMaxCount}}
+                </span>
+            </div>
+            <div class="cont clear">
+                <span class="cannel-tips" i18n>MODULE.SHOWROOM_SET.TEMPLATE_CHANNEL_TIPS2</span>
+                <select a-model="moduleData.scRow" id="seletc-row" style="width:40px;" name="row" dropDown>
+                    <option a-repeat="moduleData.sccrow" value="{{srow}}">{{srow}}</option>
+                </select>
+                <span class="cannel-tips" style="color:#999;" i18n>MODULE.SHOWROOM_SET.ROW</span>
+                <select style="width:40px;" name="column" dropDown>
+                    <option value="{{moduleData.scCol}}">{{moduleData.scCol}}</option>
+                </select>
+                <span class="cannel-tips" style="color:#999;" i18n>MODULE.SHOWROOM_SET.COL</span>
+               
+            </div>
+        </div>
+        <div a-if="^moduleData.scOpen">
+            <div class="title">
+                <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_CHANNEL</div>
+            </div>
+            <div class="cont">
+                <span class="notice-1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NOTICE</span>
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_CHANNEL_TIPS3</span>
+            </div>
+        </div>
+    </div>
+    <div a-if="isShowNewProducts">
+        <div class="title">
+            <div class="tool" moduleId="{{srModuleId}}">
+                <select width="50" switch a-model="moduleDisplay">
+                    <option value="1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_YES</option>
+                    <option value="0" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NO</option>
+                </select>
+            </div>
+            <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_NEWPRODUCT</div>
+        </div>
+        <div class="cont">
+            <span class="notice-1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NOTICE</span>
+            <span a-if="^moduleData.lessNewProductCount" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NEWPRODUCT_TIPS2 |{{moduleData.newProductCount}}</span>
+            <span a-if="moduleData.lessNewProductCount" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NEWPRODUCT_TIPS3 |{{moduleData.newProductCount}}</span>
+        </div>
+    </div>
+    <div a-if="isShowMainProducts">
+        <div class="title">
+            <div class="tool" moduleId="{{srModuleId}}">
+                <span id="win-mainproducts" class="green" style="vertical-align: top;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_EDIT</span>
+                <span class="line"></span>
+                <select width="50" switch a-model="moduleDisplay">
+                    <option value="1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_YES</option>
+                    <option value="0" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NO</option>
+                </select>
+            </div>
+            <div i18n>MODULE.SHOWROOM_SET.TEMPLATE_MAINPRUDTCTS</div>
+        </div>
+        <div class="cont">
+            <span class="notice-1" i18n>MODULE.SHOWROOM_SET.TEMPLATE_NOTICE</span>
+            <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_MAINPRUDTCTS_TIPS</span>
+        </div>
+    </div>
+</div>
+<div class="actions temple">
+    <a href="javascript:;" id="release" class="btn btn-s11" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SEND</a>
+    <a href="{{domainUrl}}/china-supplier/istransit/{{companyId}}.html" target="_blank" class="btn-falt" i18n>MODULE.SHOWROOM_SET.PREVIEW</a>
+    <div class="text-tips global-notice" id="success-tip" style="position: absolute;left:150px;display:none;">
+        <div>
+            <span class="text-tips-icon"></span>
+            <span i18n>MODULE.BUYER_LEAD_MANAGE.SAVE</span>
+        </div>
+    </div>
+</div>
+</script>
+<!-- 店招 -->
+<script type="text/tpl" id="my-base">
+    <div class="shoroom_base" id="shoroom_base">
+        <div class="request-title clear">
+            <div class="request" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_REQUEST</div>
+            <div class="request-cont" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_REQUESTCONT</div>
+        </div>
+        <h3 i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_STYLETIPS</h3>
+        <div class="mode">
+            <div class="diy">
+                <span class="icons select-5"></span>
+                <span class="mode-list" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_STYLETIPS1</span>
+            </div>
+            <div class="diy" style="margin-left:160px;">
+                <span class="icons select-5"></span>
+                <span class="mode-list" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_STYLETIPS2</span>
+            </div>
+        </div>
+        <div class="cont">
+            <h3>
+                <span style="margin-right:5px;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_LEGEND</span>
+                <span class="icons ico-down"></span>
+                <a href="/C/css/common/bgimg/template_base_0.jpg" target="_blank" class="sample" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SAMPLE</a>
+            </h3>
+            <div class="preview alldiy">
+                <img can-src="{{base.totalCustomImg}}" width="720" height="50" alt="">
+            </div>
+            <div class="actions" style="width:300px;">
+                <div style="display: inline-block;">
+                    <input type="file" id="base" fileSize="2000" uploader="MODULE.SHOWROOM_SET.TEMPLATE_SET_UPLOAD" file-type="*.png;*.jpg" class="btn btn-s11 base1" width="120">
+                </div>
+                <a a-if="base.isUpload" href="javascript:;" style="padding:0px 20px;height:36px;line-height:36px;" class="btn btn-s11" id="save-base" i18n="">MODULE.SHOWROOM_SET.TEMPLATE_SAVE</a>
+            </div>
+        </div>
+        <div class="cont">
+            <h3>
+                <span style="margin-right:5px;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_LEGEND</span>
+            </h3>
+            <div class="preview diybg">
+                <img can-src="{{base.backgroundImg}}" width="720" height="50" alt="">
+                <div class="companyName" id="colorCompanyName" style="color:{{base.fontColor}};">{{base.companyName}}</div>
+                <div class="logo">
+                    <img can-src="{{base.companyLogo}}" width="58" height="28" alt="">
+                </div>
+            </div>
+            <div class="selectcolor">
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SELECTNAME</span>
+                <span title="{{base.fontColor}}" class="icons ico-color" id="color"></span>
+            </div>
+            <div class="actions" style="width:200px;">
+                <div style="display: inline-block;">
+                    <input type="file" id="base2" fileSize="2000" uploader="MODULE.SHOWROOM_SET.TEMPLATE_SET_UPBG" file-type="*.png;*.jpg" class="btn btn-s11 base2" width="106">
+                </div>
+                <a href="javascript:;" a-if="base.isUploadbg" style="padding:0px 20px;height:36px;line-height:36px;" class="btn btn-s11" id="save-basebg" i18n="">MODULE.SHOWROOM_SET.TEMPLATE_SAVE</a>
+            </div>
+        </div>
+        
+    </div>
+</script>
+<!-- 通栏大图 -->
+<script type="text/tpl" id="my-banner">
+    <div class="shoroom_base" id="shoroom_banner" style="max-height:500px; overflow:hidden; overflow-y:scroll;">
+        <h3>
+            <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_STYLETIPS</span>
+            <span style="margin-left:75px;" class="icons ico-banner"></span>
+            <span style="margin-left:150px;" class="icons ico-banner1"></span>
+        </h3>
+        <div class="mode" style="margin-top:5px;">
+            <div class="diy" style="margin-left:170px;">
+                <span class="icons select-5"></span>
+                <span class="mode-list" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_STYLETIPS3</span>
+            </div>
+            <div class="diy" style="margin-left:185px;">
+                <span class="icons select-5"></span>
+                <span class="mode-list" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_STYLETIPS4</span>
+            </div>
+        </div>
+        <div class="cont" a-if="bigpic.isDisplay">
+            <div class="banner-title">
+                <span style="margin-top:5px;margin-right:3px;" class="icons mark"></span>
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_BANNER_REQUIRE1</span>
+            </div>
+            <form class="mod-form-s1" id="form1" validator>
+                <ul class="list">
+                    <li a-repeat="bigpic.photos" class="clear">
+                        <div class="el-cont">
+                            <div class="inner">
+                                <input i18n name="name" class="w140" pattern="^[a-zA-Z\s_-]*$" error="TEXT_BUTTON_VIEW.ONLY_ENGLISH" maxlength="200" type="text" a-model="photoName" placeholder="MODULE.SHOWROOM_SET.TEMPLATE_SET_IPCNAME" required />
+                            </div>
+                        </div>
+                        <div class="el-cont">
+                            <div class="inner">
+                                <input i18n name="fileName" maxlength="300" pattern="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?" error="TEXT_BUTTON_VIEW.URL" class="w270" type="text" a-model="photoHttp" placeholder="MODULE.SHOWROOM_SET.TEMPLATE_SET_HTTPSTIP" required />
+                            </div>
+                        </div>
+                        <span class="view-small" a-if="photoUrl">
+                            <img can-src="{{photoUrl}}" width="26" height="26" />
+                        </span>
+                        <div class="el-cont">
+                            <div class="upload-banner" a-if="^photoUrl">
+                                <input type="file" style="padding:0px;" id="upload-{{index}}" fileSize="1000" uploader="MODULE.SHOWROOM_SET.TEMPLATE_SET_BANNER_UPLOAD" file-type="*.png;*.jpg" class="btn-falt upload-bigpic" width="65" height="28" >
+                                <input type="hidden" value="{{photoUrl}}" width="65" height="28" required>
+                            </div>
+
+                        </div>
+                        <span class="icons close-2 close-bigpic"></span>
+                    </li>
+                </ul>
+            </form>
+            <div class="pic-tips" a-if="bigpic.tips">
+                <span style="margin-right:3px;" class="icons mark"></span>
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_TIPS1</span>
+            </div>
+            <div class="add-pic" id="add-bigpic" a-if="bigpic.isAdd">
+                <span class="icons add-2"></span>
+                <span id="add-npic" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_ADD_TIPS</span>
+            </div>
+            <div class="actions">
+                <a href="javascript:;" style="padding:0px 30px;" class="btn btn-s11" id="save-bigpic" i18n="">MODULE.SHOWROOM_SET.TEMPLATE_SAVE</a>
+            </div>
+        </div>
+        <div class="cont" a-if="roompic.isDisplay">
+            <h5>
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SLLOWBG</span>
+                <span class="tip" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SLLOWTIPS</span>
+            </h5>
+            <div class="showbg-btn">
+                <div a-if="^roompic.useDefaultBg">
+                    <a href="javascript:;" style="margin-left:85px;" class="btn btn-s10" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_DEFALT</a>
+                    <span style="display: inline-block;">
+                        <input i18n type="file" id="upload-big" fileSize="1000"  uploader="MODULE.SHOWROOM_SET.TEMPLATE_SET_UPLOADBG" file-type="*.png;*.jpg" class="btn-falt upload-bigbtn" width="150" height="28">
+                    </span> 
+                </div>
+                <div class="showbg" a-if="roompic.useDefaultBg">
+                    <span style="display:inline-block;vertical-align: middle;margin-right:25px;">
+                        <img can-src="{{roompic.backgroundImg}}" width="310" height="65" />
+                    </span>
+                    <span class="icons close-2 close-bg"></span>
+                </div>
+            </div>
+            <h5>
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SLLOWPIC</span>
+                <span class="tip" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SLLOWPICIPS</span>
+            </h5>
+            <form class="mod-form-s1" id="form2" validator>
+                <ul class="list">
+                    <li a-repeat="roompic.photos" class="clear">
+                        <div class="el-cont">
+                            <div class="inner">
+                                <input i18n name="name" pattern="^[a-zA-Z\s_-]*$" error="TEXT_BUTTON_VIEW.ONLY_ENGLISH" class="w140" maxlength="200" type="text" a-model="photoName" placeholder="MODULE.SHOWROOM_SET.TEMPLATE_SET_IPCNAME" required />
+                            </div>
+                        </div>
+                        <div class="el-cont">
+                            <div class="inner">
+                                <input i18n name="fileName" class="w270" pattern="http://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?" error="TEXT_BUTTON_VIEW.URL" maxlength="300" type="text" a-model="photoHttp" placeholder="MODULE.SHOWROOM_SET.TEMPLATE_SET_HTTPSTIP" required />
+                            </div>
+                        </div>
+                        <span class="view-small" a-if="photoUrl">
+                            <img can-src="{{photoUrl}}" width="26" height="26" />
+                        </span>
+                        <div class="el-cont">
+                            <div class="upload-banner" a-if="^photoUrl">
+                                <input type="file" style="padding:0px;" id="uploadroom-{{index}}" fileSize="1000" uploader="MODULE.SHOWROOM_SET.TEMPLATE_SET_BANNER_UPLOAD" file-type="*.png;*.jpg" class="btn-falt upload-roompic" width="65" height="28">
+                                <input type="hidden" value="{{photoUrl}}" width="65" height="28" required>
+                            </div>
+                        </div>
+                        <span class="icons close-2 close-roompic"></span>
+                    </li>
+                </ul>
+            </form>
+            <div class="pic-tips" a-if="roompic.tips">
+                <span style="margin-right:3px;" class="icons mark"></span>
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_TIPS2</span>
+            </div>
+            <div class="add-pic" id="add-roompic" a-if="roompic.isAdd">
+                <span class="icons add-2"></span>
+                <span id="add-nroom" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_ADD_TIPS1</span>
+            </div>
+            <div class="actions">
+                <a href="javascript:;" style="padding:0px 30px;" id="save-roompic" class="btn btn-s11" i18n="">MODULE.SHOWROOM_SET.TEMPLATE_SAVE</a>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- 主营产品 -->
+<script type="text/tpl" id="my-mainproducts">
+    <div class="shoroom_base" id="showroom_mainproducts">
+        <div class="cont" style="display:block;position: relative; ">
+            <div class="banner-title">
+                <span style="margin-top:5px;margin-right:3px;" class="icons mark"></span>
+                <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_PRODUCTS_TIPS</span>
+            </div>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_PRODUCTS_TIPS2</td>
+                    <td></td>
+                    <td id="nselect" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_PRODUCTS_TIPS3</td>
+                </tr>
+                <tr>
+                    <td width="260">
+                        <select multiple="multiple" name="type">
+                            <option a-repeat="list" value="{{groupId}}">{{groupName}}</option>
+                        </select>
+                    </td>
+                    <td width ="60" align="center">
+                        <button id="del-select" class="btn btn-s11">&lt;&lt;</button>
+                        <button id="list-select" class="btn btn-s11">&gt;&gt;</button>  
+                    </td>
+                    <td width="260">
+                        <form id="mp-select">
+                            <select multiple="multiple" name="groupIds">
+                                <option a-repeat="mainpro-select" value="{{groupId}}">{{groupName}}</option>
+                            </select>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <div class="text-tips global-notice" style="left: 18%; top: 90px;position: absolute;display:none;">
+                <div>
+                    <span class="icons mark"></span><span style="vertical-align: middle;color:#575757;margin-left:3px;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_TIPS3</span>
+                </div>
+            </div>
+            <div class="actions">
+                <a href="javascript:;" id="save-mainpro" style="padding:0px 30px;" class="btn btn-s11" i18n="">MODULE.SHOWROOM_SET.TEMPLATE_SAVE</a>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- 展位信息 -->
+<script type="text/tpl" id="my-booth">
+    <div>
+        <div class="shoroom_base" style="width:696px;" id="showroom_booth">
+            <div class="banner-title" a-if="isShowBoothNum">
+                <span class="booth-choo" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SELECT_BOOTH</span>
+                <select class="cannel-drop" style="width:60px;" id="booth" name="booth" dropDown>
+                    <option a-repeat="boothAll" value="{{boothNum}}">{{boothNum}}</option>
+                </select>
+                <a href="javascript:;" style="margin-left:10px;" id="add-booth" class="btn btn-s11" i18n="">MODULE.SHOWROOM_SET.TEMPLATE_SET_ADD</a>
+            </div>
+            <div style="max-height:400px;min-height:200px; overflow:hidden; overflow-y: scroll;">
+                <div style="width:680px;">
+                    <ul class="list-booth">
+                        <li a-repeat="settedBooth">
+                            <div class="booth-title">
+                                <h5>{{setted}}</h5>
+                                <span a-if="isShowBoothItem" class="icons allow-down down " data-id="{{setted}}" data-num="{{index}}"></span>
+                                <span a-if="^isShowBoothItem" class="icons allow-up down" data-id="{{setted}}" data-num="{{index}}"></span>
+                                <span class="icons delect-1 del" style="cursor: pointer;" data-id="{{setted}}"></span>
+                            </div>
+                            <div a-if="isShowBoothItem">
+                                <div class="mode" data-id="{{setted}}">
+                                    <span class="{{isNumber: cur}}" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_ADD_BOOTH</span>
+                                    <span class="{{^isNumber: cur}}" style="margin-left:60px;" i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_ADD_BOOTHPIC</span>
+                                </div>
+                                <div class="booth-cont" a-if="isNumber">
+                                    <div class="booth-list clear">
+                                        <div id="booth-name-wrap"></div>
+                                    </div> 
+                                    <div class="add-pic" id="add-boothName" a-if="isShowAdd">
+                                        <span class="icons add-2"></span>
+                                        <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_ADD_BOOTHNO</span>
+                                    </div>
+                                </div>
+                                <div class="booth-cont clear" a-if="^isNumber">
+                                    <div class="booth-list clear">
+                                        <p>
+                                            <span style="margin-right:3px;" class="icons mark"></span>
+                                            <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_UPLOAD_PIC</span>
+                                        </p>
+                                        <div id="booth-image-wrap" style="position: relative;"></div>
+                                        
+                                    </div>
+                                    <div class="add-pic" id="add-boothpic" data-id="{{setted}}" style="width:603px;float:left;">
+                                        <span class="icons add-2"></span>
+                                        <span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_BOOTH_ADD_PIC</span>
+                                    </div>
+                                    <a href="javascript:;" id="save-roompic" class="btn-boothpic" i18n="">MODULE.SHOWROOM_SET.TEMPLATE_SAVE</a>
+                                </div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 展位图片表单 -->
+<script type="text/tpl" id="booth-image-tpl">
+    <form class="mod-form-s1 save-boothpic" validator>
+        <ul class="list">
+            <li a-repeat="boothPhotos" class="clear">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input i18n name="photoName" class="w450" pattern="^[a-zA-Z\s_-]*$" error="TEXT_BUTTON_VIEW.ONLY_ENGLISH"  type="text" a-model="photoName" maxlength="200" placeholder="MODULE.SHOWROOM_SET.TEMPLATE_SET_BOOTH_NAME" required />
+                    </div>
+                </div>
+                <span class="view-small" a-if="photoUrl">
+                    <img can-src="{{photoUrl}}" width="26" height="26" />
+                </span>
+                <input type="hidden" name="fairNum" a-model="setted" />
+                <div class="el-cont" a-if="^photoUrl">
+                    <div class="upload-banner">
+                        <input type="file" style="padding:0px;" fileSize="1000" data-id="{{nIndex}}" uploader="MODULE.SHOWROOM_SET.TEMPLATE_SET_BANNER_UPLOAD" file-type="*.png;*.jpg" class="btn-falt upload-boothpic" width="65" height="28" >
+                        <input type="hidden" value="{{photoUrl}}" width="65" height="28" required>
+                    </div>
+                </div>
+                <span class="icons close-2 del-boothpic"></span>
+            </li>
+        </ul>
+    </form>
+    <div class="text-tips global-notice" style="left: 280px; bottom: 20px;position: absolute;display: none;">
+        <div>
+            <span class="text-tips-icon"></span><span i18n>MODULE.SHOWROOM_SET.TEMPLATE_SET_SUCCESS</span>
+        </div>
+    </div>
+</script>
+
+<!-- 展位名称表单 -->
+<script type="text/tpl" id="booth-name-tpl">
+    <form class="mod-form-s1 save-booth" validator>
+        <div style="margin-bottom:10px;">
+            <p a-repeat="boothNums">
+                <span>Phase {{periodNum}}:</span>
+                <span class="orange">{{boothNum}}</span>
+                <span class="icons close-2 del-boothnum" data-fairNum="{{nId}}" data-srBsId="{{srBsId}}"></span>
+            </p>
+        </div>
+        <div class="el-cont">
+            <select class="cannel-drop" style="width:60px;" name="periodNum" dropDown>
+                <option value="1">Phase 1</option>
+                <option value="2">Phase 2</option>
+                <option value="3">Phase 3</option>
+            </select>
+        </div>
+        <input type="hidden" name="fairNum" a-model="nId" />
+        <input type="hidden" name="srBsId" a-model="srBsId" />
+        <div class="el-cont">
+            <div class="inner">
+                <input i18n name="boothNum" class="w270" maxlength="1000" type="text" placeholder="MODULE.SHOWROOM_SET.TEMPLATE_SET_INNER_BOOTH" required>
+            </div>
+        </div>
+        <div class="el-cont">
+            <a href="javascript:;" i18n style="margin-left:10px;color:#666;" class="btn-falt add-boothnum">MODULE.SHOWROOM_SET.TEMPLATE_SET_ADD</a>
+        </div>
+    </form>
+</script>

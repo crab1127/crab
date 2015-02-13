@@ -1,0 +1,259 @@
+<div class="mod-col clear">
+    <!--左侧分组-->
+    <div class="extra" id="group_left">
+        <div class="site-nav">
+            <div class="nav-item">
+                <div class="bg-ico cur-mark" style="top:18px;"></div>
+                <ul class="my-apps">
+                    <li>
+                        <a href="javascript:;" class="tit-all ">
+                            <span class="bg-ico c-all"></span>
+                            <span i18n>MODULE.PRODUCT_MANAGE.ALL_GROUP</span>
+                            <em>({{groupCount}})</em>
+                        </a> 
+                        <ul class="stage ui-sortable">
+                            <li role="group-item" a-repeat="group" group-id="{{groupId}}" class="{{^isNone : order-li}}">
+                                <a act="groupName" href="" data-id="{{groupId}}">
+                                    {{groupName}}
+                                    <em>({{productNum}})</em>
+                                </a>
+                                <a class="bg-ico ico-edit" data-name="{{groupName}}" act="groupEdit" href="" a-if="^isNone"></a>
+                                <a class="bg-ico ico-close" data-del-id="{{groupId}}"  data-pnum="{{productNum}}"  act="groupClose" href="" a-if="^isNone"></a>
+                            </li>
+                        </ul>
+
+                        <div class="create-group">
+                            <a href="javascript:;" class="btn btn-s12 create-group" i18n>MODULE.PRODUCT_MANAGE.CREATE_GROUP</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!--右侧内容-->
+    <div id="content_right" class="main">
+        <div class="tab-s2" id="top-tab">
+            <a href="#!/product-manage" i18n>MODULE.PRODUCT_MANAGE.ON_LINE</a>
+            <a href="#!/product-manage/offline" i18n>MODULE.PRODUCT_MANAGE.OFF_LINE</a>
+        </div> 
+        <div class="opt-area" id="toolbar" style="margin-top: -18px;">
+            <div class="mod-pagination-s2">
+                <a href="javascript:;" class="btn-prev dis" title="Prev">Prev</a>
+                <a href="javascript:;" class="btn-next dis" title="Next">Next</a>
+            </div>
+            <div style="width:120px" class="search-s2">
+                <a class="ico-search" href="javascript:;"></a>
+                <input class="txt" type="text" a-model="keyword" id="search-kewyord" name="selsct-keyword" i18n placeholder="FORM.KEYWORD" style="width: 80px;">
+
+            </div>
+            <div class="fil-msg" >
+                <input checkbox type="checkbox" name="selectAll" style="margin-top: 5px;" id="selectAll">
+            </div>
+            <div class="item-opt" style="width:376px;">
+                <div class="group-button-box group_field">
+                    <div class="txt"><a href="javascript:;"></a><em i18n>BUTTON.ADD_Btn</em></div>
+                </div>
+            
+                <div class="group-button-box " a-if="isOnline" act="maskAs">
+                    <div class="txt"><a href="javascript:;"></a><em i18n>MODULE.PRODUCT_MANAGE.MASK_AS</em></div>
+                </div>
+
+                <a a-if="isOnline"  href="javascript:;" class="btn btn-s12" act="offLines" i18n>MODULE.PRODUCT_MANAGE.OFF_LINE</a>
+
+                <a  href="javascript:;" class="btn btn-s12" act="delProduct" i18n>MODULE.PRODUCT_MANAGE.DEL_GROUP</a>
+
+            </div>
+
+            <div class="item-opt" >
+                         
+                <span >
+                    <select name="filter" style="width:70px;" a-model="filter" id="filter" dropdown>
+                        <option value="" i18n>MODULE.PRODUCT_MANAGE.ALL</option>
+                        <option value="newest" i18n>MODULE.PRODUCT_MANAGE.MARK_NEW</option>
+                        <option value="showCase" i18n>MODULE.PRODUCT_MANAGE.SHOWCASE</option>
+                    </select>
+                </span>
+                
+                <span a-if="isPass" class="hr"></span>
+
+            </div>
+        </div>
+
+        <div a-if="isShowLoad" class="loading" >
+            <span></span>
+            Loading...
+        </div>
+
+        <table a-if="^isShowLoad" class="mod-table tbl-contacter">
+            <colgroup>
+                <col class="w36">
+                <col class="">
+                <col class="w120">
+                <col class="w130">
+                <col class="w120">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><div class="th-gap"></div></th>
+                    <th><div class="th-gap" i18n>MODULE.PRODUCT_MANAGE.NAME</div></th>
+                    <th><div class="th-gap" i18n>MODULE.PRODUCT_MANAGE.GROUP</div></th>
+                    <th><div class="th-gap" i18n>MODULE.PRODUCT_MANAGE.LAST_MODIFY</div></th>
+                    <th><div class="th-gap" i18n>MODULE.PRODUCT_MANAGE.ACTION</div></th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr a-repeat="products" data-id="{{productId}}" class="unread">
+                    <td><input checkbox type="checkbox" name="product" style="margin-top: 0;" value="{{productId}}"></td>
+                    <td>
+                        <div class="mod-pro">
+                            <div class="pic">
+                                <a href="#!/view-product?id={{productId}}">
+                                    <img width="120" height="120" can-src="{{productLogoUrl}}">
+                                </a>
+                            </div>
+                            <div class="txt-info-s1">
+                                <h3>
+                                    <a href="#!/view-product?id={{productId}}" substr="23" title="{{productName}}">{{productName}}</a>
+                                    <span a-if="isNew" class="ico-new" can-tip="CAN_TITLE.NEW_PRODUCT"></span>
+                                </h3>
+                                <div a-if="isOnline">
+                                    <p a-if="minOrder" class="txt-tit"> 
+                                        <span i18n>MODULE.PRODUCT_MANAGE.MIN_ORDER</span>
+                                        <em>{{minOrder}}{{minOrderUnit}}</em>
+                                    </p>
+                                    <p a-if="fobPriceTo" class="txt-tit"> 
+                                        <span i18n>MODULE.PRODUCT_MANAGE.FOB_PRICE</span>
+                                        <em>{{monetaryUnit}} {{fobPriceFrom}} - {{fobPriceTo}} / {{fobUnit}}</em>
+                                    </p>
+                                    <p a-if="payMethods" class="txt-tit"> 
+                                        <span i18n>MODULE.PRODUCT_MANAGE.PAYMENT</span>
+                                        <em>{{payMethods}}</em>
+                                    </p>
+                                    <p a-if="monthSupply" class="txt-tit"> 
+                                        <span i18n>MODULE.PRODUCT_MANAGE.SUPPLY</span>
+                                        <em>{{monthSupply}}{{msUnit}}</em>
+                                    </p>
+                                </div>
+
+                                <div a-if="^isOnline" style="font-size: 14px;">
+                                    <span style="color: #8e8e8e;" i18n>MODULE.PRODUCT_MANAGE.STATUS</span>
+                                    <span a-if="isPending" i18n>MODULE.PRODUCT_MANAGE.PENDING</span>
+                                    <span a-if="isRejected" style="color: #e04d2c;" i18n>MODULE.PRODUCT_MANAGE.REJECTED</span>
+                                    <span a-if="isPass" style="color: #44a76f;" i18n>MODULE.PRODUCT_MANAGE.PASS</span>
+
+                                </div>
+
+
+                                <div style="color: #8e8e8e; font-size: 12px; font-weight: normal;" a-if='isRejected'>
+                                    <span i18n>MODULE.PRODUCT_MANAGE.REASON</span>
+                                    <span>{{reason}}</span>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="mod-sel">
+                            <div class="table-groups-btn group_field" data-id="{{productId}}">
+                                <div class="txt">
+                                    <a href="javascript:;"></a><em>{{groupName}}</em>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="time">{{updateTime}}</span>
+                    </td>
+                    <td class="action-box">
+                         
+                            <span class="bg-icon icons select-0"></span>
+                            
+                            <a style="margin-left: 2px;" a-if="^isPending" href="#!/edit-product?id={{productId}}&title={{urlproductName}}&copy=0" class="bg-ico ico-trail" can-tip="CAN_TITLE.MODIFY"></a>
+
+                            <a a-if="isPass" href="#!/edit-product?id={{productId}}&title={{urlproductName}}&copy=1" class="icons copy" can-tip="CAN_TITLE.COPY"></a>
+
+                            <a style="margin-left: 8px;" data-id="{{productId}}" a-if="isOnline" href="#" class="icons off-line" act="offLine" can-tip="MODULE.PRODUCT_MANAGE.OFF_LINE"></a>
+                                
+                            <span a-if="^isOnline" >
+                                <a style="margin-left: 8px;" data-id="{{productId}}" a-if="isPass"  href="#" class="icons on-line" act="onLine" can-tip="MODULE.PRODUCT_MANAGE.ON_LINE"></a>
+                            </span>
+
+
+                            <div a-if="isOnline" class="cbox" act="changeShowcase" data-selected="{{ isShowcase : 1}}">
+                                <input checkbox type="checkbox" name="changeShowcase" data-id="{{productId}}" a-model="isShowcase" >
+                                <span style="cursor:pointer" i18n>MODULE.PRODUCT_MANAGE.SHOWCASE</span>
+                            </div>
+                            <div class="cbox" act="changeMakeNew">
+                                <input checkbox type="checkbox" name="changeMakeNew" data-id="{{productId}}" a-model="isNew" >
+                                <span style="cursor:pointer" i18n>MODULE.PRODUCT_MANAGE.MARK_NEW</span>
+                            </div>
+
+                       
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 删除按钮 -->
+        <a class="bg-ico ico-del" href="javascript:;"></a>
+        
+        
+        <div a-if="^isShowLoad" show-count="1" class="page-toop" page-current="{{page.page}}" page-total="{{page.total}}" page-limit="{{page.pageSize}}" paging></div>
+    </div>
+
+    <!-- 添加分组弹窗-->
+    <div id="group-win" class="hide">
+        <div style="margin:10px 20px;" class="group-con">
+            <p style="margin: 5px 0;" i18n>MODULE.PRODUCT_FORM.CREATE_GROUP_NAME</p>
+            <div class="mod-form" style="float: left;">
+                <div class="el" style="width: 220px;">
+                    <input class="ipt" type="text" autocomplete="off" style="width: 200px;">
+                    <div class="error-msg hidden" id="tipNav"></div>
+                </div>
+            </div>
+            <a href="javascript:;" class="btn btn-s11 addBtn" style="float: left; line-height: 32px; height: 32px;" i18n>MODULE.PRODUCT_FORM.ADD</a>
+        </div>
+    </div>
+
+    <!-- mask as下拉框-->
+    <div id="mask-drop" style="position: absolute;" class="hide">
+        <ul class="mark-s1">
+            <li><a a-if="isOnline" href="javascript:;" act="makeNew" i18n>MODULE.PRODUCT_MANAGE.MARK_NEW</a></li> 
+            <li><a a-if="isOnline" href="javascript:;" act="showcase" i18n>MODULE.PRODUCT_MANAGE.SHOWCASE</a></li> 
+        </ul>
+    </div>
+
+    
+    <!-- 分组下拉框-->
+    <div id="group-drop" class="hide">
+        <ul class="mark-s1">
+            <li data-id="-1" a-if="^isNone"><a href="javascript:;" i18n>MODULE.PRODUCT_MANAGE.NOT_GROUP</a></li>
+            <li data-id="{{groupId}}" a-repeat="group" a-if="^isNone"><a href="javascript:;">{{groupName}}</a></li>
+
+            <li class="create-group"><a class="btn btn-s12" href="javascript:void(0);" i18n>MODULE.PRODUCT_MANAGE.CREATE_GROUP</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- 套餐提示 -->
+<div id="pack-tip" class="text-tips has-arrow arrow-right" style="display:none;" >
+    <p>
+        <i class="icons mark"></i>
+        <span class="tip">...</span>
+    </p>
+    <div class="text-right">
+        <input checkbox type="checkbox" >
+        <span i18n>MODULE.PRODUCT_MANAGE.NOT_TIP</span>
+    </div>
+</div>
+<!-- 套餐提示 -->
+<div id="showcase-tip" class="text-tips has-arrow arrow-right" style="display:none;" >
+    <p>
+        <i class="icons mark"></i>
+        <span class="tip"></span>
+    </p>
+</div>
+

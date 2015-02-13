@@ -1,0 +1,14 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "groupId":2,
+            "groupName":"研发部"
+        },
+        {
+            "groupId":2,
+            "groupName":"研发部"
+        }
+    ]
+}

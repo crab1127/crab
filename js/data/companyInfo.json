@@ -1,0 +1,35 @@
+{
+	"message": "success",
+	"type": "json",
+	"data": {
+		"compname": "Guangzhou Ajax Medical Equipment Co., Ltd.",
+		"found": "2000",
+		"category": "Shoe, T-shit",
+		"companytype": "Manufacturer, Trading Company",
+		"mainprds": "prd1,prds2,prd3",
+		"area": "Guangdong Guangzhou",
+		"address": "300 West 57th Street, New York, NY 10019, USa",
+		"zip": "510000",
+		"employee": "500",
+		"regcapital": "$1000.00",
+		"commercial": "234234234234",
+		"website": "www.test.com",
+		"slogan": "slogn----",
+		"introduction": "this is introductionasdfasdfsadfsadfsadfsadfsa",
+		"telephone": "86-020-87687983",
+		"fax": "86-020-89843987",
+		"mobile": "86-1343333876",
+		"skype": "sdfsdf@123.com",
+		"facebook": "asdfsad@213.com",
+		"photo": ["/img/120_120.jpg"],
+		"video": ["/img/120_120.jpg"],
+		"vision": ["/img/120_120.jpg", "/img/120_120.jpg", "/img/120_120.jpg", "/img/120_120.jpg", "/img/120_120.jpg"]
+	},
+	"status": "success",
+	"page": {
+		"total": 0,
+		"page": 1,
+		"maxPage": 0,
+		"pageSize": 0
+	}
+}

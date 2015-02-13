@@ -1,0 +1,167 @@
+<style>
+  .win-login{padding:0 !important;}
+  .win-main{padding:10px 50px 20px;}
+  .cc{zoom: 1;}
+  .cc:after{content: '.';display: block;clear: both;height: 0;overflow: hidden;}
+  .win-tit-tab{border-bottom:1px solid #ddd;position: relative;top:-1px}
+  .win-tit-tab li{float:left;border-right:1px solid #ddd;position: relative;top:1px}
+  .win-tit-tab li:last-child{border-right:none;}
+  .win-tit-tab li a{display: block;padding:10px 15px;font:16px/18px "微软雅黑";}
+  .win-tit-tab li.act{border-bottom: 1px solid #fff;border-right:1px solid #ddd;position: relative;top:1px;}
+  .win-tit-tab li.act a,.win-tit-tab li a:hover{color:#e04d2c;}
+  .panel{border:0 !important;}
+  *:before, *:after{-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}
+</style>
+<div class="win-inner win-login">
+    <ul class='win-tit-tab cc'>
+        <li><a href="javascript:;" id='sign-in'>SIGN IN</a></li>
+        <li class='act'><a href="javascript:;" id='join-free'>JOIN FREE</a></li>
+    </ul>
+    <div class="win-main">
+    <div class="title hidden">Create your account</div>
+    <!-- activation -->
+    <form id="activate" class="register panel hidden" validator>
+        <div class="pic hidden">
+            <img can-src="{{ buyer.buyerPhoto }}" />
+            <p>
+                You've bound your <br/>Canton Fair ID: <span>{{ cid }}</span>.<br><a href="javascript:;" id="notme">Not me?</a>
+            </p>
+        </div>
+        <!--<div class="create hidden">
+            <p>Canton Fair buyers?<br>Access fast registration lane <a href="javascript:;">here &gt;&gt;</a></p>
+        </div>-->
+        <div class="create">
+          <p>New Member? Please register to continue.</p>
+        </div>
+        <div class="control">
+            <div class="inner">
+                <input type="email" name="email" a-model="buyer.email" placeholder="Input your email" maxlength="128" pattern="{{ pattern.email }}" required error="{{ errorMsg.email }}"  >
+                <div class="fm-tips">Use to sign in to e-cantonfair.com </div>
+            </div>
+        </div>
+        <div class="control">
+            <div class="inner">
+                <input type="text" name="cantonfairId" a-model="cid" placeholder="Canton Fair ID (if you have)" maxlength="15" pattern="{{ pattern.cantonfairId }}" error="{{ errorMsg.cantonfairId }}" id="ic">
+                <div class="fm-tips">Use to sign in to e-cantonfair.com </div>
+            </div>
+        </div>
+       <div class="control">
+           <div class="inner password">
+               <input id="password" type="password" placeholder="Set password"  pattern="{{ pattern.password }}" required error="{{ errorMsg.password }}">
+               <input type="hidden" name="password" value="{{ password }}"/>
+               <input type="text" class="hidden placeholder"/>
+               <i class="icons view-pwd-0" title="display password"></i>
+               <div class="fm-tips">Between 6 and 20 characters (A-Z, a-z, 0-9)</div>
+           </div>
+       </div>
+        <div class="control">
+            <div class="inner code">
+                <input type="text" class="" name="firstName" a-model="buyer.firstName" placeholder="Full Name" required maxlength="32">
+            </div>
+        </div>
+       <div class="control">
+           <div class="inner">
+               <input id="companyName" type="text" class="" name="company.companyName" a-model="buyer.company.companyName" placeholder="Company Name" required maxlength="256">
+           </div>
+       </div>
+       <div class="control">
+           <div class="inner">
+               <select class="country" name="countryId" a-model="buyer.countryId" required>
+                   <option value="" selected>Please Select your country</option>
+                   <option a-repeat="countryList" value="{{ countryId }}" data-code="{{ countryCode }}" >{{ countryEnName }}</option>
+               </select>
+           </div>
+       </div>
+       <div class="control">
+           <div class="inner code">
+               <input type="text" class="txt1" name="countryCode" a-model="buyer.countryCode" pattern="^\d+$" validator error="*Number only!">
+               <input type="text" class="txt2" name="areaCode" a-model="buyer.areaCode" pattern="^\d+$|^.{0}$" validator placeholder="Area Code" maxlength="8" error="*Number only!">
+               <input type="text" class="txt3" name="phoneCode" a-model="buyer.phoneCode" pattern="^\d+$" placeholder="Phone Number" required maxlength="16" error="*Number only!">
+           </div>
+       </div>
+        <div class="inner">
+            <p class="tips">For internal usage when necessary. e.g. 86 - 571 - 12345678</p>
+        </div>
+        <div class="inner code">
+            <a id="create-submit" href="javascript:;" class="btn-orange">Confirm</a>
+            <img class="win-loading" src="/C/css/common/bgimg/loading.gif" alt=""/>
+        </div>
+        <div class="inner">
+            <h4>By confirming the information, I'd agree to <a href="http://www.e-cantonfair.com/en/useragreement.html" target="_blank">user agreement.</a></h4>
+        </div>
+    </form>
+    <!-- when not me click -->
+    <div id="not-me" class="verify panel hidden">
+        <h3>Hi there,</h3>
+        <p>
+            Please notify that you're about to access our identity verification process, due to Canton Fair's identity is of vital importance to any users here.
+        </p>
+        <p>
+            It's strongly recommended not close the current window which can keep your message here until you finish the process.
+        </p>
+        <p>
+            Thank you for your understanding again!
+        </p>
+        <p class="team">
+            Cheers,<br/>E-cantonfair buyer service team
+        </p>
+        <a href="javascript:;" class="btn-orange">Got it ! Verify now</a>
+    </div>
+    <!-- confirm the cantonfire id -->
+    <form id="confirm-id" class="register panel hidden" validator>
+        <a id="quit-confirm" class="mt15 inline-block" href="javascript:;">Quit binding Canton Fair ID &gt;&gt;</a>
+        <div class="control">
+            <div class="inner">
+                <input type="text" name="cantonfairId" a-model="cid" placeholder="Please input your Canton Fair ID" required maxlength="15" min-length="9" pattern="{{ pattern.cantonfairId }}" error="{{ errorMsg.cantonfairId }}">
+            </div>
+        </div>
+        <div class="inner">
+            <select name="type" disabled>
+                <option value="1" selected>My passport number is:</option>
+                <option value="2">The last four digits of my registered phone is:</option>
+                <option value="3">My email address is:</option>
+                <option value="4">My profile picture is:</option>
+            </select>
+        </div>
+       <div class="control">
+           <div class="inner mt0">
+               <input type="text" name="var" required placeholder="Input  your answer here" disabled />
+               <ul class="avatar-list">
+                   <li a-repeat="avatarList">
+                       <img src="{{ photo }}" data-code="{{ photoCode }}"/>
+                       <i class="icons select-0"></i>
+                       <i class="icons select-1"></i>
+                   </li>
+               </ul>
+               <select name="countryId" class="hidden">
+                   <option value="" selected>Please Select your country</option>
+                   <option a-repeat="countryList" value="{{ countryId }}">{{ countryEnName }}</option>
+               </select>
+           </div>
+       </div>
+       <div class="control">
+           <div class="inner vcode">
+               <input type="text" class="txt5" name="code" placeholder="Verification code" required maxlength="4" />
+               <img src="/cfone/code/loginCode.cf" alt=""/>
+               <div class="icons refresh"></div>
+           </div>
+       </div>
+        <div class="inner">
+            <a id="con-submit" href="javascript:;" class="btn-orange">Submit</a>
+            <img class="win-loading" src="/C/css/common/bgimg/loading.gif" alt=""/>
+        </div>
+    </form>
+
+    <!-- canton fair id has been activated -->
+    <div id="activated" class="activated panel hidden">
+        <p class="mt15">
+            Cantonfair ID {{ cid }} has been activatied, verified email is <span>{{ email }}</span>. If you have question in the authorised ownership, please
+            <a href="/buyerVali/appeal.html" target="_blank">reclaim ownership</a>.
+        </p>
+        <div class="inner">
+            <a href="javascript:;" class="sign-in" rel="nofollow">Sign in</a>
+            <a href="javascript:;" class="cancel">Cancel</a>
+        </div>
+    </div>
+</div>
+</div>

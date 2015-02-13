@@ -1,0 +1,20 @@
+{
+"message":"success",
+"type":"json",
+"data":{
+"export":"America,Aust,England",
+"paytip":"fob,cfr",
+"tradecurrencie":"fob,cfr,exw",
+"paymethod":"fob,fas",
+"onbord":"this is 离岸港口",
+"delivery":"50",
+"supportdemo":"1"
+},
+"status":"success",
+"page":{
+"total":0,
+"page":1,
+"maxPage":0,
+"pageSize":0
+}
+}

@@ -1,0 +1,29 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "label":"",
+            "name":"nyYE",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":0,
+                    "text":"不限",
+                    "icon":"data-icon s103000"
+                },
+                {
+                    "value":500,
+                    "text":"$500",
+                    "icon":"data-icon s103001"
+                },
+                {
+                    "value":1000,
+                    "text":"$1000",
+                    "icon":"data-icon s103002"
+                }
+            ]
+        }
+    ]
+}

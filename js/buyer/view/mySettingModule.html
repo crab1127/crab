@@ -1,0 +1,803 @@
+<script type="text/template" id="tpl-nav-bar">
+    <div class="mod-col clear">
+        <div class="extra">
+            <div class="integrity">
+                <p i18n>MODULE.MY_SETTING.INFO_INTEGRITY</p>
+                <div class="progress-bar">
+                    <span class="num">{{ integrity }}%</span>
+                    <div style="width:{{ integrity }}%;" class="scale"></div>
+                </div>
+            </div>
+            <div class="site-nav">
+                <div class="nav-item">
+                    <ul class="my-apps">
+                        <li>
+                            <a href="#!/personProfile" act="showPP"><span class="bg-ico c-profile"></span><span i18n>MODULE.MY_SETTING.PERSON_PROFILE</span></a>
+                            <div class="bg-ico bc"></div>
+                        </li>
+                        <li>
+                            <a href="#!/companyProfile" act="showCP"><span class="bg-ico c-company"></span><span i18n>MODULE.MY_SETTING.COMPANY_PROFILE</span></a>
+                            <div class="bg-ico bc"></div>
+                        </li>
+                        <li>
+                            <a href="#!/setAccount" act="showAS"><span class="bg-ico c-account"></span></span><span i18n>MODULE.MY_SETTING.ACCOUNT_SETTING</span></a>
+                            <div class="bg-ico bc"></div>
+                        </li>
+                        <li>
+                            <a href="#!/setBusiness" act="showBS"><span class="bg-ico c-business"></span><span i18n>MODULE.MY_SETTING.BUSINESS_SETTING</span></a>
+                            <div class="bg-ico bc"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main mysetting">
+        </div>
+    </div>
+</script>
+<!-- set personal profile -->
+<script type="text/template" id="tplPP">
+    <div class="tips-s4">
+        <span class="ico"></span>
+        <div class="des"><span i18n>MODULE.MY_SETTING.TITLE_TIPS</span></div>
+    </div>
+    <form id="set-personal-form" class="mod-form-s1 form-profile form" enctype="multipart/form-data" validator>
+        <div class="upload-pro-pic">
+            <div class="pic">
+                <img id="pic" width="100" height="100" can-src="{{ buyer.buyerAbsloutePhoto }}" alt="" />
+            </div>
+            <div class="des">
+                <p class="op" id="file-parent">
+                    <input id="upload-pp"  class="btn btn-s12" type="file" name="profile" fileSize="200" uploader="BUTTON.UPLOAD" width="70" height="35"  />
+                    <span class="tips-upload" i18n>MODULE.MY_SETTING.UPLOAD_TIPS1</span>
+                </p>
+                <div class="el-cont" style="width: 465px;">
+                    <div class="inner">
+                        <input type="hidden" id="gk" name="buyerPhoto" a-model="buyer.buyerPhoto"/>
+                    </div>
+                </div>
+                <div class="el-cont">
+                    <div class="inner">
+                        <label for="gkcb" class="gk">
+                            <input id="gkcb" class="vertical" style="height:auto;" type="checkbox" name="gkcb"><span i18n>MODULE.MY_SETTING.UPLOAD_TIPS2</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field s-acc">
+            <label class="col" i18n>MODULE.MY_SETTING.ACCOUNT</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="text">{{ buyer.email }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.NAME</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <select name="gender" a-model="buyer.gender" dropdown>
+                            <option value="1" i18n>MODULE.MY_SETTING.MALE</option>
+                            <option value="2" i18n>MODULE.MY_SETTING.FEMALE</option>
+                        </select>
+                        <input i18n class="ipt w140 ml-out" type="text" name="firstName" a-model="buyer.firstName" placeholder="MODULE.MY_SETTING.FULL_NAME" required maxlength="32">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.COUNTRY_REGION</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <select a-model="countryId" name="countryId" required>
+                            <option a-repeat="countryList" value="{{ code }}"  > {{ enName }} </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.ADDRESS2</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w500 ipt " name="address" a-model="buyer.address" placeholder="Please Enter Address" required maxlength="156">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.ZIP_CODE</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w100 ipt" name="zipCode" a-model="buyer.zipCode"  placeholder="e.g.510000" required maxlength="16" pattern="^\d+$" error="MODULE.MY_SETTING.TIPS_TITLE_5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.TELEPHONE</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text"  name="countryNo" a-model="infoFormat.countryNo"  class="ipt w80" required maxlength="4" pattern="^\d+$" error="MODULE.MY_SETTING.TIPS_TITLE_5">
+                        <input type="text"  name="zoneNo" a-model="infoFormat.zoneNo"  class="ipt w80 ml-out" pattern="^\d+$|^.{0}$" maxlength="8" validator error="MODULE.MY_SETTING.TIPS_TITLE_5">
+                        <input type="text"  name="codeNum" a-model="infoFormat.codeNum"  class="ipt w150 ml-out" required maxlength="16" pattern="^\d+$" error="MODULE.MY_SETTING.TIPS_TITLE_5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span i18n>MODULE.MY_SETTING.FAX</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="ipt w80"  name="faxFirst" a-model="infoFormat.faxFirst"  maxlength="4"  pattern="^\d+$|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_5"  validator/>
+                        <input type="text" class="ipt w80 ml-out"  name="faxSecond" a-model="infoFormat.faxSecond"  maxlength="4"  pattern="^\d+$|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_5"  validator />
+                        <input type="text" class="ipt w150 ml-out"   name="faxThirdly" a-model="infoFormat.faxThirdly"  maxlength="32" pattern="^\d+$|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_5"  validator/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span i18n>MODULE.MY_SETTING.MOBILE_PHONE</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w80 ipt" name="mobilePrefix" a-model="infoFormat.mobilePrefix"  maxlength="6" pattern="^\d+$|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_5" validator>
+                        <input type="text" class="ipt w150 ml-out" name="mobileSuffix" a-model="infoFormat.mobileSuffix"   maxlength="16" pattern="^\d+$|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_5" validator>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span i18n>MODULE.MY_SETTING.MOBILE_PHONE_CN</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w80 ipt" value="86" disabled >
+                        <input type="text" class="ipt w150 ml-out"  name="mobileCn" a-model="infoFormat.mobileCn"  maxlength="11" pattern="^\d{11}$|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_6" validator>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col">Skype :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input class="ipt w300" pattern="^$|^[a-zA-Z][a-zA-Z0-9_\.\-\,]{5,31}$" error="TEXT_BUTTON_VIEW.SKYPE_ERROR" type="text" name="skype" a-model="buyer.skype" validator>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="col">Facebook :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input class="ipt w300" type="text" name="facebook" a-model="buyer.facebook" maxlength="64">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span i18n>MODULE.MY_SETTING.DEPARTMENT</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input class="ipt w300" type="text" name="department" a-model="buyer.department" maxlength="128" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span i18n>MODULE.MY_SETTING.POST</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input class="ipt w300" type="text" name="position" a-model="buyer.position" maxlength="64" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <a id="submit" href="javascript:;" class="btn btn-s11" i18n>BUTTON.SAVE</a>
+            <div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+        </div>
+    </form>
+</script>
+
+<!-- set company profile  -->
+<script type="text/template" id="tplCP">
+    <div class="tab-s2">
+        <a href="javascript:" act="showBI" i18n>MODULE.MY_SETTING.BASE_INFO</a>
+        <a href="javascript:" act="showTI" i18n>MODULE.MY_SETTING.TRADING_INFO</a>
+        <a href="javascript:" act="showCI" class="hidden" >Certification Info</a>
+    </div>
+    <div class="companyWrap">
+
+    </div>
+</script>
+
+<!-- set account -->
+<script type="text/template" id="tplAS">
+    <div class="tips-s4">
+        <span class="ico"></span>
+        <div class="des" i18n>MODULE.MY_SETTING.TIPS_TITLE_7</div>
+    </div>
+    <div id="set-account-form" class="mod-form-s1 form-account">
+        <div class="mod-part">
+            <div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.BASE_INFO</h3></div>
+            <div class="field">
+                <label class="col" i18n>MODULE.MY_SETTING.NAME</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="text">{{buyer.firstName}}&nbsp;{{buyer.lastName}}</div>
+                    </div>
+                </div>
+            </div>
+            <form id="form-acc" validator>
+                <div class="field s-acc">
+                    <label class="col"><span class="bg-ico required hide"></span><span i18n>MODULE.MY_SETTING.EMAIL</span></label>
+                    <div class="el">
+                        <div class="el-cont">
+                            <div id="oldEmail" class="text">{{buyer.oldEmail}}</div>
+                            <div class="inner hide">
+                                <input id="email" type="email" class="w300 ipt" name="email" a-model="buyer.email" required error="* This email format is not recognized. Please check again." >
+                            </div>
+                        </div>
+                        <span id="email-loading" class="ice-email-loading"></span>
+                        <div id="email-action" class="el-cont-right">
+                            <a id="email-edit" href="javascript:" i18n>BUTTON.EDIT</a>
+                            <span id="email-activate" >&nbsp;|&nbsp;<a href="javascript:" i18n>MODULE.MY_SETTING.ACTIVATE_EMAIL</a></span>
+                        </div>
+                        <div id="email-edit-action" class="el-cont-right hide">
+                            <a id="email-edit-save" href="javascript:" i18n>BUTTON.SAVE</a>
+                            &nbsp;|&nbsp;<a id="email-edit-cancel" href="javascript:" i18n>BUTTON.CANCEL</a>
+                            </div>
+                    </div>
+                </div>
+            </form>
+            <div class="field">
+                <label class="col">Canton Fair ID :</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="text">{{buyer.cantonfairId}}</div>
+                    </div>
+                    <div class="el-cont-right">
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="col" i18n>MODULE.MY_SETTING.PASSWORD</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="text" i18n>MODULE.MY_SETTING.TIPS_TITLE_8</div>
+                    </div>
+                    <div class="el-cont-right">
+                        <a id="edit-password" data-editfield=".edit-password" href="javascript:;" i18n>MODULE.MY_SETTING.UPDATE_PWD</a>
+                    </div>
+                </div>
+            </div>
+            <form id="password-holder" class="hide" validator>
+                <div class="field">
+                    <label class="col" i18n>MODULE.MY_SETTING.CURRENT_PWD</label>
+                    <div class="el">
+                        <div class="el-cont">
+                            <div class="inner">
+                                <input id="cur-pwd" class="ipt w300" type="password" name="password" value="" required pattern="^[a-zA-Z0-9]{6,20}$" error="MODULE.MY_SETTING.TIPS_TITLE_3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="col" i18n>MODULE.MY_SETTING.NEW_PWD</label>
+                    <div class="el">
+                        <div class="el-cont">
+                            <div class="inner">
+                                <input class="ipt w300" type="password" id="new-pwd" name="new-pwd" value="" required pattern="^[a-zA-Z0-9]{6,20}$" error="MODULE.MY_SETTING.TIPS_TITLE_3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="col" i18n>MODULE.MY_SETTING.CONFIRM_PWD</label>
+                    <div class="el">
+                        <div class="el-cont">
+                            <div class="inner">
+                                <input class="ipt w300" type="password" id="confirm-pwd"  name="confirm-pwd" value="" required pattern="^[a-zA-Z0-9]{6,20}$" error="MODULE.MY_SETTING.TIPS_TITLE_3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button id="save" type="submit" class="btn btn-s11" i18n>BUTTON.SAVE</button>
+                    <button id="cancel" type="button" class="btn btn-s11" i18n>BUTTON.CANCEL</button>
+                    <div id="loading" class="loading-s1 hide"><span></span>Loading ...</div>
+                </div>
+            </form>
+        </div>
+        <div class="mod-part" id="privacy">
+            <div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.PRIVACY_SETTING</h3></div>
+            <div class="field" id="avatar">
+                <label class="col" i18n>MODULE.MY_SETTING.AVATAR</label>
+                <div class="el">
+                    <div class="privacy-item">
+                        <div class="user-pic">
+                            <img width="60" height="60" alt="" can-src="{{ imageUrl }}/{{ buyer.buyerPhoto }}">
+                        </div>
+                        <p class="tips" i18n>MODULE.MY_SETTING.TIPS_TITLE_9</p>
+                    </div>
+                    <div class="mod-switch">
+                        <div class="op"><span class="txt" i18n>PRIVACY.PUBLIC</span><span class="turn-ico"></span><span class="txt" i18n>PRIVACY.SECRET</span></div>
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="field" id="cont-info">
+                <label class="col" i18n>MODULE.MY_SETTING.CONTACT_INFO</label>
+                <div class="el">
+                    <div class="privacy-item">
+                        <p class="tit-s6" i18n>MODULE.MY_SETTING.TIPS_TITLE_10</p>
+                        <p class="tips" i18n>MODULE.MY_SETTING.TIPS_TITLE_11</p>
+                    </div>
+                    <div class="mod-switch">
+                        <div class="op"><span class="txt" i18n>PRIVACY.PUBLIC</span><span class="turn-ico"></span><span class="txt" i18n>PRIVACY.SECRET</span></div>
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- set Business -->
+<script  type="text/template" id="tplBS">
+    <div class="mod-form-s1 form-business">
+        <form id="businessFormId" validator>
+        <div class="mod-part">
+            <div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.BUSINESS_SETTING_TIT.i0</h3></div>
+            <div class="field f-category">
+                <label class="col" i18n>MODULE.MY_SETTING.CATEGORY</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="inner">
+                            <div class="select-box">
+                                <div id="select-btn" class="txt"><a href="javascript:;"></a><em i18n>MODULE.MY_SETTING.CATEGORY_LABEL</em></div>
+                                <input id="categorys" type="hidden"/>
+                                <div id="category-data">
+                                    <div a-repeat="categoryList" class="categoryItem" data-id="{{categoryId}}" data-text="{{categoryEname}}">{{ categoryEname }}</div>
+                                </div>
+                                <div id="cateCheckHolder" class="hidden">
+                                    <input a-repeat="categoryList" type="checkbox" checked="checked" name="categoryId" value="{{categoryId}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-part">
+            <div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.BUSINESS_SETTING_TIT.i1</h3></div>
+            <div class="field f-rdchk-bs">
+                <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i0.title</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="inner">
+                            <label for="a1">
+                                <input id="a1" class="vertical"  name="employee" type="radio" value="104000" a-model="employee">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i0.i0</span>
+                            </label>
+                            <label for="a2">
+                                <input id="a2" class="vertical"  name="employee" type="radio" value="104001" a-model="employee">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i0.i1</span>
+                            </label>
+                            <label for="a3"><input id="a3" class="vertical"  name="employee" type="radio" value="104002" a-model="employee">100-499</label>
+                            <label for="a4"><input id="a4" class="vertical"  name="employee" type="radio" value="104003" a-model="employee">500-999</label>
+                            <label for="a5"><input id="a5" class="vertical"  name="employee" type="radio" value="104004" a-model="employee">1000-4999</label>
+                            <label for="a6">
+                                <input id="a6" class="vertical"  name="employee" type="radio" value="104005" a-model="employee">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i0.i2</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field f-rdchk-bs">
+                <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.title</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="inner">
+                            <label for="b1">
+                                <input id="b1" class="vertical"  name="regCapital" type="radio" value="105000" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i0</span>
+                            </label>
+                            <label for="b2">
+                                <input id="b2" class="vertical"  name="regCapital" type="radio" value="105001" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i1</span>
+                            </label>
+                            <label for="b3">
+                                <input id="b3" class="vertical"  name="regCapital" type="radio" value="105002" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i2</span>
+                            </label>
+                            <label for="b4">
+                                <input id="b4" class="vertical"  name="regCapital" type="radio" value="105003" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i3</span>
+                            </label>
+                            <label for="b5">
+                                <input id="b5" class="vertical"  name="regCapital" type="radio" value="105004" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i4</span>
+                            </label>
+                            <label for="b6">
+                                <input id="b6" class="vertical"  name="regCapital" type="radio" value="105005" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i5</span>
+                            </label>
+                            <label for="b7">
+                                <input id="b7" class="vertical"  name="regCapital" type="radio" value="105006" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i6</span>
+                            </label>
+                            <label for="b8">
+                                <input id="b8" class="vertical"  name="regCapital" type="radio" value="105007" a-model="regCapital">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i1.i7</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field f-rdchk-bs">
+                <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i2.title</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="inner">
+                            <label for="c1">
+                                <input id="c1" class="vertical" name="annualSale" type="radio" value="103000" a-model="annualSale">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i2.i0</span>
+                            </label>
+                            <label for="c2">
+                                <input id="c2" class="vertical" name="annualSale" type="radio" value="103001" a-model="annualSale">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i2.i1</span>
+                            </label>
+                            <label for="c3">
+                                <input id="c3" class="vertical" name="annualSale" type="radio" value="103002" a-model="annualSale">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i2.i2</span>
+                            </label>
+                            <label for="c4">
+                                <input id="c4" class="vertical" name="annualSale" type="radio" value="103003" a-model="annualSale">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i2.i3</span>
+                            </label>
+                            <label for="c5">
+                                <input id="c5" class="vertical" name="annualSale" type="radio" value="103004" a-model="annualSale">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i2.i4</span>
+                            </label>
+                            <label for="c6">
+                                <input id="c6" class="vertical" name="annualSale" type="radio" value="103005" a-model="annualSale">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i2.i5</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-part">
+            <div class="tit-s2"><h3 i18n>MODULE.MY_SETTING.BUSINESS_SETTING_TIT.i2</h3></div>
+            <div class="field f-rdchk-bs">
+                <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i3.title</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="inner">
+                            <label for="d1">
+                                <input id="d1" class="vertical" name="companyType" type="radio" value="201001" a-model="companyType">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i3.i0</span>
+                            </label>
+                            <label for="d2">
+                                <input id="d2" class="vertical" name="companyType" type="radio" value="201002" a-model="companyType">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i3.i1</span>
+                            </label>
+                            <label class="w200" for="d3">
+                                <input id="d3" class="vertical" name="companyType" type="radio" value="201003" a-model="companyType">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i3.i2</span>
+                            </label>
+                            <label for="d4">
+                                <input id="d4" class="vertical" name="companyType" type="radio" value="201999" a-model="companyType">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i3.i3</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field f-rdchk-bs">
+                <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i4.title</label>
+                <div class="el">
+                    <div class="el-cont">
+                        <div class="inner">
+                            <label for="e1">
+                                <input id="e1" class="vertical" name="numOfExh" type="radio" value="107000" a-model="numOfExh">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i4.i0</span>
+                            </label>
+                            <label for="e2">
+                                <input id="e2" class="vertical" name="numOfExh" type="radio" value="107002" a-model="numOfExh">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i4.i1</span>
+                            </label>
+                            <label for="e3">
+                                <input id="e3" class="vertical" name="numOfExh" type="radio" value="107003" a-model="numOfExh">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i4.i2</span>
+                            </label>
+                            <label for="e4">
+                                <input id="e4" class="vertical" name="numOfExh" type="radio" value="107004" a-model="numOfExh">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i4.i3</span>
+                            </label>
+                            <label for="e5">
+                                <input id="e5" class="vertical" name="numOfExh" type="radio" value="107005" a-model="numOfExh">
+                                <span i18n>MODULE.MY_SETTING.BUSINESS_SETTING_LABEL.i4.i4</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <input type="hidden" name="isNew" value="1"/>
+            <a id="submit" href="javascript:;" class="btn btn-s11" i18n>BUTTON.SAVE</a>
+            <div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+        </div>
+        </form>
+    </div>
+</script>
+
+<!-- set company profile -> basic info  -->
+<script type="text/template" id="tplBI">
+    <form id="set-cb-form" class="mod-form-s1 form-company mysetting" validator>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.COMPANY_NAME</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w500 ipt" name="companyName" a-model="buyerCompany.companyName" placeholder="Please Enter Company Name" maxlength="256" required />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field f-upload">
+            <label class="col">Logo :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input id="upload-cp"  class="btn btn-s12" type="file" name="logo" fileSize="200" uploader="BUTTON.UPLOAD" width="70" height="35" />
+                        <span class="tips-upload" i18n>MODULE.MY_SETTING.UPLOAD_TIPS3</span>
+                        <div class="upload-logo">
+                            <img  width="160" height="80" can-src="{{ buyerCompany.companyLogo2 }}" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field f-introd">
+            <label class="col" i18n>MODULE.MY_SETTING.INTRO</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <textarea id="companyDesc" class="ipt" name="companyDesc" cols="" rows="" maxlength="1000">{{ buyerCompany.companyDesc}}</textarea>
+                    </div>
+                </div>
+                <div id="cd-tips" class="description"><span>1000</span> characters left</div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col" i18n>MODULE.MY_SETTING.WEBSITE</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input class="ipt w300" type="text" name="companyWebsite" a-model="buyerCompany.companyWebsite" maxlength="128" pattern="{{ rules.url.strRegex }}|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_1" validator>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col" i18n>MODULE.MY_SETTING.FOUND</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <select name="companyFoundYear" a-model="foundYear">
+                            <option value="">--Please select--</option>
+                            <option a-repeat="year" value="{{ val }}">{{ val }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.COUNTRY_REGION</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <select a-model="countryId" name="countryId" required>
+                            <option a-repeat="countryList" value="{{ code }}"  > {{ enName }} </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col"><span class="bg-ico required"></span><span i18n>MODULE.MY_SETTING.ADDRESS2</span></label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w500 ipt" name="address" a-model="buyerCompany.address" placeholder="Please Enter Address" maxlength="256" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col" i18n>MODULE.MY_SETTING.ZIP_CODE</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w100 ipt" name="zipCode" a-model="buyerCompany.zipCode" placeholder="e.g.510000" maxlength="16" pattern="^\d+$|^.{0}$" error="MODULE.MY_SETTING.TIPS_TITLE_5" validator>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <input type="hidden" name="companyId" a-model="buyerCompany.companyId"/>
+            <input type="hidden" name="companyLogo" a-model="buyerCompany.companyLogo"/>
+            <input type="hidden" name="buyerId" a-model="buyerCompany.buyerId"/>
+            <input type="hidden" name="yearBuyingAmt" a-model="buyerCompany.yearBuyingAmt"/>
+            <input type="hidden" name="companyType" a-model="buyerCompany.companyType"/>
+            <input type="hidden" name="companyNature" a-model="buyerCompany.companyNature"/>
+            <a id="submit" href="javascript:;" class="btn btn-s11" i18n>BUTTON.SAVE</a>
+            <div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+        </div>
+
+    </form>
+
+</script>
+
+<!-- set company profile -> Trading Info -->
+<script type="text/template" id="tplTI">
+<div class="mod-form-s1 form-business">
+    <form id="companyprofileFormId" validator>
+        <div class="field f-rdchk-tp">
+            <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_TIT_7</label>
+            <div class="el">
+                <div id="ct" class="el-cont">
+                    <div class="inner">
+                        <label for="c1">
+                            <input id="c1" class="vertical" name="companyType" type="checkbox" value="100001">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i0</span>
+                        </label>
+                        <label for="c2">
+                            <input id="c2" class="vertical" name="companyType" type="checkbox" value="100002">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i1</span>
+                        </label>
+                        <label for="c3">
+                            <input id="c3" class="vertical" name="companyType" type="checkbox" value="100003">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i2</span>
+                        </label>
+                        <label for="c4">
+                            <input id="c4" class="vertical" name="companyType" type="checkbox" value="100004">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i3</span>
+                        </label>
+                        <label for="c5">
+                            <input id="c5" class="vertical" name="companyType" type="checkbox" value="100005">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i4</span>
+                        </label>
+                        <label for="c6">
+                            <input id="c6" class="vertical" name="companyType" type="checkbox" value="100006">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i5</span>
+                        </label>
+                        <label for="c7">
+                            <input id="c7" class="vertical" name="companyType" type="checkbox" value="100007">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i6</span>
+                        </label>
+                        <label for="c8">
+                            <input id="c8" class="vertical" name="companyType" type="checkbox" value="100999">
+                            <span i18n>MODULE.MY_SETTING.BUYER_BUSINESS_TYPE.i7</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field f-rdchk-lv">
+            <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_TIT_8</label>
+            <div class="el">
+                <div id="cl" class="el-cont">
+                    <div class="inner">
+                        <label for="d1">
+                            <input id="d1" class="vertical" name="companyNature" type="checkbox" value="101001">
+                            <span i18n>MODULE.MY_SETTING.BUSINESS_NATURE.i0</span>
+                        </label>
+                        <label for="d2">
+                            <input id="d2" class="vertical" name="companyNature" type="checkbox" value="101002">
+                            <span i18n>MODULE.MY_SETTING.BUSINESS_NATURE.i1</span>
+                        </label>
+                        <label for="d3">
+                            <input id="d3" class="vertical" name="companyNature" type="checkbox" value="101003">
+                            <span i18n>MODULE.MY_SETTING.BUSINESS_NATURE.i2</span>
+                        </label>
+                        <label for="d4">
+                            <input id="d4" class="vertical" name="companyNature" type="checkbox" value="101004">
+                            <span i18n>MODULE.MY_SETTING.BUSINESS_NATURE.i3</span>
+                        </label>
+                        <label for="d5">
+                            <input id="d5" class="vertical" name="companyNature" type="checkbox" value="101999">
+                            <span i18n>MODULE.MY_SETTING.BUSINESS_NATURE.i4</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field f-rdchk">
+            <label class="col" i18n>MODULE.MY_SETTING.BUSINESS_TIT_9</label>
+            <div class="el">
+                <div id="radioParent" class="el-cont">
+                    <div class="inner">
+                        <label for="a1">
+                            <input id="a1" class="vertical"  name="yearBuyingAmt" type="radio" value="102001">
+                            <span i18n>MODULE.MY_SETTING.ANNUAL_PURCHASE.i0</span>
+                        </label>
+                        <label for="a2">
+                            <input id="a2" class="vertical"  name="yearBuyingAmt" type="radio" value="102002">
+                            <span i18n>MODULE.MY_SETTING.ANNUAL_PURCHASE.i1</span>
+                        </label>
+                        <label for="a3">
+                            <input id="a3" class="vertical"  name="yearBuyingAmt" type="radio" value="102003">
+                            <span i18n>MODULE.MY_SETTING.ANNUAL_PURCHASE.i2</span>
+                        </label>
+                        <label for="a4">
+                            <input id="a4" class="vertical"  name="yearBuyingAmt" type="radio" value="102004">
+                            <span i18n>MODULE.MY_SETTING.ANNUAL_PURCHASE.i3</span>
+                        </label>
+                        <label for="a5">
+                            <input id="a5" class="vertical"  name="yearBuyingAmt" type="radio" value="102005">
+                            <span i18n>MODULE.MY_SETTING.ANNUAL_PURCHASE.i4</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <input type="hidden" name="companyId" value="{{buyerCompany.companyId}}"/>
+            <a id="submit" href="javascript:;" class="btn btn-s11" i18n>BUTTON.SAVE</a>
+            <div id="loading" class="loading-s1 hidden"><span></span>Loading ...</div>
+        </div>
+    </form>
+</div>
+</script>
+
+<!-- set company profile -> Certification Info  -->
+<script type="text/template"  id="tplCI">
+    <!-- 尚未验证的情况 -->
+    <div class="mod-form-s1 no-cert hidden">
+        <p class="p-tl">If you are already a buyer of Canton Fair, please verify your ID to enjoy more exclusive matching services.</p>
+        <div class="field">
+            <label class="col">Canton Fair ID :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" class="w200 ipt" name="cantonFairID" >
+                    </div>
+                </div>
+                <span class="bg-ico ico-help"></span>
+            </div>
+        </div>
+        <div class="actions">
+            <a id="verify" href="javascript:;" class="btn btn-s11">Verify my ID</a>
+            <div class="loading-s1 hidden"><span></span>submitting ...</div>
+        </div>
+    </div>
+    <!-- 尚未验证的情况 End -->
+    <!-- 已经验证的情况 -->
+    <div class="credit-cert">
+        <div class="hd clear noborder">
+            <h3>e-Commerce Level :</h3>
+            <div class="mod-crt mod-crt-a">Credit:<em>${credit}</em></div>
+        </div>
+    </div>
+    <!-- 已经验证的情况 End -->
+</script>

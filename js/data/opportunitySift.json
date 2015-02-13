@@ -1,0 +1,128 @@
+{
+    "message": "",
+    "type": null,
+    "data": [{
+        "category": [{
+            "enName": "Food & Native Produce",
+            "cnName": "食品及土特产品类",
+            "code": "902015"
+        },
+        {
+            "enName": "Textiles & Garments",
+            "cnName": "纺织服装类",
+            "code": "902014"
+        },
+        {
+            "enName": "Shoes",
+            "cnName": "鞋类",
+            "code": "902013"
+        },
+        {
+            "enName": "Medicines, Medical Devices and Health Products",
+            "cnName": "医药及医疗保健类",
+            "code": "902012"
+        },
+        {
+            "enName": "Office Supplies, Cases & Bags, and Recreation Products",
+            "cnName": "办公\\箱包及休闲用品类",
+            "code": "902011"
+        },
+        {
+            "enName": "Home Decorations",
+            "cnName": "家居装饰品类",
+            "code": "902010"
+        },
+        {
+            "enName": "Gifts",
+            "cnName": "礼品类",
+            "code": "902009"
+        },
+        {
+            "enName": "Consumer Goods",
+            "cnName": "日用消费品类",
+            "code": "902008"
+        },
+        {
+            "enName": "Chemical Products",
+            "cnName": "化工产品类",
+            "code": "902007"
+        },
+        {
+            "enName": "Building Materials",
+            "cnName": "建材类",
+            "code": "902006"
+        },
+        {
+            "enName": "Hardware & Tools",
+            "cnName": "五金工具类",
+            "code": "902005"
+        },
+        {
+            "enName": "Machinery",
+            "cnName": "机械类",
+            "code": "902004"
+        },
+        {
+            "enName": "Vehicles & Spare Parts",
+            "cnName": "车辆及配件类",
+            "code": "902003"
+        },
+        {
+            "enName": "Lighting Equipment",
+            "cnName": "照明类",
+            "code": "902002"
+        },
+        {
+            "enName": "Electronics & Household Electrical Appliances",
+            "cnName": "电子及家电类",
+            "code": "902001"
+        }]
+    },
+    {
+        "tag": [{
+            "tagName": "老王",
+            "tagId": 3
+        },
+        {
+            "tagName": "老代",
+            "tagId": 4
+        },
+        {
+            "tagName": "老向",
+            "tagId": 5
+        },
+        {
+            "tagName": "老叶",
+            "tagId": 6
+        },
+        {
+            "tagName": "老李",
+            "tagId": 7
+        },
+        {
+            "tagName": "老陈",
+            "tagId": 8
+        },
+        {
+            "tagName": "老曹",
+            "tagId": 9
+        }]
+    },
+    {
+        "source": [{
+            "sourceType": "0",
+            "sourceName": "APP获取"
+        },
+        {
+            "sourceType": "1",
+            "sourceName": "我收藏的"
+        }]
+    }],
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

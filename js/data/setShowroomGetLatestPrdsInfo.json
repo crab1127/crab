@@ -1,0 +1,51 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "productId":"1011",
+            "prdName":"Jiangsu pure white garlic price ",
+            "minorder":"1000 Pieces",
+            "fobprice":"$788/Pieces",
+            "paymentterms":"T/T",
+            "supplyAbility":"1000 Pieces/Month",
+            "pic":"/img/120_120.jpg"
+        },
+        {
+            "productId":"106",
+            "prdName":"Popular Rooftop Packaged air conditioner unit ",
+            "minorder":"1000 Pieces",
+            "fobprice":"$889/Pieces",
+            "paymentterms":"T/T",
+            "supplyAbility":"1000 Pieces/Month",
+            "pic":"/img/120_120.jpg"
+        },
+        {
+            "productId":"105",
+            "prdName":"Air Cooled Modular Chiller (heat pump) ",
+            "minorder":"1000 Pieces",
+            "fobprice":"$800/Pieces",
+            "paymentterms":"T/T",
+            "supplyAbility":"1000 Pieces/Month",
+            "pic":"/img/120_120.jpg"
+        },
+        {
+            "productId":"104",
+            "prdName":"Hybrid Solar Air Conditioner ",
+            "minorder":"1000 Pieces",
+            "fobprice":"$500/Pieces",
+            "paymentterms":"T/T",
+            "supplyAbility":"1000 Pieces/Month",
+            "pic":"/img/120_120.jpg"
+        },
+        {
+            "productId":"102",
+            "prdName":"Hybrid Solar Air Conditioner ",
+            "minorder":"1000 Pieces",
+            "fobprice":"$520/Pieces",
+            "paymentterms":"T/T",
+            "supplyAbility":"1000 Pieces/Month",
+            "pic":"/img/120_120.jpg"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "status":"success",
+    "message":"fuck, why return error.",
+    "data":{
+        "supplierId":1,
+        "supplierPhoto":"/img/user_pic/default_120.jpg",
+        "supplierName":"Christina Dior Dior Dior Dior",
+        "buyerName":"Steven Jobs",
+        "supplierCompanyName":"alibaba.com",
+        "countryId":233,
+        "countryName":"中国",
+        "countryEName":"China",
+        "districtName":"广东省",
+        "districtEnName":"Guangdong",
+        "supplierIntegrity":41,
+        "inquiryMsg":216,
+        "improvableProd":45,
+        "buyingLead":328
+    }
+}

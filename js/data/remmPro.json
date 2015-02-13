@@ -1,0 +1,84 @@
+{
+    "status":"success",
+    "message":"",
+    "data":{
+        "Bicycles":[
+            {
+                "productId":123144,
+                "productPhoto":"/img/temp/bicycles/001.jpg",
+                "productTitle":"Bicycles, for wemen, fashion bikes",
+                "productIntroduction":"Bicycles, for wemen, fashion bikes"
+            },
+            {
+                "productId":123145,
+                "productPhoto":"/img/temp/bicycles/002.jpg",
+                "productTitle":"Supply 2011 Men Bikes/Giant Bicycles, TCR Advanced SL 0 on-Road Bike",
+                "productIntroduction":"Supply 2011 Men Bikes/Giant Bicycles, TCR Advanced SL 0 on-Road Bike"
+            },
+            {
+                "productId":123148,
+                "productPhoto":"/img/temp/bicycles/003.jpg",
+                "productTitle":"Electric bicycles",
+                "productIntroduction":"Electric bicycles"
+            }
+        ],
+        "Motorcycles":[
+            {
+                "productId":123149,
+                "productPhoto":"/img/temp/motorcycles/001.jpg",
+                "productTitle":"Honda Motorcycles",
+                "productIntroduction":"Honda Motorcycles"
+            },
+            {
+                "productId":123151,
+                "productPhoto":"/img/temp/motorcycles/002.jpg",
+                "productTitle":"A pretty cool motorcycle",
+                "productIntroduction":"A pretty cool motorcycle"
+            },
+            {
+                "productId":123152,
+                "productPhoto":"/img/temp/motorcycles/003.jpg",
+                "productTitle":"2013 new fasion cool motorcycle 748",
+                "productIntroduction":"2013 new fasion cool motorcycle 748"
+            },
+            {
+                "productId":123153,
+                "productPhoto":"/img/temp/motorcycles/004.jpg",
+                "productTitle":"Hot sale motorcycle in 2012",
+                "productIntroduction":"Hot sale motorcycle in 2012"
+            }
+        ],
+        "Vehicles":[
+            {
+                "productId":123154,
+                "productPhoto":"/img/temp/electricvehicles/001.jpg",
+                "productTitle":"Electric Vehicles",
+                "productIntroduction":"Electric Vehicles"
+            },
+            {
+                "productId":123155,
+                "productPhoto":"/img/temp/electricvehicles/002.jpg",
+                "productTitle":"Holden Special Vehicles V2",
+                "productIntroduction":"Holden Special Vehicles V2"
+            },
+            {
+                "productId":123156,
+                "productPhoto":"/img/temp/electricvehicles/003.jpg",
+                "productTitle":"Cool Fasion Electric Vehicles G3",
+                "productIntroduction":"Cool Fasion Electric Vehicles G3"
+            },
+            {
+                "productId":123157,
+                "productPhoto":"/img/temp/electricvehicles/004.jpg",
+                "productTitle":"Top Design Crossover Vehicle",
+                "productIntroduction":"Top Design Crossover Vehicle"
+            },
+            {
+                "productId":123158,
+                "productPhoto":"/img/temp/electricvehicles/005.jpg",
+                "productTitle":"New hybrid vehicles",
+                "productIntroduction":"New hybrid vehicles"
+            }
+        ]
+    }
+}

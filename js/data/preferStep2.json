@@ -1,0 +1,186 @@
+{
+    "status":"success",
+    "message":"",
+    "data":{
+        "employee":{
+            "label":"",
+            "name":"employee",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":104000,
+                    "text":"Not Required",
+                    "icon":"data-icon s104000"
+                },
+                {
+                    "value":104001,
+                    "text":"<100",
+                    "icon":"data-icon s104001"
+                },
+                {
+                    "value":104002,
+                    "text":"100-499",
+                    "icon":"data-icon s104002"
+                },
+                {
+                    "value":104003,
+                    "text":"500-999",
+                    "icon":"data-icon s104003"
+                },
+                {
+                    "value":104004,
+                    "text":"1000-4999",
+                    "icon":"data-icon s104004"
+                },
+                {
+                    "value":104005,
+                    "text":"Over 5000",
+                    "icon":"data-icon s104005"
+                }
+            ]
+        },
+        "regCapital":{
+            "label":"",
+            "name":"regCapital",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":105000,
+                    "text":"No Request",
+                    "icon":"data-icon s105000"
+                },
+                {
+                    "value":105001,
+                    "text":"Below 1 million",
+                    "icon":"data-icon s105001"
+                },
+                {
+                    "value":105002,
+                    "text":"1-5 million",
+                    "icon":"data-icon s105002"
+                },
+                {
+                    "value":105003,
+                    "text":"5-20 million",
+                    "icon":"data-icon s105003"
+                },
+                {
+                    "value":105004,
+                    "text":"20-50 million",
+                    "icon":"data-icon s105004"
+                },
+                {
+                    "value":105005,
+                    "text":"50-100 million",
+                    "icon":"data-icon s105005"
+                },
+                {
+                    "value":105006,
+                    "text":"100-1000 million",
+                    "icon":"data-icon s105006"
+                },
+                {
+                    "value":105007,
+                    "text":"Over 100 billion",
+                    "icon":"data-icon s105007"
+                }
+            ]
+        },
+        "annualSale":{
+            "label":"",
+            "name":"annualSale",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":103000,
+                    "text":"Not Required",
+                    "icon":"data-icon s103000"
+                },
+                {
+                    "value":103001,
+                    "text":"Below 1 million",
+                    "icon":"data-icon s103001"
+                },
+                {
+                    "value":103002,
+                    "text":"1 to 10 million",
+                    "icon":"data-icon s103002"
+                },
+                {
+                    "value":103003,
+                    "text":"10 to 50 million",
+                    "icon":"data-icon s103003"
+                },
+                {
+                    "value":103004,
+                    "text":"50 to 100 million",
+                    "icon":"data-icon s103004"
+                },
+                {
+                    "value":103005,
+                    "text":"Over 100 million",
+                    "icon":"data-icon s103002"
+                }
+            ]
+        },
+        "companyType":{
+            "label":"",
+            "name":"companyType",
+            "type":"checkbox",
+            "normal":null,
+            "options":[
+                {
+                    "value":101001,
+                    "text":"Manufacturer/Large wholesaler"
+                },
+                {
+                    "value":101002,
+                    "text":"Small/Medium-sized wholesaler"
+                },
+                {
+                    "value":101003,
+                    "text":"Small-sized wholesaler"
+                },
+                {
+                    "value":101004,
+                    "text":"Trader"
+                },
+                {
+                    "value":101999,
+                    "text":"Others"
+                }
+            ]
+        },
+        "numOfExh":{
+            "label":"",
+            "name":"numOfExh",
+            "type":"radio",
+            "normal":null,
+            "options":[
+                {
+                    "value":107000,
+                    "text":"Not Required"
+                },
+                {
+                    "value":107002,
+                    "text":"No less than 1 time in recently"
+                },
+                {
+                    "value":107003,
+                    "text":"No less than 1 time among all"
+                },
+                {
+                    "value":107004,
+                    "text":"No less than 2 time in recently"
+                },
+                {
+                    "value":107005,
+                    "text":"5 times and above"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "categoryId":1,
+            "label":"Consumer Goods"
+        },
+        {
+            "categoryId":2,
+            "label":"Lighting Equipment"
+        },
+        {
+            "categoryId":3,
+            "label":"Building Material"
+        },
+        {
+            "categoryId":4,
+            "label":"Shoes"
+        },
+        {
+            "categoryId":5,
+            "label":"Chemical Products"
+        },
+        {
+            "categoryId":6,
+            "label":"Electronics & Household Electrical Appliances"
+        },
+        {
+            "categoryId":7,
+            "label":"Vehicles & Spare Parts"
+        },
+        {
+            "categoryId":8,
+            "label":"Gifts"
+        },
+        {
+            "categoryId":9,
+            "label":"Home Decorations"
+        },
+        {
+            "categoryId":10,
+            "label":"Office Supplies, Cases&Bags and Recreation Products"
+        },
+        {
+            "categoryId":11,
+            "label":"Machinery"
+        },
+        {
+            "categoryId":12,
+            "label":"Medicines, Medical Devices and Health Products"
+        },
+        {
+            "categoryId":13,
+            "label":"Textiles & Garments"
+        },
+        {
+            "categoryId":14,
+            "label":"Hardware& Tools"
+        },
+        {
+            "categoryId":15,
+            "label":"Food"
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+<form name="prdInforForm" id="prdInforFormId">
+    <div class="mod-form-s1">
+        <div class="field">
+            <label class="col">
+                {{_ "TPL_SHOWROOM.FACTORY_SIZE"}}
+                
+                :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <input type="text" placeholder="" name="factoryArea" id="fsize" class="w150 ipt number">
+                         {{_ "TPL_SHOWROOM.SQUARE_METER"}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field f-rdchk">
+            <label class="col">
+                {{_ "TPL_SHOWROOM.ODM_EXPERIENCE"}}
+              
+                :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <label for="a1"><input type="radio" class="vertical" id="a1" name="odmExper" value="1">
+                            {{_ "BUTTON.YES"}}
+                        </label>
+                        <label for="a2"><input type="radio" class="vertical" id="a2" name="odmExper" value="0">
+                            {{_ "BUTTON.NO"}}
+                        </label>
+                        <span id="odmdescCon" style="display: none;">
+                            {{_ "TPL_SHOWROOM.EXPERIENCE_OUTLINE"}}:
+                  
+                        <input type="text" placeholder="{{_ "TPL_SHOWROOM.PBOYE"}}" name="odmDesc" id="odmdesc" class="w300 ipt">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field f-rdchk">
+            <label class="col">
+                {{_ "TPL_SHOWROOM.OEM_EXPERIENCE"}}
+                :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner">
+                        <label for="a3"><input type="radio" class="vertical" id="a3" name="oemExper" value="1">
+                             {{_ "BUTTON.YES"}} </label>
+                        <label for="a4"><input type="radio" class="vertical" id="a4" name="oemExper" value="0">
+                             {{_ "BUTTON.NO"}} </label>
+                        <span id="oemdescCon" style="display: none;">
+                        {{_ "TPL_SHOWROOM.EXPERIENCE_OUTLINE"}}:
+                        <input type="text" placeholder="{{_ "TPL_SHOWROOM.PBOYE"}}"  name="oemDesc" id="oemDesc" class="w300 ipt">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col">
+                {{_ "TPL_SHOWROOM.ENGINEER_TOTAL"}}:
+                
+                :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner" id="engFieldId">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col">
+                {{_ "TPL_SHOWROOM.RDS_TOTAL"}}:
+            </label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner" id="devPersonFieldId">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label class="col">
+                {{_ "TPL_SHOWROOM.QCS_TOTAL"}}
+                :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner" id="checkPersonFieldId">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="field f-rdchk">
+            <label class="col">
+                {{_ "TPL_SHOWROOM.CERT"}}
+                :</label>
+            <div class="el">
+                <div class="el-cont">
+                    <div class="inner" id="systemCertificationEls">
+                        
+                    </div>
+                    <div class="fm-error hidden">
+                        {{_ "TPL_SHOWROOM.REQUIRE"}}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a class="btn btn-s11" id="saveBtn" href="javascript:;">
+                {{_ "BUTTON.SAVE"}}
+            </a>
+        </div>
+
+    </div>
+</form>

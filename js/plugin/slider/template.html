@@ -1,0 +1,38 @@
+<div class="cps-mask"></div>
+<div class="cps-content">
+    <a class="cps-close-btn" href="javascript:;"></a>
+    <div class="cps-min-map">
+        <div class="cps-wrap">
+            <ul class="cps-thumb">
+                <li a-repeat="imgs"><img src="{{ thumb }}" alt="{{ alt }}"/></li>
+            </ul>
+        </div>
+        <a class="cps-pre icons left" href="javascript:;"></a>
+        <a class="cps-next icons right" href="javascript:;"></a>
+    </div>
+    <div class="cps-action">
+        <a class="cps-view-origin" href="{{ curItem.img }}" target="_blank">View origin</a>
+        <a class="cps-auto-play" href="javascript:;">Auto play</a>
+        <div class="cps-count">({{ curNum }}/{{ imgs.length }})</div>
+    </div>
+    <div class="cps-main">
+        <div class="cps-main-mask">
+            <div class="cur-left"></div>
+            <div class="cur-right"></div>
+        </div>
+        <ul class="cps-slider">
+            <li a-repeat="imgs">
+                <img class="cps-img" src="{{ img }}" alt="{{ alt }}" style="display: none;"/>
+                <img class="cps-loading" src="/C/css/common/bgimg/loading.gif" alt="loading"/>
+            </li>
+        </ul>
+        <a class="cps-trigger cps-pre" href="javascript:;">&lt;</a>
+        <a class="cps-trigger cps-next" href="javascript:;">&gt;</a>
+        <div class="cps-desc" a-if="curItem.desc">
+            <div>
+                <p><span>{{ curItem.desc }}</span></p>
+            </div>
+            <a class="cps-fold" href="javascript:"></a>
+        </div>
+    </div>
+</div>

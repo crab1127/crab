@@ -1,0 +1,235 @@
+{
+	"status": "success",
+	"message": "",
+	"data": {
+		"userType": 2,
+		"socialType": 1,
+		"baseInfo": {
+			"userPhoto": "",
+			"userName": "James Ma",
+			"cantonFairId": "34245456563***456",
+			"countryId": 233,
+			"countryName": "China",
+			"numOfExh": 4,
+			"credit": "B",
+			"isEmail": true,
+			"isPhone": true,
+			"dataList": {
+				"generalScore": 89,
+				"productScore": 89,
+				"backgroundScore": 89,
+				"productMatchInfo": {
+					"Building and Decorative Materials": ["Building", "Decorative", "Materials"],
+					"Chemical Products": ["Building", "Decorative", "Materials", "Decorative", "Materials", "Building", "Decorative", "Materials"],
+					"Toiletries": ["Building", "Decorative", "Materials"],
+					"Chemical": ["Decorative", "Materials"],
+					"Personal Care Products": ["Building", "Decorative", "Materials"]
+				},
+				"backgroundMatchInfo": [
+					{
+						"label": "Area:",
+						"countryId": 233,
+						"level": 1,
+						"text": "USA"
+					},
+					{
+						"label": "Category:",
+						"level": 2,
+						"text": "Led Light"
+					},
+					{
+						"label": "Exhibitors:",
+						"level": 2,
+						"text": "7 times"
+					},
+					{
+						"label": "Recently Participation:",
+						"level": 2,
+						"text": "Nearly 5 times in the 2 Canton Fair"
+					},
+					{
+						"label": "Type of Buyer:",
+						"level": 2,
+						"text": "Department store buyer"
+					},
+					{
+						"label": "Nature of Buyer:",
+						"level": 2,
+						"text": "Small and medium-sized wholesalers group"
+					}
+				]
+			},
+			"profile": [
+				{
+					"gender": "Male",
+					"position": "Manager",
+					"email": "info@adamedicaluniforms.com",
+					"phone": "718-935-1197",
+					"fax": "718-228-2027",
+					"address": "300 West 57th Street, New York, NY 10019, USA",
+					"postCode": "511-324",
+					"userAccount": "info@adamedicaluniforms.com"
+				},
+				{
+					"logo": "/img/default_logo.jpg",
+					"company": "Haiyan True Goal Garment Co., Ltd.",
+					"typeOfBuyer": "Manufacturer",
+					"companyNature": "Manager",
+					"companyFoundYear": "2001",
+					"employees": "500",
+					"yearBuyingAmt": "500,000 USD",
+					"address": "300 West 57th Street, New York, NY 10019, USA",
+					"postCode": "511-324"
+				}
+			]
+		},
+		"follow": {
+			"form": [
+				{
+					"label": "Types of Clients:",
+					"name": "typeofclient",
+					"type": "radio",
+					"normal": 213030,
+					"options": [
+						{
+							"text": "Potential",
+							"value": 213010
+						},
+						{
+							"text": "Normal",
+							"value": 213020
+						},
+						{
+							"text": "Agency",
+							"value": 213030
+						},
+						{
+							"text": "Personal Client",
+							"value": 213040
+						},
+						{
+							"text": "Invalid",
+							"value": 213050
+						}
+					]
+				},
+				{
+					"label": "Relationship Ranking:",
+					"name": "ranking",
+					"type": "radio",
+					"normal": null,
+					"options": [
+						{
+							"text": "Close",
+							"value": 214010
+						},
+						{
+							"text": "Not bad",
+							"value": 214020
+						},
+						{
+							"text": "Normal",
+							"value": 214030
+						},
+						{
+							"text": "Bad",
+							"value": 214050
+						}
+					]
+				},
+				{
+					"label": "Cooperation Condition:",
+					"name": "cooperation",
+					"type": "radio",
+					"normal": null,
+					"options": [
+						{
+							"text": "In progress",
+							"value": 215010
+						},
+						{
+							"text": "Contract phase",
+							"value": 215020
+						},
+						{
+							"text": "In cooperation",
+							"value": 215030
+						},
+						{
+							"text": "Cooperation expired",
+							"value": 215050
+						}
+					]
+				},
+				{
+					"label": "Value Assessment:",
+					"name": "assessment",
+					"type": "radio",
+					"normal": null,
+					"options": [
+						{
+							"text": "Very High",
+							"value": 216010
+						},
+						{
+							"text": "High",
+							"value": 216020
+						},
+						{
+							"text": "Middle",
+							"value": 216030
+						},
+						{
+							"text": "Low",
+							"value": 216040
+						},
+						{
+							"text": "Very Low",
+							"value": 216050
+						}
+					]
+				},
+				{
+					"label": "Credit Rating:",
+					"name": "credit",
+					"type": "radio",
+					"normal": null,
+					"options": [
+						{
+							"text": "Very High",
+							"value": 217010
+						},
+						{
+							"text": "High",
+							"value": 217020
+						},
+						{
+							"text": "Middle",
+							"value": 217030
+						},
+						{
+							"text": "Low",
+							"value": 217040
+						},
+						{
+							"text": "Very Low",
+							"value": 217050
+						}
+					]
+				}
+			],
+			"remarks": ["WTF", "SB"],
+			"group": [
+				{
+					"groupId": 1,
+					"groupName": "国际部"
+				},
+				{
+					"groupId": 2,
+					"groupName": "研发部"
+				}
+			]
+		},
+		"evaluate": []
+	}
+}

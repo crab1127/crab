@@ -1,0 +1,170 @@
+{
+	"message":"",
+	"type":"json",
+	"data":[
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD001",
+            "companyType": "Manufacturer",
+            "countryId": 233,
+            "district": "Beijing",
+            "visitTimes":2,
+            "mainProduct": [
+                "Alternator", "Electric Motor", "Generator set"
+            ],
+            "exhibitionBooth":"020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        },
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD002",
+            "companyType": "Manufacturer",
+            "visitTimes":3,
+            "countryId": 233,
+            "district": "Beijing",
+            "mainProduct": [
+                "Alternator, Electric Motor, Generator set"
+            ],
+            "exhibitionBooth":"020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        } ,
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD003",
+            "companyType": "Manufacturer",
+            "visitTimes":2,
+            "countryId": 233,
+            "district": "Beijing",
+            "mainProduct": [
+                "Alternator, Electric Motor, Generator set"
+            ],
+            "exhibitionBooth":"020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        },
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD004",
+            "companyType": "Manufacturer",
+            "visitTimes":2,
+            "countryId": 233,
+            "district": "Beijing",
+            "mainProduct": [
+                "Alternator, Electric Motor, Generator set"
+            ],
+            "exhibitionBooth":"020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        },
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD005",
+            "companyType": "Manufacturer",
+            "countryId": 233,
+            "visitTimes":2,
+            "district": "Beijing",
+            "mainProduct": [
+                "Alternator, Electric Motor, Generator set"
+            ],
+            "exhibitionBooth":"020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        },
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD006",
+            "companyType": "Manufacturer",
+            "countryId": 233,
+            "district": "Beijing",
+            "mainProduct": [
+                "Alternator, Electric Motor, Generator set"
+            ],
+            "exhibitionBooth":"020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        },
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD007",
+            "companyType": "Manufacturer",
+            "countryId": 233,
+            "district": "Beijing",
+            "mainProduct": [
+                "Alternator, Electric Motor, Generator set"
+            ],
+            "exhibitionBooth":"020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        },
+        {
+            "companyId": 254069,
+            "companyName": "FUoooTD008",
+            "companyType": "Manufacturer",
+            "countryId": 233,
+            "district": "Beijing",
+            "mainProduct": [
+                "Alternator, Electric Motor, Generator set"
+            ],
+            "exhibitionBooth":" 020E12;020F02;020E12;020F02;",
+            "exhibitionPhoto":["http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg","http://58.248.138.13:81/group1/M00/39/B5/wKgKEVIdZiuAEU4_AAAWJQT2I_Y181.jpg"],
+
+            "userId": 241638,
+            "contacter": "Mr Lin.Quan",
+            "position": "CEO",
+            "email": "821@sel.com",
+            "telephone": "(+86)086-98654789",
+            "fax": "(+86)086-98654789"
+        }
+    ],
+	"status":"success",
+	"page":{
+		"total": 0,
+		"page": 1,
+		"maxPage": 0,
+		"pageSize": 0
+	}
+}

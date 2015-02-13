@@ -1,0 +1,122 @@
+{
+    "message": "",
+    "type": null,
+    "data": {
+        "product": {
+            "shortDescription": "&nbsp;&nbsp; 深圳市兴大兴科技有限公司(简称&ldquo;兴大兴&rdquo;)是一家国内著名的电子元器件分销商。公司以执着专业的精神，准确进行市场定位，经营IC元件包括通讯设备IC，医疗电器IC，电子仪表，以及工业自动化设备等各种领域，并成为国内诸多知名企业指定的元件供应商。多年以来，兴大兴公司以自己良好的信用，可靠的质量，有竞争力的价格和灵活的财务支持，在行业内赢得了很好的信誉。&nbsp;&nbsp;&nbsp;&nbsp; 专业分销：TI、ST、 IR、NXP、 ATMEL、FAIRCHILD等国际知名品牌电子元件。作为专业的电子元器件分销商，公司拥有一支具有丰富经验的IC销售队伍，有良好稳定的货源。在激烈的市场竞争中，兴大兴公司秉持着只做原装，不断创新的经营方式，拥有大量的库存，完善的配套，在众多客户的支持与信赖下，得到了不断的发展 。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经过长期的不懈努力，公司在同行内已树立了良好的信誉，受到了全国各地客户的好评与信赖。竭诚为国内外众多客户提供第一手货源，我们将以最硬的质量，最诚的服务，最优的...",
+            "supplierId": 1,
+            "categoryId": 3,
+            "productId": 2582,
+            "productName": "LPC1768FBD100,NXP代理，绝对原装正品，假一赔十 LPC1768FBD100",
+            "productImgs": ["http://58.248.138.13:81/group1/M00/01/43/wKgKEVEIe7CAG_wmAAAMcVfYGgs316.jpg", "http://58.248.138.13:81/group1/M00/01/43/wKgKEVEIe7GASGgVAAAMcVfYGgs282.jpg"],
+            "detailDescription": "&nbsp;&nbsp; 深圳市兴大兴科技有限公司(简称&ldquo;兴大兴&rdquo;)是一家国内著名的电子元器件分销商。公司以执着专业的精神，准确进行市场定位，经营IC元件包括通讯设备IC，医疗电器IC，电子仪表，以及工业自动化设备等各种领域，并成为国内诸多知名企业指定的元件供应商。多年以来，兴大兴公司以自己良好的信用，可靠的质量，有竞争力的价格和灵活的财务支持，在行业内赢得了很好的信誉。&nbsp;&nbsp;&nbsp;&nbsp; 专业分销：TI、ST、 IR、NXP、 ATMEL、FAIRCHILD等国际知名品牌电子元件。作为专业的电子元器件分销商，公司拥有一支具有丰富经验的IC销售队伍，有良好稳定的货源。在激烈的市场竞争中，兴大兴公司秉持着只做原装，不断创新的经营方式，拥有大量的库存，完善的配套，在众多客户的支持与信赖下，得到了不断的发展 。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经过长期的不懈努力，公司在同行内已树立了良好的信誉，受到了全国各地客户的好评与信赖。竭诚为国内外众多客户提供第一手货源，我们将以最硬的质量，最诚的服务，最优的...",
+            "fobPriceFrom": 88.00,
+            "fobPriceTo": 158.00,
+            "monetaryUnit": 905001,
+            "fobUnit": 906001,
+            "minOrder": 49,
+            "startPort": "温州港",
+            "payMethods": ["904002","904001"],
+            "categoryName": "电子电气产品",
+            "minOrderUnit": 906001,
+            "keywords": ["LPC1768FBD100,NXP代理", "绝对原装正品", "假一赔十 LPC1768FBD100"],
+            "manyImg": 1,
+            "newest": 1,
+            "monthSupply": 2753,
+            "msUnit": 906001,
+            "productDetailId": 2582,
+            "groupId": 3
+        },
+        "orderUtils": [{
+            "enName": "Pieces",
+            "cnName": "Pieces",
+            "code": "906001"
+        },
+            {
+                "enName": "20'container",
+                "cnName": "20'container",
+                "code": "906002"
+            },
+            {
+                "enName": "40'container",
+                "cnName": "40'container",
+                "code": "906003"
+            }],
+        "paymethods": [{
+            "enName": "L/C",
+            "cnName": "L/C",
+            "code": "904001"
+        },
+            {
+                "enName": "T/T",
+                "cnName": "T/T",
+                "code": "904002"
+            },
+            {
+                "enName": "D/P",
+                "cnName": "D/P",
+                "code": "904003"
+            }],
+        "productCategory": [{
+            "childNodes": [{
+                "childNodes": [{
+                    "childNodes": [{
+                        "childNodes": [],
+                        "categoryId": 4,
+                        "categoryName": "Computer and Communication Products"
+                    },
+                        {
+                            "childNodes": [],
+                            "categoryId": 6,
+                            "categoryName": "Bicycles"
+                        }],
+                    "categoryId": 3,
+                    "categoryName": "Electronic and Electrical Products"
+                },
+                    {
+                        "childNodes": [],
+                        "categoryId": 5,
+                        "categoryName": "Lighting Equipment"
+                    }],
+                "categoryId": 2,
+                "categoryName": "Consumer Electronics"
+            }],
+            "categoryId": 1,
+            "categoryName": "Electronics & Household Electrical Appliances"
+        }],
+        "monetayUtils": [{
+            "enName": "USD",
+            "cnName": "USD",
+            "code": "905001"
+        },
+            {
+                "enName": "GBP",
+                "cnName": "GBP",
+                "code": "905002"
+            },
+            {
+                "enName": "RMB",
+                "cnName": "RMB",
+                "code": "905003"
+            }],
+        "productGroups": [{
+            "sortOrder": 10,
+            "groupId": 1,
+            "groupName": "Universal Car Camera",
+            "productNum": 1
+        },
+            {
+                "sortOrder": 10,
+                "groupId": 3,
+                "groupName": "Sex boby",
+                "productNum": 0
+            }]
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

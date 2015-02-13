@@ -1,0 +1,636 @@
+/**
+ * Manage Collections
+ * @Author: vfasky
+ * @Version: 1.2 ($Id$)
+ * @Update: 13-7-29
+ */
+(function (Can, Module) {
+	var _confg = Can.util.Config.buyer;
+	//设置搜索框的初始值, 静态缓存
+	var _searchFormDefVal = null;
+
+	//渲染
+	var Render = function (data, oppModule) {
+		var pageInfo = data.page;
+		var data = data.data;
+		var contentEl = oppModule.listEl.find('ul');
+		var self = this;
+
+		pageInfo.page = Number(pageInfo.page);
+		pageInfo.maxPage = Number(pageInfo.maxPage);
+
+		//用于指示当前的静态分页
+		var page = pageInfo.page;
+		this.page = page;
+
+		if (pageInfo.page == 1) {
+			oppModule.listEl.find('li.col').remove();
+			contentEl.data('scrollLeft', 0);
+		}
+
+		//绑定分页
+		oppModule.nextEl.hide();
+		if (pageInfo.maxPage > pageInfo.page) {
+			oppModule.nextEl.show();
+		}
+		oppModule.prevEl.hide();
+		if (pageInfo.page > 1) {
+			oppModule.prevEl.show();
+		}
+		oppModule.prevEl.unbind().bind('click', function () {
+			self.pre();
+			return false;
+		});
+		oppModule.nextEl.unbind().bind('click', function () {
+			self.next();
+			return false;
+		});
+
+		//构造列
+		this.build = function (v) {
+			var li = $('<li class="col"></li>');
+
+			li.append('<h3 class="day">' + Can.util.formatDateTime(v.datetime, 'YYYY-MM-DD') + '</h3>');
+
+			$.each(v.items, function (k, val) {
+				self.buildItem(val, k).appendTo(li);
+			});
+
+			li.appendTo(contentEl);
+		};
+
+		//构造item
+		this.buildItem = function (v, k) {
+			var el = $(
+				'<div class="item-box">' +
+					'<a class="bg-ico ico-del" href="javascript:void(0);" title="close"></a>' +
+					'<div class="box-t">' + Can.util.formatDateTime(v.createTime, 'hh:mm') + '</div>' +
+					'<div class="box-m"></div>' +
+					'<div class="box-b"><div class="opt"></div></div>' +
+					'</div>'
+			);
+			var formatImage = Can.util.formatImage;
+			var config = Can.util.Config.seller;
+			//公司
+			if (v.collectType == 1) {
+				el.find('.box-m').append(
+					'<div class="pro-pic">' +
+						'<a target="_blank" href="' + config.showroom.rootURL + v.oppCompanyId + '">' +
+						formatImage((v.companyImage || v.collectionPhoto), '229x230', 'company') +
+						'</a>' +
+						'</div>'
+				);
+
+				if (v.match) {
+					//match
+					var match_box = new Can.ui.Panel({
+						cssName: 'mod-mch ' + fCountMatchLevel(v.match),
+						html: Can.msg.MODULE.OPPORTUNITY.MATCH + '<em>' + v.match + '</em>%'
+					});
+					match_box.el.attr('cantitle', Can.msg.CAN_TITLE.MATCH.replace('[@]', v.match)).prependTo(el.find('.box-b'));
+				}
+
+			}
+			else {
+				el.find('.box-m').append(
+					'<div class="pro-pic">' +
+						'<a target="_blank" href="#">' +
+						formatImage(v.collectionPhoto, '229x230', 'product') +
+						'</a>' +
+						'</div>'
+				);
+				//查看产品详细
+				el.find('.pro-pic a').click(function () {
+					var sTitle = v.subject;
+					var nId = v.collectionId;
+					Can.util.canInterface('productDetail', [nId, sTitle, 'OpportunityModuleId']);
+					return false;
+				});
+			}
+			//用户信息
+			el.find('.box-m').append(
+				'<div class="mod-person clear">' +
+					'<div class="pic">' +
+					formatImage(v.supplierPhoto, '60x60', (v.gender * 1 === 2 ? 'female' : 'male')) +
+					'</div>' +
+					'<div class="info">' +
+					'<p class="name">' +
+					'<a href="javascript:;" title="' + v.superlierName + '">' + v.superlierName + '</a>' +
+					'</p>' +
+					'<p class="country">' +
+					'<span class="flags fs' + v.countryId + '"></span>' +
+					'<span class="txt">' + v.countryName + '</span>' +
+					'<span class="mth" cantitle="' + Can.msg.CAN_TITLE.EXP_NUM.replace('[@]', v.participation || 0) + '">' + (v.participation || 0 ) + '</span>' +
+					'</p>' +
+					'</div>' +
+					'</div>' +
+					'<p class="cpy-name">' + (v.subject || '') + '</p>'
+			);
+			el.find('.pic').add(el.find('.info .name')).click(function () {
+				Can.util.canInterface('personProfile', [1, v.supplierId]);
+				return false;
+			});
+
+			//加入按钮
+			//询盘
+			var inquiryIcon = $('<a class="bg-ico ico-inquiry" href="#" cantitle="' + Can.msg.CAN_TITLE.INQUIRY + '"></a>');
+			inquiryIcon.click(function () {
+				self.inquiry(v);
+				return false;
+			});
+			inquiryIcon.appendTo(el.find('.box-b .opt'));
+
+			//IM
+			var chatIcon = $('<a class="bg-ico ico-chat" href="javascript:;" cantitle="' + Can.msg.CAN_TITLE.CHAT + '"></a>');
+			chatIcon.data({
+				setStatus: function (status, data) {
+					if (status == 'online') {
+						chatIcon.attr('class', 'bg-ico ico-chat-online');
+					}
+					else {
+						chatIcon.attr('class', 'bg-ico ico-chat');
+					}
+				}
+			});
+			chatIcon.appendTo(el.find('.box-b .opt'));
+			Can.util.bindIM.add(chatIcon, v.supplierId);
+
+			//绑定移除事件
+			if (v.collectId) {
+				el.find('.ico-del').click(function () {
+					self.removeItem(v.collectId, el);
+					return false;
+				});
+			}
+			else {
+				el.find('.ico-del').remove();
+			}
+
+			return el;
+		};
+
+		//移除元素
+		this.removeItem = function (id, el) {
+			var url = Can.util.Config.buyer.opportunity.delOpportunity;
+
+			$.ajax({
+				url: Can.util.Config.buyer.opportunity.delOpportunity,
+				data: {
+					collectionId: id
+				},
+				success: function (d) {
+					if (d['status'] !== 'success') {
+						return;
+					}
+					el.slideUp(500);
+				}
+			});
+
+		};
+
+		//发送询盘
+		this.inquiry = function (data) {
+			var _data = {inquiry: []};
+			var _subject;
+			//公司
+			if (data.collectType == 1) {
+				//发公司询盘
+				_data.inquiry.push({
+					supplierId: data.supplierId,
+					supplierName: data.superlierName,
+					companyId: data.oppCompanyId,
+					companyName: data.oppCompanyName,
+					products: null
+				});
+				_subject = Can.msg.MESSAGE_WINDOW.INQUIRY_SUBJECT.replace('[@]', 'company');
+			}
+			else {//产品
+				//发产品询盘
+				_data.inquiry.push({
+					supplierId: data.supplierId,
+					supplierName: data.superlierName,
+					companyId: data.oppCompanyId,
+					companyName: data.oppCompanyName,
+					products: [
+						{
+							productId: data.collectionId,
+							productTitle: data.subject,
+							productPhoto: data.collectionPhoto
+						}
+					]
+				});
+				_subject = Can.msg.MESSAGE_WINDOW.INQUIRY_SUBJECT.replace('[@]', data.subject);
+			}
+			Can.util.canInterface('inquiry', [Can.msg.MESSAGE_WINDOW.INQUIRY_TIT, _data, _subject]);
+
+		};
+
+
+		//点击上一页
+		this.pre = function () {
+			oppModule.nextEl.show();
+			page--;
+			if (page <= 1) {
+				page = 1;
+				oppModule.prevEl.hide();
+			}
+			this.movePage(page);
+		};
+
+		//点击下一页
+		this.next = function () {
+			//动态分页
+			if (page == pageInfo.page) {
+				oppModule.searchBtn.el.addClass('dis');
+
+				if (oppModule._isSearch) {
+					oppModule.searchBar.el.find('[name=page]').val(pageInfo.page + 1);
+					oppModule.loadData(oppModule.searchBar.el.serialize());
+				}
+				else {
+					oppModule.loadData({page: pageInfo.page + 1});
+				}
+				return false;
+			}
+			oppModule.prevEl.show();
+			// 静态分页
+			page++;
+
+			if (page == pageInfo.maxPage) {
+				oppModule.nextEl.hide();
+			}
+			this.movePage(page);
+			return false;
+		};
+
+		//移动到第几页
+		this.movePage = function (num) {
+			var num = Number(num);
+			this.page = num;
+
+			var width = 250 * 4 * (num + 1);
+			if (contentEl.width() < width) {
+				contentEl.width(width);
+			}
+
+			if (!contentEl.data('scrollLeft')) {
+				contentEl.data('scrollLeft', 0);
+			}
+
+			if (num <= 1) {
+				var x = 0;
+				var index = 0;
+			}
+			else {
+				var index = 4 * num - 4;
+				var liEl = contentEl.find('li').eq(index);
+				var x = liEl.position().left + contentEl.data('scrollLeft');
+				contentEl.data('scrollLeft', x)
+			}
+
+			var height = 0;
+			for (var i = index; i < index + 4; i++) {
+				var liEl = contentEl.find('li').eq(i);
+				if (liEl.length > 0) {
+					var h = liEl.height();
+					if (h > height) {
+						height = h;
+					}
+				}
+				else {
+					break;
+				}
+			}
+			;
+			for (var i = index; i < index + 4; i++) {
+				var liEl = contentEl.find('li').eq(i);
+				liEl.height(height);
+			}
+			oppModule.contentEl.find('.inner').height(height).animate({
+				scrollLeft: x
+			}, 'slow');
+
+		};
+
+		//设置搜索后没数据的VIEW,有数据可以调用之前的creatItem（）;
+		this.createNoSearchItem = function () {
+			var itemEL = $('<div class="fil-none">' +
+				'<p class="txt2">' + Can.msg.NOT_SEARCH_RESULT + '</p>' +
+				'<p class="txt3">' + Can.msg.NOT_SEARCH_SUGGEST + '</p>' +
+				'<p><a href="javascript:;" class="btn btn-l btn-s13">' + Can.msg.BUTTON.RETURN_LIST + '</a></p>' +
+				'</div>');
+			itemEL.find('a').click(function () {
+				$('#oppoBtnId').click();
+				return false;
+			});
+			itemEL.appendTo(oppModule.contentEl);
+		};
+
+		//没有任何待处理商机的时候
+		this.createNoMatchCollections = function () {
+			var itemEL = $('<div class="fil-none">' +
+				'<p class="txt2">' + Can.msg.NOT_COLLECTION + '</p>' +
+				'<p class="txt3">' + Can.msg.NOT_COLLECTION_SUGGEST + '</p>' +
+				'<p><a href="javascript:;" class="btn btn-l btn-s13">' + Can.msg.BUTTON.SEARCH_NOW + '</a></p>' +
+				'</div>');
+			itemEL.find('a').click(function () {
+				$('#searchBtnId').click();
+				return false;
+			});
+			itemEL.appendTo(oppModule.contentEl);
+		};
+
+
+		this.init = function () {
+			oppModule.contentEl.find('.fil-none').remove();
+			//没有商机的处理
+			if (data.length == 0) {
+				oppModule.contentEl.find('.inner').height(0);
+				oppModule.contentEl.find('.bg-tool').hide();
+				if (oppModule._isSearch) {
+					this.createNoSearchItem();
+				}
+				else {
+					this.createNoMatchCollections();
+				}
+				return false;
+			}
+			$.each(data, function (k, v) {
+				self.build(v);
+			});
+
+			oppModule.contentEl.find('.bg-tool').show();
+
+			this.movePage(pageInfo.page);
+		};
+
+		this.init();
+	};
+
+	Module.opportunityModule = Can.extend(Module.BaseModule, {
+		title: Can.msg.MODULE.OPPORTUNITY.TITLE,
+		id: 'OpportunityModuleId',
+		requireUiJs: [],
+		actionJs: [],
+		constructor: function (jCfg) {
+			Can.apply(this, jCfg || {});
+			Module.opportunityModule.superclass.constructor.call(this);
+		},
+		startup: function () {
+			Module.opportunityModule.superclass.startup.call(this);
+			var self = this;
+			//指示是否通过搜索取得结果
+			this._isSearch = false;
+			//存放渲染对象
+			this._render = false;
+			//是否点中 Sourcing Egg 标签
+			this._isSourcing = false;
+
+			//加入tabs
+			this.fncContainer.el.append(
+					'<div class="tab-s1">' +
+						'<a class="cur" role="collections" href="javascript:;">' + Can.msg.MODULE.OPPORTUNITY.COLLECTIONS + '</a>' +
+						'<a href="javascript:;" role="sourcingEgg">' + Can.msg.MODULE.OPPORTUNITY.SOURCING_EGG + '</a>' +
+						'</div>'
+				).find('a').click(function () {
+					var that = $(this);
+
+					var searchBarItem = self.searchBar.el.find('.select-box')
+						.add(self.searchBar.el.find('.search-s2'))
+						.add(self.searchBar.el.find('.action'));
+
+					if (that.is('.cur')) {
+						return false;
+					}
+					//处理tab 的选中状态
+					self.fncContainer.el.find('a').removeClass('cur');
+					that.addClass('cur');
+					//tab 的事件绑定
+					if (that.attr('role') == 'sourcingEgg') {
+						searchBarItem.hide();
+						self._isSourcing = true;
+						self._isSearch = false;
+						self.loadData({page: 1});
+						self.searchBar.el.css('padding', '1px 18px');
+					}
+					else {
+						searchBarItem.show();
+						self._isSourcing = false;
+						self.searchBtn.el.click();
+						self.searchBar.el.css('padding', '12px 18px');
+					}
+
+					return false;
+				});
+
+			//搜索栏容器
+			this.searchBar = new Can.ui.Panel({
+				cssName: 'mod-filter clear',
+				wrapEL: 'form'
+			});
+
+			//表单提交动作
+			this.searchBar.el.submit(function () {
+				self.searchBtn.el.click();
+				return false;
+			});
+
+			//加入page input
+			this.searchBar.el.append('<input type="hidden" name="page" value="1" />');
+
+			//分类下拉框
+			this.categoryField = new Can.ui.DropDownField({
+				name: 'categoryCode',
+				blankText: Can.msg.MODULE.OPPORTUNITY.CATEGORY
+			});
+			//tag 下拉框
+			this.tagField = new Can.ui.DropDownField({
+				name: 'tagId',
+				blankText: Can.msg.MODULE.OPPORTUNITY.TAG
+			});
+			//来源下拉框
+			this.sourceField = new Can.ui.DropDownField({
+				name: 'sourceType',
+				blankText: Can.msg.MODULE.OPPORTUNITY.SOURCE
+			});
+			//搜索关键字
+			this.keywordField = new Can.ui.TextField({
+				name: 'keyword',
+				cssName: 'search-s2',
+				blankText: 'input a keyword',
+				width: 320
+			});
+			//searchBtn
+			this.searchBtn = new Can.ui.toolbar.Button({
+				cssName: 'btn btn-s11',
+				text: Can.msg.BUTTON.SEARCH
+			});
+
+			this.splitNav = new Can.ui.Panel({cssName: 'action', html: '<span class="brace"></span>'});
+			this.splitNav.addItem(this.searchBtn);
+			this.searchBar.addItem(this.categoryField);
+			this.searchBar.addItem(this.tagField);
+			this.searchBar.addItem(this.sourceField);
+			this.searchBar.addItem(this.keywordField);
+			this.searchBar.addItem(this.splitNav);
+
+			this.searchBar.applyTo(this.contentEl);
+
+			//绑定搜索事件
+			this.searchBtn.el.click(function () {
+				var that = $(this);
+				self.searchBar.el.find('[name=page]').val('1');
+				if (false == that.is('.dis')) {
+					that.addClass('dis');
+					self._isSearch = true;
+					self.loadData(self.searchBar.el.serialize());
+				}
+				;
+				return false;
+			});
+
+			//内容el
+			this.listEl = $(
+				'<div class="mod-pending-list">' +
+					'<a class="btn-backward" href="javascript:;">Prev</a>' +
+					'<a class="btn-forward" href="javascript:;">Next</a>' +
+					'<div class="bg-tool"></div>' +
+					'<div class="inner">' +
+					'<ul class="label-out clear"></ul>' +
+					'</div>' +
+					'</div>'
+			);
+
+			this.prevEl = this.listEl.find('.btn-backward').hide();
+			this.nextEl = this.listEl.find('.btn-forward').hide();
+
+			this.listEl.appendTo(this.contentEl);
+		},
+		show: function () {
+			Module.opportunityModule.superclass.show.call(this);
+			if (this._render) {
+				this._render.movePage(this._render.page);
+			}
+		},
+		/**
+		 * 取搜索框的默认值
+		 *
+		 * @param {Function} callback 成功后回调
+		 *
+		 * @return {Void}
+		 */
+		getSearchFormDefVal: function (callback) {
+			//bug /issues/539
+			// if(null != _searchFormDefVal){
+			//     return callback(_searchFormDefVal);
+			// }
+			var self = this;
+			var defVal = {};
+
+			defVal.page = 1;
+			defVal.keyword = '';
+
+			$.post(_confg.opportunity.opportunityScreen, function (data) {
+				if (data.status == 'success') {
+					var categoryVal = [];
+					var categoryLab = [];
+					var tagVal = [];
+					var tagLab = [];
+					var sourceVal = [];
+					var sourceLab = [];
+
+					var data = data.data;
+
+					categoryVal.push('');
+					categoryLab.push(Can.msg.ALL);
+					for (var c = 0; c < data[0].category.length; c++) {
+						categoryVal.push(data[0].category[c].code);
+						categoryLab.push(data[0].category[c].typeName);
+					}
+
+					tagVal.push('');
+					tagLab.push(Can.msg.ALL);
+					for (var m = 0; m < data[1].tag.length; m++) {
+						tagVal.push(data[1].tag[m]['tagId']);
+						tagLab.push(data[1].tag[m]['tagName']);
+					}
+
+					sourceVal.push('');
+					sourceLab.push(Can.msg.ALL);
+					for (var s = 0; s < data[2].source.length; s++) {
+						sourceVal.push(data[2].source[s].sourceType);
+						sourceLab.push(data[2].source[s].sourceName);
+					}
+
+					defVal.categorys = {
+						labelItems: categoryLab,
+						valueItems: categoryVal
+					};
+
+					defVal.tags = {
+						labelItems: tagLab,
+						valueItems: tagVal
+					};
+
+					defVal.sources = {
+						labelItems: sourceLab,
+						valueItems: sourceVal
+					};
+
+					_searchFormDefVal = defVal;
+
+					return callback(_searchFormDefVal);
+
+				}
+				else {
+					Can.util.EventDispatch.dispatchEvent('ON_ERROR_HANDLE', this, data);
+				}
+			}, 'json');
+		},
+		/**
+		 * 初始化
+		 *
+		 * @return
+		 */
+		init: function () {
+			var self = this;
+			this._isSearch = false;
+			// 设置/重置 搜索表单
+			this.getSearchFormDefVal(function (defVal) {
+				self.searchBar.el.find('[name=page]').val(defVal.page);
+				self.searchBar.el.find('[name=keyword]').val(defVal.keyword);
+				self.categoryField.updateOptions(defVal.categorys);
+				self.tagField.updateOptions(defVal.tags);
+				self.sourceField.updateOptions(defVal.sources);
+				self.loadData(null);
+			});
+		},
+
+		/**
+		 * 加载数据
+		 *
+		 * @param {Mixed} data 搜索条件
+		 */
+		loadData: function (data) {
+			var self = this;
+			var url = this._isSourcing ? _confg.opportunity.getbizOpportunities
+				: _confg.opportunity.opportunity_itmes;
+			//console.log(url);
+			$.ajax({
+				url: url,
+				data: data,
+				cache: false,
+				success: function (data) {
+					self.searchBtn.el.removeClass('dis');
+					if (data.status == 'success') {
+						self._render = new Render(data, self);
+					}
+					else {
+						Can.util.EventDispatch.dispatchEvent('ON_ERROR_HANDLE', this, data);
+					}
+				}
+			})
+		}
+	});
+
+})(Can, Can.module); 

@@ -1,0 +1,311 @@
+<!--筛选框列表-->
+<script type="text/tpl" id="type-list">
+    <ul class="mark-s1 type-drop-list">
+        <!--<li class="clear">
+            <i class="ico-b5"></i> <span i18n>MODULE.BUYING_LEAD.READ</span>
+            <div class="checkbox"> <input type="checkbox" name="read" checkbox></div>
+            </li>-->
+        <li class="clear" a-if="isAll">
+            <i class="ico-b4"></i> <span i18n>MODULE.BUYING_LEAD.UNREAD</span>
+            <div class="checkbox"> <input type="checkbox" name="unread" checkbox></div>
+        </li>
+        <li class="clear">
+            <i class="ico-b3"></i> <span i18n>MODULE.BUYING_LEAD.ATTACHMENT</span>
+            <div class="checkbox"> <input type="checkbox" name="attachment" checkbox></div>
+        </li>
+        <li class="clear">
+            <i class="icons live-1 mi-set"></i> <span i18n>MODULE.BUYING_LEAD.LIEV_LEADEXPRESS</span>
+            <div class="checkbox"> <input type="checkbox" name="live" checkbox></div>
+        </li>
+        <li class="clear" a-if="isJoinFair">
+            <i class="icon-bg icon-logo"></i> <span i18n>MODULE.BUYING_LEAD.LEADEXPRESS</span>
+            <div class="checkbox"> <input type="checkbox" name="currentJoin" checkbox></div>
+        </li>
+        <li class="clear">
+            <i class="icon-bg icon-fav-m"></i> <span i18n>MODULE.BUYING_LEAD.MY_FAVORITE</span>
+            <div class="checkbox"> <input type="checkbox" name="favorite" checkbox></div>
+        </li>
+        <li class="clear" a-if="isRecommend">
+            <i class="icons recommend-1 mi-set"></i> <span i18n>MODULE.BUYING_LEAD.RECOMMEND</span>
+            <div class="checkbox"> <input type="checkbox" name="recommend" checkbox></div>
+        </li>
+        <li class="clear" a-if="isMatched">
+            <i class="icons matched mi-set"></i> <span i18n>MODULE.BUYING_LEAD.MATCH</span>
+            <div class="checkbox"> <input type="checkbox" name="matched" checkbox></div>
+        </li>
+        <li class="clear">
+            <i class="icons matched mi-set"></i> <span i18n>MODULE.BUYING_LEAD.AUTHORIZED</span>
+            <div class="checkbox"> <input type="checkbox" name="authorized" checkbox></div>
+        </li>
+    </ul>
+</script>
+<!--分类列表-->
+<script type="text/tpl" id="category-tpl">
+    <div class="mark-s1-auto category-drop-list" style="">
+        <ul class="root-list">
+            <li a-repeat="category" title="{{indusName}}" data-id="{{indusId}}">
+                <em>{{indusName}}</em>
+
+                <span><i class="icon-bg icon-left-1"></i></span>
+            </li>
+        </ul>
+        <ul class="child-list">
+            <li a-repeat="childsList">
+                <div a-if="isTitle" class="item title">
+                    {{categoryName}}
+                </div>
+
+                <div a-if="^isTitle" class="item name">
+                    {{{categoryName}}}
+                </div>
+
+                <div a-if="^isTitle" class="checkbox">
+                    <input a-if="checked" checked="checked" title="{{categoryName}}" value="{{categoryId}}" type="checkbox" name="categoryId" checkbox>  
+
+                    <input a-if="^checked" title="{{categoryName}}" value="{{categoryId}}" type="checkbox" name="categoryId" checkbox>  
+
+                </div>
+            </li>
+        </ul>
+
+        <div class="footer">
+            <div class="return">
+                <div a-repeat="selectList" class="mod-item-q">
+                    <span>{{title}}</span>
+                    <a data-id="{{id}}" class="bg-ico btn-close" href="javascript:;"></a>
+                </div>
+                
+                <div class="clear"></div>
+            </div>
+            <div class="action">
+                <span i18n>MODULE.BUYING_LEAD.SELECTED</span> {{count}}
+                <a href="javascript:;" id="buyleadCategoryClear" class="btn btn-s12 " i18n>MODULE.BUYING_LEAD.CLEAR_ALL</a>
+                
+                <a href="javascript:;" id="buyleadCategorySubmit" class="btn btn-s11" i18n>MODULE.BUYING_LEAD.SUBMIT</a>
+            </div>
+        </div>
+    </div>
+</script>
+<!--搜索条-->
+<script type="text/tpl" id="tool-tpl">
+    <div class="mod-filter clear">
+        <div class="select-box" id="buyleadCategoryField">
+            <div class="txt">
+                <a href="javascript:;"></a>
+                <em style="width: 105px;" i18n>MODULE.BUYING_LEAD.CATE_LABEL</em>
+            </div>
+        </div>
+
+        <select id="buyleadRegion" name="region" dropDown>
+            <option value="" i18n>MODULE.BUYING_LEAD.REGION_LABEL</option>
+            <option a-repeat="regionList" value="{{countryId}}">{{countryName}}</option>
+        </select>
+        
+        <div class="select-box" id="buyleadTypeField">
+            <div class="txt">
+                <a href="javascript:;"></a>
+                <em style="width: 85px;" i18n>MODULE.BUYING_LEAD.ALL_TYPE</em>
+            </div>
+        </div>
+        
+        
+        <div a-if="isAll" class="order-box" id="buyleadOrderField">
+            <input type="checkbox" name="order-select" checkbox>
+            <span i18n>MODULE.BUYING_LEAD.POST_TIME</span>
+            <i class="icon-bg icon-down"></i>
+            <ul class="mark-s1 order-drop-list">
+                <li data-val="1" class="cur" i18n>MODULE.BUYING_LEAD.POST_TIME</li>
+                <li data-val="2" i18n>MODULE.BUYING_LEAD.COMING_EXPIRED</li>
+            </ul>
+        </div>
+        
+       
+        <div class="search-s2" id="buyleadSearchField" style="width: 210px;">
+            <input type="text" class="txt"  style="width: 190px;" name="keyword" placeholder="Keywords">
+        </div>
+
+        <div class="action">
+            <span class="brace"></span>
+            <a href="" class="btn-s17 btn-s18" id="buyleadSearchBtn" i18n>
+                BUTTON.SEARCH_BTN
+            </a>
+        </div>
+    </div>
+</script>
+
+<!--主内容-->
+<script type="text/tpl" id="content-tpl">
+    <div class="bl-list lead-express">
+        {{{> tool}}}
+    </div>
+
+  
+    <div a-if="^isShowLoad" >
+        <div a-if="^page.total" class="fil-none">
+            <p class="txt2" i18n>BL_DETAIL.NOT_SEARCH_RESULT</p>
+            <p class="txt3" i18n>BL_DETAIL.NOT_SEARCH_SUGGEST</p>
+            <a href="#!/add-product" class="btn-s17 btn-s18" i18n>
+                BUTTON.TOP_BAR_2.PRODUCT_FORM
+            </a>
+        </div>
+    </div>
+    
+    <table class="mod-table tbl-match-buyer buylead-list">
+        <colgroup><col width="140"><col class=""></colgroup>
+        <taody>
+            <tr a-repeat="buyingLeads">
+                <td>
+                    <div class="ui-person">
+                        <div class="pic">
+                            <img avatar="{{avatarType}}" width="60" height="60" can-src="{{buyerPhoto}}" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="" cid="{{buyerId}}" title="{{buyerName}}">
+                                <strong>{{buyerName}}</strong>
+                            </div>
+                            <div class="country" a-if="countryId">
+                                <span class="flags fs{{countryId}}"></span>
+                                <span class="txt" title="{{countryName}}">{{countryName}}</span>
+                            </div>
+
+                            <div a-if="buyAdviserRecommend">
+                                <span class="ico-b7"></span>
+                                <span class="verified" can-tip="BL_DETAIL.RECOMMEND_TIPS" i18n>
+                                    BL_DETAIL.RECOMMEND
+                                </span>
+
+                            </div>
+                            <div a-if="^buyAdviserRecommend">
+                                <span a-if="verified" class="ico-b8" ></span>
+                                <span class="verified" can-tip="BL_DETAIL.VERIFY_TIPS" a-if="verified" i18n>BL_DETAIL.VERIFY</span>
+
+                                <span a-if="^verified" class="ico-b9" ></span>
+                                <span class="verified" can-tip="BL_DETAIL.UNVERIFY_TIPS"  a-if="^verified" i18n>BL_DETAIL.UNVERIFY</span>
+                            </div>
+
+                          
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="icons left-arw-lin"></div>
+                </td>
+                <td>
+                    <div class="win-tips-s1 new-tips-s1" is-read="{{isRead}}">
+                        <div can-tip-type="left" lead-id="{{leadId}}" can-tip="MODULE.BUYING_LEAD.COLLECTION_TIP" is-favorate="{{isFavorate}}" class="favorite icons star-0"></div>
+                        <div class="ico-buying-en hidden" data-title="{{source}}"></div>
+                        <div class="buyer">
+
+                            <div class="title">                               
+
+                                <h5>
+                                    <a show-buyinglead="{{leadId}}" supplier-id="{{supplierId}}" href="" highlight="{{keyword}}">{{subject}}</a>
+                                    <span a-if="isAll">
+                                    <span can-tip="MODULE.BUYING_LEAD.UNREAD" a-if="^isRead" class="ico-b4"></span>
+                                    <span can-tip="MODULE.BUYING_LEAD.READ" a-if="isRead" class="ico-b5"></span>
+                                    </span>
+                                    <span can-tip="MODULE.BUYING_LEAD.ATTACHMENT" a-if="hasAttachment" class="ico-b3"></span>
+                                    <span can-tip="MODULE.BUYING_LEAD.LEADEXPRESS" a-if="iscfec" class="ico-b10"></span>
+                                    <span can-tip="MODULE.BUYING_LEAD.LIEV_LEADEXPRESS" a-if="is114" class="icons live-1" style="margin-left:15px; margin-top:-4px;"></span>
+                                    <span can-tip="MODULE.BUYING_LEAD.REWARD_TIPS" a-if="rewardCcoin" class="icons reward mi-set"></span>
+
+                                </h5>
+                                
+                            </div>
+                            <table>
+                                <colgroup>
+                                    <col style="width:460px"/>
+                                    <col style="width:200px"/>
+                                    <col />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="buylead-info">
+                                                <div class="sourcing-range">
+                                                    <strong i18n>MODULE.MATCH_BUYERS.SOURCING</strong>
+                                                    
+                                                    <span title="{{.}}" a-repeat="categorys">{{.}}</span>
+                                                </div>
+                                                <div a-if="source" class="export-range hidden">
+                                                    <strong i18n>MODULE.BUYING_LEAD.EXPORT</strong>
+                                                    <span>{{exportMarket}}</span>
+                                                </div>
+
+                                                <div class="desc clear" substr="120" highlight="{{keyword}}">
+                                                    {{description}}
+                                                </div>
+                                                <div class="img-list">
+                                                
+                                                    <img a-repeat="productPhotoArray" width="60" height="60" can-src="{{.}}" alt="">
+                                                </div>
+												<div a-if="isUnverfiy" style="margin-top:25px;">
+													<span i18n>MODULE.BUYING_LEAD.OFFLINE_TIME</span>
+                                                    <span>{{offlineTime}}</span>
+												</div>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <ul class="info-list">
+                                                <li a-if="quantityRequire">
+                                                    <strong i18n>MODULE.BUYING_LEAD.QUANTITY</strong>
+                                                    {{quantityRequire}}
+                                                </li>
+                                                <li a-if="transMode">
+                                                    <strong i18n>BL_DETAIL.MODE_OF_TRANSPORT</strong><strong>:</strong>
+                                                    {{transMode}}
+                                                </li>
+                                                <li a-if="preferredPrice">
+                                                    <strong i18n>BL_DETAIL.PREFERRED_PRICE</strong><strong>:</strong>
+                                                    {{preferredCurrency}} {{preferredPrice}} / {{preferredUnit}}
+
+                                                </li>
+                                                <li>
+                                                    <strong i18n>MODULE.BUYING_LEAD.TIME_LEFT</strong>
+                                                    <span countDown>{{expiredDate}}</span>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <span class="date" style="font-size: 11px;">{{postTime}}</span>
+                                            <a show-buyinglead="{{leadId}}" supplier-id="{{supplierId}}" href="" class="ui-btn btn-gray-2">
+                                                <i class="icons icon-search"></i>
+                                                <span i18n>MODULE.BUYING_LEAD.VIEW_NOW</span>
+                                            </a>
+                                            <div class="icon-list">
+                                                <div class="icon-item">
+                                                    <i class="icons view"></i> 
+                                                                                                                                    {{viewCount}}
+                                                                                                                                     <i class="icons comment"></i> 
+                                                                                                                                     {{replyCount}}
+                                                </div>
+
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <span a-if="^isRead" class="icons arror-left-0"></span>
+                        <span a-if="isRead" class="icons arror-left-1"></span>
+
+                    </div>
+                                            
+                </td>
+            </tr>
+        </taody>
+    </table>
+
+    <div a-if="isShowLoad" class="loading" >
+        <span></span>
+        Loading...
+    </div>
+
+
+    <div a-if="^isShowLoad" class="page-toop" page-current="{{page.page}}" page-total="{{page.total}}" page-limit="{{page.pageSize}}" paging></div>
+</script>
+    
+

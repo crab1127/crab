@@ -1,0 +1,17 @@
+{
+    "message": "getBuyerActionSearchParam",
+    "type": null,
+    "data": {
+        "category": ["供应商"],
+        "time_ranges": ["1:Today", "3:3 Days", "7:7 Days", "14:2 Weeks", "360:1 Year"],
+        "actionIds": ["0:交换名片:11", "2:收藏产品:7", "3:浏览公司信息:3", "4:浏览产品:13", "1:收藏公司信息:3"],
+        "countryIds": ["113:西班牙:Spain:1", "118:中国澳门:Macau:1", "37:佛得角:Cape Verde:2", "188:西萨摩亚:Western Samoa:1", "13:阿富汗:Afghanistan:1", "14:赤道几内亚:Equatorial Guinea:1", "171:突尼斯:Tunisia:1", "17:巴巴多斯:Barbados:1", "34:扎伊尔:Zaire:1", "120:纽埃:Niue:1", "24:牙买加:Jamaica:1", "132:皮特凯恩群岛:Pitcairn Islands Group:3"]
+    },
+    "status": "success",
+    "page": {
+        "total": 0,
+        "page": 1,
+        "maxPage": 0,
+        "pageSize": 0
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "label":"Lighting Equipment",
+            "categoryId":"1",
+            "items":[
+                {
+                    "categoryId":1,
+                    "label":"Small machinery"
+                },
+                {
+                    "categoryId":2,
+                    "label":"Large scale machinery and equipment"
+                },
+                {
+                    "categoryId":3,
+                    "label":" Engineering machinery"
+                }
+            ]
+        },
+        {
+            "label":"Consumer Goods",
+            "categoryId":"2",
+            "items":[
+                {
+                    "categoryId":11,
+                    "label":"Small machinery"
+                },
+                {
+                    "categoryId":12,
+                    "label":"Large scale machinery and equipment"
+                },
+                {
+                    "categoryId":13,
+                    "label":"Engineering machinery"
+                },
+                {
+                    "categoryId":112,
+                    "label":"Large scale machinery and equipment"
+                },
+                {
+                    "categoryId":123,
+                    "label":"Engineering machinery"
+                }
+            ]
+        }
+    ]
+}

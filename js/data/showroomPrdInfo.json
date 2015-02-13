@@ -1,0 +1,21 @@
+{
+    "message":"success",
+    "type":"json",
+    "data":{
+        "fsize":"500",
+        "odm":"1",
+        "odmdesc":"This is ODM experencie",
+        "oem":"0",
+        "engCount":"30",
+        "devCount":"50",
+        "checkCount":"30",
+        "cers":"iso2000,iso2008"
+    },
+    "status":"success",
+    "page":{
+        "total":0,
+        "page":1,
+        "maxPage":0,
+        "pageSize":0
+    }
+}

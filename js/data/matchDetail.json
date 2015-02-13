@@ -1,0 +1,23 @@
+{
+	"status": "success",
+	"message": "",
+	"data": {
+		"generalScore": 80,
+		"productScore": 85,
+		"backgroundScore": 90,
+		"productMatchInfo": {
+			"Building and Decorative Materials": ["Building", "Decorative", "Materials"],
+			"Chemical Products": ["Building", "Decorative", "Materials", "Decorative", "Materials", "Building", "Decorative", "Materials"],
+			"Toiletries": ["Building", "Decorative", "Materials"],
+			"Chemical": ["Decorative", "Materials"],
+			"Personal Care Products": ["Building", "Decorative", "Materials"]
+		},
+		"backgroundMatchInfo": {
+			"market": "Europe",
+			"activity": "7 times",
+			"nature": "Company",
+			"lately": "Lately 5 times in the past 10 sessions",
+			"type": "Buying Office"
+		}
+	}
+}

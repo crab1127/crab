@@ -1,0 +1,14 @@
+{
+    "status":"success",
+    "message":"fuck, why return error.",
+    "data":{
+        "buyerName": "simon wang",
+        "buyerPhoto": "/img/user_pic/default_120.jpg",
+        "countryId": 3,
+        "countryName": "Dominica",
+        "integrity": 50,
+        "bizOppotunity": 28,
+        "inquiryReply": 30,
+        "buyingleadReply": 388
+    }
+}

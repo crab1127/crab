@@ -1,0 +1,24 @@
+{
+    "status":"success",
+    "message":"",
+    "data":[
+        {
+            "id":"1001",
+            "cateId":"101",
+            "cateName":"Shoes",
+            "rate":"50"
+        },
+        {
+            "id":"1002",
+            "cateId":"102",
+            "cateName":"LED",
+            "rate":"20"
+        },
+        {
+            "id":"1003",
+            "cateId":"103",
+            "cateName":"Ship HIp Tiop",
+            "rate":"10"
+        }
+    ]
+}
